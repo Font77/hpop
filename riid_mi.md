@@ -1,5 +1,6 @@
 > # hpop
-qndroed popqp kibord klond &amp; cenjd phrom hqkqr's kiibord
+qndroed popqp kibord klond &amp; cenjd phrom 
+[hqkqr's kiibord on gitHb onli](https://github.com/klausw/hackerskeyboard)
 --------bilo tekst tu bi viyud in roboto_heks_jk.ttf phont--------
 **hpop** kibord is sopht_kiiboard phur heksifglish vic hqj **onli smal kes**  ~~ no kqps ~~ .
 in heksi aski kods phur :;&lt;=&gt;? got siphtid siks stqps rait
@@ -16,4 +17,3 @@ heksi translitresn_translesqn stqps:
 4e) > -> E 
 4e) ? -> F
 ![hpop kibord no kAps](https://i.pinimg.com/originals/f7/0d/ae/f70daee69cf53d101c1e5af0303aca52.gif)
-
