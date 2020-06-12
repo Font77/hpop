@@ -12,3 +12,6 @@ ifglish tu heksifnglish knvrjn.
 heksi translitresn_translesqn stqps:
 1) al smal kes ( kntrol u ) 2) w -> v , q->k , z->j 3) x->qks 
 4a) : -> A 4b) ; -> B 4c) < -> C 4d) = -> D 4e) > -> E 4e) ? -> F
+
+marketifg lifks:
+1. [heksadesiml marketifg qt plqrk](https://www.plurk.com/heksadesiml)
