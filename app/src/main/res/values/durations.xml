@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vibrate_duration_ms">40 ms</string>
+</resources>

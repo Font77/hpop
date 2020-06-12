@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="candidate_normal">#FFFFFFFF</color>
+    <color name="candidate_recommended">#FFFCAE00</color>
+    <color name="candidate_other">#FFFCAE00</color>
+    <color name="latinkeyboard_transparent">#00000000</color>
+    <color name="latinkeyboard_bar_language_shadow_white">#80000000</color>
+    <color name="latinkeyboard_bar_language_shadow_black">#80FFFFFF</color>
+    <color name="latinkeyboard_dim_color_white">#FFDDDDDD</color>
+    <color name="latinkeyboard_dim_color_black">#FF222222</color>
+    <color name="latinkeyboard_extension_background">#A0000000</color>
+    <color name="latinkeyboard_feedback_language_text">#FFFFFFFF</color>
+    <color name="latinkeyboard_key_color_white">#FFFFFFFF</color>
+    <color name="latinkeyboard_key_color_black">#FF000000</color>
+<!--Material Keyboard Colors-->
+    <color name="key_background_material_black">#000000</color>
+    <color name="key_background_pressed_material_black">#19FFFFFF</color>
+    <color name="key_text_color_material_black">#CCFFFFFF</color>
+    <color name="key_hint_letter_color_material_black">#80FFFFFF</color>
+    <color name="key_background_material_dark">#263238</color>
+    <color name="key_background_pressed_material_dark">#19FFFFFF</color>
+    <color name="key_text_color_material_dark">#CCFFFFFF</color>
+    <color name="key_hint_letter_color_material_dark">#80FFFFFF</color>
+    <color name="key_background_material_light">#ECEFF1</color>
+    <color name="key_background_pressed_material_light">#2637474F</color>
+    <color name="key_text_color_material_light">#000000</color>
+    <color name="key_hint_letter_color_material_light">#B337474F</color>
+</resources>

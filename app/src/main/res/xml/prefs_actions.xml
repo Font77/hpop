@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="prefs_actions"
+    android:title="@string/pref_screen_actions_title" >
+
+    <PreferenceCategory
+        android:key="swipe_actions"
+        android:title="@string/title_swipe_gestures" >
+
+        <org.kiibord.hpop.AutoSummaryListPreference
+            android:defaultValue="@string/default_swipe_up"
+            android:entries="@array/swipe_action_entries"
+            android:entryValues="@array/swipe_action_values"
+            android:key="pref_swipe_up"
+            android:persistent="true"
+            android:title="@string/title_swipe_up" />
+
+        <org.kiibord.hpop.AutoSummaryListPreference
+            android:defaultValue="@string/default_swipe_down"
+            android:entries="@array/swipe_action_entries"
+            android:entryValues="@array/swipe_action_values"
+            android:key="pref_swipe_down"
+            android:persistent="true"
+            android:title="@string/title_swipe_down" />
+
+        <org.kiibord.hpop.AutoSummaryListPreference
+            android:defaultValue="@string/default_swipe_left"
+            android:entries="@array/swipe_action_entries"
+            android:entryValues="@array/swipe_action_values"
+            android:key="pref_swipe_left"
+            android:persistent="true"
+            android:title="@string/title_swipe_left" />
+
+        <org.kiibord.hpop.AutoSummaryListPreference
+            android:defaultValue="@string/default_swipe_right"
+            android:entries="@array/swipe_action_entries"
+            android:entryValues="@array/swipe_action_values"
+            android:key="pref_swipe_right"
+            android:persistent="true"
+            android:title="@string/title_swipe_right" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="key_actions"
+        android:title="@string/title_hardware_key_actions" >
+
+        <org.kiibord.hpop.AutoSummaryListPreference
+            android:defaultValue="@string/default_vol_up"
+            android:entries="@array/swipe_action_entries"
+            android:entryValues="@array/swipe_action_values"
+            android:key="pref_vol_up"
+            android:persistent="true"
+            android:title="@string/title_vol_up" />
+
+        <org.kiibord.hpop.AutoSummaryListPreference
+            android:defaultValue="@string/default_vol_down"
+            android:entries="@array/swipe_action_entries"
+            android:entryValues="@array/swipe_action_values"
+            android:key="pref_vol_down"
+            android:persistent="true"
+            android:title="@string/title_vol_down" />
+    </PreferenceCategory>
+</PreferenceScreen>

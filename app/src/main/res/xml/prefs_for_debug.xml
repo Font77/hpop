@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="@string/prefs_dibqg_mode" android:key="english_ime_debug_settings">
+    <CheckBoxPreference android:key="enable_logging" android:title="@string/prefs_enable_log" android:summary="@string/prefs_description_log" android:persistent="true" android:defaultValue="false" />
+    <ListPreference android:key="pref_keyboard_layout_20100902" android:title="@string/keyboard_layout" android:persistent="true" android:entryValues="@array/keyboard_layout_modes_values" android:entries="@array/keyboard_layout_modes" android:defaultValue="4" />
+    <CheckBoxPreference android:key="debug_mode" android:persistent="true" android:title="@string/prefs_dibqg_mode" android:defaultValue="false" />
+</PreferenceScreen>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font android:fontStyle="normal" android:fontWeight="400" android:font="@font/roboto_heks_jk" />
+    <font android:fontStyle="italic" android:fontWeight="400" android:font="@font/roboto_heks_jk" />
+</font-family>
+<!--    Support Library 26.0 provides support to the Fonts in XML feature on devices
+running Android 4.1 (API level 16) and higher.-->

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res-auto" android:keyWidth="7.1428571485%p" android:horizontalGap="0px"
+android:verticalGap="0px"> 
+    <Row android:rowEdgeFlags="top|bottom">
+        <Key android:keyLabel="&#x300;" android:keyEdgeFlags="left"/>
+        <Key android:keyLabel="&#x301;"/>
+        <Key android:keyLabel="&#x302;"/>        
+        <Key android:keyLabel="&#x303;"/>
+        <Key android:keyLabel="&#x304;"/>
+        <Key android:keyLabel="&#x305;"/>
+        <Key android:keyLabel="&#x306;"/>
+        <Key android:keyLabel="&#x307;"/>
+        <Key android:keyLabel="&#x308;"/>
+        <Key android:keyLabel="&#x30A;"/>
+        <Key android:keyLabel="&#x30B;"/>
+        <Key android:keyLabel="&#x30C;"/>
+        <Key android:codes="@integer/key_home" android:isModifier="true" android:keyLabel="hom"/>
+        <Key android:codes="@integer/key_end" android:isModifier="true" android:keyLabel="qnd" android:keyEdgeFlags="right" />
+        <!-- /> -->
+    </Row>
+</Keyboard>

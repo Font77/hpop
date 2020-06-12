@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="word_separators">.\u0009\u0020,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|\u0022</string>
+    <string name="sentence_separators">.,!?);:</string>
+    <string name="suggested_punctuations_default">!?,\u0022\u0027:;()-/@_</string>
+    <string name="suggested_punctuations">!?,\u0022\u0027:;()-/@_</string>
+    <string name="settings_key_mode_auto" translatable="false">0</string>
+    <string name="settings_key_mode_always_show" translatable="false">1</string>
+    <string name="settings_key_mode_always_hide" translatable="false">2</string>
+</resources>

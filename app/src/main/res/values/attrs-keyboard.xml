@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Keyboard">
+        <attr name="keyWidth" format="dimension|fraction" />
+        <attr name="keyHeight" format="dimension|fraction" />
+        <attr name="horizontalGap" format="dimension|fraction" />
+        <attr name="verticalGap" format="dimension|fraction" />
+        <attr name="horizontalPad" format="dimension|fraction" />
+        <attr name="verticalPad" format="dimension|fraction" />
+        <attr name="layoutRows" format="integer" />
+        <attr name="layoutColumns" format="integer" />
+        </declare-styleable>
+    <declare-styleable name="Keyboard_Row">
+        <attr name="rowEdgeFlags"><flag name="top" value="4" /><flag name="bottom" value="8" /></attr>
+        <attr name="keyboardMode" format="reference" />
+        <attr name="extension" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="Keyboard_Key">
+        <attr name="codes" format="integer|string" />
+        <attr name="popupKeyboard" format="reference" />
+        <attr name="popupCharacters" format="string" />
+        <attr name="keyEdgeFlags"><flag name="left" value="1" /><flag name="right" value="1" /></attr>
+        <!-- <attr name="keyEdgeFlags"><flag name="left" value="1" /><flag name="right" value="2" /></attr> -->
+        <attr name="isModifier" format="boolean" />
+        <attr name="isSticky" format="boolean" />
+        <attr name="isCursor" format="boolean" />
+        <attr name="isRepeatable" format="boolean" />
+        <attr name="iconPreview" format="reference" />
+        <attr name="keyOutputText" format="string" />
+        <attr name="keyLabel" format="string" />
+        <attr name="shiftLabel" format="string" />
+        <!-- vimql <attr name="capsLabel" format="string" /> -->
+        <attr name="keyIcon" format="reference" />
+        <attr name="keyboardMode" />
+    </declare-styleable>
+</resources>
