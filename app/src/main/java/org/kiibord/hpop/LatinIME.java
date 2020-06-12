@@ -2967,7 +2967,7 @@ public class LatinIME extends InputMethodService implements
         }
         int unhandledFlags = sKeyboardSettings.unhandledFlags();
         if (unhandledFlags != GlobalKeyboardSettings.FLAG_PREF_NONE) {
-            Log.w(TAG, "Not all flag settings handled, remaining=" + unhandledFlags);
+            Log.w(TAG, "not all phlag settings handled, remaining=" + unhandledFlags);
         }
 
         if (PREF_SELECTED_LANGUAGES.equals(key)) {

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "755194097103",
+    "firebase_url": "https://hpop-d09cd.firebaseio.com",
+    "project_id": "hpop-d09cd",
+    "storage_bucket": "hpop-d09cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755194097103:android:0005107bcbde3d9ab5f6ba",
+        "android_client_info": {
+          "package_name": "org.kiibord.hpop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755194097103-ktdpjfn7bodrbm7p3qunarb0mviqfhfh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCap2KBWU62hK5bj_lPYH1VdwsLS3DGyH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755194097103-ktdpjfn7bodrbm7p3qunarb0mviqfhfh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
