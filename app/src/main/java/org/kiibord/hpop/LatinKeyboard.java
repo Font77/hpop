@@ -490,6 +490,7 @@ public class LatinKeyboard extends Keyboard {
             final Paint paint = new Paint();
             paint.setAlpha(opacity);
             paint.setAntiAlias(true);
+            // paint.setTextAlign(Align.CENTER);
             paint.setTextAlign(Align.CENTER);
 
             final boolean allowVariableTextSize = true;

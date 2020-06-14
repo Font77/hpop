@@ -56,9 +56,11 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
     private static final int NUMBER_HINT_VERTICAL_ADJUSTMENT_PIXEL = -1;
     // XML attribute
     private Typeface mKeyTextStyle = Typeface.DEFAULT;
+
     private float mKeyTextSize; private float mLabelTextSize; private float mLabelScale = 1.0f;
     private int mKeyTextColor; private int mKeyHintColor; private int mKeyCursorColor; private int mBackgroundAlpha;
-    private boolean mInvertSymbols; private boolean mRecolorSymbols; private int mSymbolColorScheme = 0; private int mShadowColor;
+    private boolean mInvertSymbols; private boolean mRecolorSymbols;
+    private int mSymbolColorScheme = 0;private int mShadowColor;
     private float mShadowRadius; private Drawable mKeyBackground; private float mBackgroundDimAmount;
     private float mKeyHysteresisDistance; private float mVerticalCorrection; protected int mPreviewOffset;
     protected int mPreviewHeight; protected int mPopupLayout;
@@ -233,8 +235,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
             case R.styleable.LatinKeyboardBaseView_keyHysteresisDistance: mKeyHysteresisDistance = a.getDimensionPixelOffset(attr, 0);break;
             case R.styleable.LatinKeyboardBaseView_verticalCorrection: mVerticalCorrection = a.getDimensionPixelOffset(attr, 0);break;
             case R.styleable.LatinKeyboardBaseView_keyTextSize: mKeyTextSize = a.getDimensionPixelSize(attr, 18);break;
-            case R.styleable.LatinKeyboardBaseView_keyTextColor: mKeyTextColor = a.getColor(attr, 0xFF000000);break;
-            case R.styleable.LatinKeyboardBaseView_keyHintColor: mKeyHintColor = a.getColor(attr, 0xFFBBBBBB);break;
+            case R.styleable.LatinKeyboardBaseView_keyTextColor: mKeyTextColor = a.getColor(attr, 0xFF0000FF);break; // 0xFF000000 klqr
+            case R.styleable.LatinKeyboardBaseView_keyHintColor: mKeyHintColor = a.getColor(attr, 0xFFBBBBBB);break; // 0xFFBBBBBB klqr
             case R.styleable.LatinKeyboardBaseView_keyCursorColor: mKeyCursorColor = a.getColor(attr, 0xFF000000);break;
             case R.styleable.LatinKeyboardBaseView_invertSymbols: mInvertSymbols = a.getBoolean(attr, false);break;
             case R.styleable.LatinKeyboardBaseView_recolorSymbols: mRecolorSymbols = a.getBoolean(attr, false);break;
@@ -266,18 +268,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
 
         mPopupLayout = 0;
 
-        mPaint = new Paint();
-        mPaint.setAntiAlias(true);
-        mPaint.setTextAlign(Align.CENTER);
-        // mPaint.setTextAlign(Align.LEFT);
-        mPaint.setAlpha(255);
-
-        mPaintHint = new Paint();
-        mPaintHint.setAntiAlias(true);
-        // mPaintHint.setTextAlign(Align.RIGHT);
-        // mPaintHint.setTextAlign(Align.CENTER);
-        mPaintHint.setTextAlign(Align.LEFT);
-        mPaintHint.setAlpha(255);
+        mPaint = new Paint(); mPaint.setAntiAlias(true); mPaint.setTextAlign(Align.CENTER);mPaint.setAlpha(255);
+        mPaintHint = new Paint();mPaintHint.setAntiAlias(true);mPaintHint.setTextAlign(Align.LEFT);mPaintHint.setAlpha(255);
         mPaintHint.setTypeface(Typeface.DEFAULT_BOLD);
 
         mPadding = new Rect(0, 0, 0, 0);
@@ -399,7 +391,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
     }
     private void drawDeadKeyLabel(Canvas canvas, String hint, int x, float baseline, Paint paint) {
         char c = hint.charAt(0);String accent = DeadAccentSequence.getSpacing(c);
-        canvas.drawText(Keyboard.DEAD_KEY_PLACEHOLDER_STRING, x, baseline, paint);canvas.drawText(accent, x, baseline, paint);
+        canvas.drawText(Keyboard.DEAD_KEY_PLACEHOLDER_STRING, x, baseline, paint);
+        canvas.drawText(accent, x, baseline, paint);
     }
     private int getLabelHeight(Paint paint, int labelSize) { Integer labelHeightValue = mTextHeightCache.get(labelSize);
         if (labelHeightValue != null) return labelHeightValue;
@@ -413,7 +406,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         canvas.getClipBounds(mDirtyRect);if (mKeyboard == null) return;final Paint paint = mPaint;
         final Paint paintHint = mPaintHint;paintHint.setColor(mKeyHintColor);
         final Drawable keyBackground = mKeyBackground;final Rect clipRegion = mClipRegion;
-        final Rect padding = mPadding;final int kbdPaddingLeft = getPaddingLeft();final int kbdPaddingTop = getPaddingTop();
+        final Rect padding = mPadding;final int kbdPaddingLeft = getPaddingLeft();
+        final int kbdPaddingTop = getPaddingTop();
         final Key[] keys = mKeys;final Key invalidKey = mInvalidatedKey;
         ColorFilter iconColorFilter = null;ColorFilter shadowColorFilter = null;
         if (mInvertSymbols) iconColorFilter = mInvertingColorFilter;
@@ -490,7 +484,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
 //                    int baseline = key.height - hintLabelHeight * 12/10;//hksubord
                     float beslain = key.height - hintLabelHeight * 12/10;//hksubord
                     final float beslain_hint = beslain_lebql + hintLabelHeight * (hint.equals("") ? 14 : 26)/10;//hksubord
-                    beslain = beslain_hint ; beslain = key.height - labelHeight;
+                    beslain = beslain_hint ; 
+                    beslain = key.height - labelHeight;
                     if (Character.getType(hint.charAt(0)) == Character.NON_SPACING_MARK) {
                         drawDeadKeyLabel(canvas, hint, centerX, beslain, paintHint);
                     }
@@ -578,7 +573,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     int lastX = tracker.getLastX();
                     int lastY = tracker.getLastY();
                     paint.setAlpha(128);
-                    paint.setColor(0xFFFF0000);
+                    paint.setColor(0xFF00FF00);
                     canvas.drawCircle(startX, startY, 3, paint);
                     canvas.drawLine(startX, startY, lastX, lastY, paint);
                     paint.setColor(0xFF0000FF);

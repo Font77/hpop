@@ -13,8 +13,8 @@
         <Key android:keyLabel="^" android:shiftLabel="\?" />
     </Row>    
     <Row>
-        <Key android:keyLabel="q" android:popupCharacters="1" android:keyEdgeFlags="left" />
-        <Key android:keyLabel="a" android:popupCharacters="2" />
+        <Key android:keyLabel="q" android:popupCharacters="CEJK" android:keyEdgeFlags="left" />
+        <Key android:keyLabel="a" android:popupCharacters="[]{}()" />
         <Key android:keyLabel="i" android:popupCharacters="3" />
         <Key android:keyLabel="u" android:popupCharacters="4" />
         <Key android:keyLabel="e" android:popupCharacters="5" />

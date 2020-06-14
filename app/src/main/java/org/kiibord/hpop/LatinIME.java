@@ -2635,13 +2635,14 @@ public class LatinIME extends InputMethodService implements
         }
 
         // If this is a punctuation, apply it through the normal key press
-        if (suggestion.length() == 1
-                && (isWordSeparator(suggestion.charAt(0)) || isSuggestedPunctuation(suggestion
-                        .charAt(0)))) {
+        if (suggestion.length() == 1 && (isWordSeparator(suggestion.charAt(0)) || isSuggestedPunctuation(suggestion.charAt(0)))) {
             final char primaryCode = suggestion.charAt(0);
-            onKey(primaryCode, new int[] { primaryCode },
-                    LatinKeyboardBaseView.NOT_A_TOUCH_COORDINATE,
-                    LatinKeyboardBaseView.NOT_A_TOUCH_COORDINATE);
+            onKey(
+               primaryCode,
+               new int[] { primaryCode },
+               LatinKeyboardBaseView.NOT_A_TOUCH_COORDINATE,
+               LatinKeyboardBaseView.NOT_A_TOUCH_COORDINATE
+            );
             if (ic != null) {
                 ic.endBatchEdit();
             }
