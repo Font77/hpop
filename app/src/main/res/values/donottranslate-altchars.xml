@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="alternates_for_a">2</string>
-    <string name="alternates_for_b"></string>
-    <string name="alternates_for_c">çčć¢</string>
-    <string name="alternates_for_d">đ</string>
-    <string name="alternates_for_e">3</string>
-    <string name="alternates_for_f">₣</string>
-    <string name="alternates_for_g"></string>
-    <string name="alternates_for_h"></string>
+    <string name="alternates_for_a">\@$#&amp;</string>
+    <string name="alternates_for_b">H</string>
+    <string name="alternates_for_c">E</string>
+    <string name="alternates_for_d">K</string>
+    <string name="alternates_for_e">G</string>
+    <string name="alternates_for_f">H</string>
+    <string name="alternates_for_g">Z</string>
+    <string name="alternates_for_h">I</string>
     <string name="alternates_for_i">3</string>
     <string name="alternates_for_j"></string>
     <string name="alternates_for_k"></string>
@@ -16,9 +16,9 @@
     <string name="alternates_for_n">ñ</string>
     <string name="alternates_for_o">9</string>
     <string name="alternates_for_p">0π₱</string>
-    <string name="alternates_for_q">1</string>
+    <string name="alternates_for_q">C</string>
     <string name="alternates_for_r">4</string>
-    <string name="alternates_for_s">§ßš</string>
+    <string name="alternates_for_s">ST+-ND</string>
     <string name="alternates_for_t">5</string>
     <string name="alternates_for_u">4</string>
     <string name="alternates_for_v"></string>

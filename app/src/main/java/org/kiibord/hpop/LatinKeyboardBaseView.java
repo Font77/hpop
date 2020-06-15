@@ -111,10 +111,10 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
     /* package */ static Method sSetRenderMode;
     private static int sPrevRenderMode = -1;
     private static final float[] INVERTING_MATRIX = {
-                    -1.f, 0, 0, 0, 255, // Red
-            0, -1.f, 0, 0, 255, // Green
-            0, 0, -1.f, 0, 255, // Blue
-            0, 0, 0, 1.f, 0, // Alpha
+        -1.f, 0, 0, 0, 255, // Red
+        0, -1.f, 0, 0, 255, // Green
+        0, 0, -1.f, 0, 255, // Blue
+        0, 0, 0, 1.f, 0, // Alpha
     };
     private final ColorMatrixColorFilter mInvertingColorFilter = new ColorMatrixColorFilter(INVERTING_MATRIX);
     private final UIHandler mHandler = new UIHandler();
@@ -221,16 +221,13 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
     }
     
     public LatinKeyboardBaseView(Context context, AttributeSet attrs) { this(context, attrs, R.attr.keyboardViewStyle); }
-
-    public LatinKeyboardBaseView(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
+    public LatinKeyboardBaseView(Context context, AttributeSet attrs, int defStyle) { super(context, attrs, defStyle);
+        fontsovArride.setDefaultFont(context,"DEFAULT",R.font.roboto_heks_jk);
+        fontsovArride.setDefaultFont(context,"DEFAULT_BOLD",R.font.roboto_heks_jk);
         if (!isInEditMode()) Log.i(TAG, "kriqtifg niyu lqtinkibordbesviyu " + this);
         setRenderModeIfPossible(LatinIME.sKeyboardSettings.renderMode);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.LatinKeyboardBaseView, defStyle, R.style.LatinKeyboardBaseView);
-        int n = a.getIndexCount();
-        for (int i = 0; i < n; i++) {
-            int attr = a.getIndex(i);
-            switch (attr) {
+        int n = a.getIndexCount();for (int i = 0; i < n; i++) { int attr = a.getIndex(i);switch (attr) {
             case R.styleable.LatinKeyboardBaseView_keyBackground: mKeyBackground = a.getDrawable(attr);break;
             case R.styleable.LatinKeyboardBaseView_keyHysteresisDistance: mKeyHysteresisDistance = a.getDimensionPixelOffset(attr, 0);break;
             case R.styleable.LatinKeyboardBaseView_verticalCorrection: mVerticalCorrection = a.getDimensionPixelOffset(attr, 0);break;
@@ -258,9 +255,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
             case R.styleable.LatinKeyboardBaseView_symbolColorScheme: mSymbolColorScheme = a.getInt(attr, 0);break;
             }
         }
-
         final Resources res = getResources();
-
         mShowPreview = false;
         mDelayBeforePreview = res.getInteger(R.integer.config_delay_before_preview);
         mDelayBeforeSpacePreview = res.getInteger(R.integer.config_delay_before_space_preview);
@@ -318,7 +313,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
     protected OnKeyboardActionListener getOnKeyboardActionListener() { return mKeyboardActionListener; } 
     public void setKeyboard(Keyboard keyboard) {
         if (mKeyboard != null) { dismissKeyPreview(); }
-        mHandler.cancelKeyTimers();         mHandler.cancelPopupPreview();         mKeyboard = keyboard;
+        mHandler.cancelKeyTimers(); mHandler.cancelPopupPreview(); mKeyboard = keyboard;
         mKeys = mKeyDetector.setKeyboard(keyboard, 0, 0);
         mKeyboardVerticalGap = (int)getResources().getDimension(R.dimen.key_bottom_gap);
         for (PointerTracker tracker : mPointerTrackers) { tracker.setKeyboard(mKeys, mKeyHysteresisDistance); }
@@ -366,7 +361,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 int badWidth = MeasureSpec.getSize(widthMeasureSpec);
                 if (badWidth != width) Log.i(TAG, "ignoring unexpected width=" + badWidth);
             }
-            Log.i(TAG, "onMeasure width=" + width);
+            Log.i(TAG, "onmeasure vidth=" + width);
             setMeasuredDimension(width, mKeyboard.getHeight() + getPaddingTop() + getPaddingBottom());
         }
     }
@@ -402,9 +397,11 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         }
     }
     private void onBufferDraw(Canvas canvas) {
-        if (/*mBuffer == null ||*/ mKeyboardChanged) {mKeyboard.setKeyboardWidth(mViewWidth); invalidateAllKeys(); mKeyboardChanged = false;}
+        if (/*mBuffer == null ||*/ mKeyboardChanged) {mKeyboard.setKeyboardWidth(mViewWidth);
+        invalidateAllKeys(); mKeyboardChanged = false;}
         canvas.getClipBounds(mDirtyRect);if (mKeyboard == null) return;final Paint paint = mPaint;
-        final Paint paintHint = mPaintHint;paintHint.setColor(mKeyHintColor);
+        final Paint paintHint = mPaintHint;
+        paintHint.setColor(mKeyHintColor);
         final Drawable keyBackground = mKeyBackground;final Rect clipRegion = mClipRegion;
         final Rect padding = mPadding;final int kbdPaddingLeft = getPaddingLeft();
         final int kbdPaddingTop = getPaddingTop();
@@ -423,12 +420,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 drawSingleKey = true;
             }
         }
-        final int keyCount = keys.length;
-        List<Integer> keyWidths = new ArrayList<Integer>();
-        List<Integer> keyHeights = new ArrayList<Integer>();
-        for (int i = 0; i < keyCount; i++) {
-            final Key key = keys[i];keyWidths.add(key.width);keyHeights.add(key.height);
-        }
+        final int keyCount = keys.length; List<Integer> keyWidths = new ArrayList<Integer>(); List<Integer> keyHeights = new ArrayList<Integer>();
+        for (int i = 0; i < keyCount; i++) { final Key key = keys[i]; keyWidths.add(key.width); keyHeights.add(key.height); }
         Collections.sort(keyWidths);Collections.sort(keyHeights);
         int medianKeyWidth = keyWidths.get(keyCount / 2);int medianKeyHeight = keyHeights.get(keyCount / 2);
         mKeyTextSize = Math.min(medianKeyHeight * 6 / 10, medianKeyWidth * 6 / 10);
@@ -437,8 +430,10 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         for (int i = 0; i < keyCount; i++) {
             final Key key = keys[i];
             if (drawSingleKey && invalidKey != key) continue;
-            if (!mDirtyRect.intersects(key.x + kbdPaddingLeft, key.y + kbdPaddingTop,
-                key.x + key.width + kbdPaddingLeft, key.y + key.height + kbdPaddingTop)) { continue; }
+            if (!mDirtyRect.intersects(
+                key.x + kbdPaddingLeft, key.y + kbdPaddingTop,
+                key.x + key.width + kbdPaddingLeft, key.y + key.height + kbdPaddingTop
+            )) { continue; }
             keysDrawn++;
             paint.setColor(key.isCursor ? mKeyCursorColor : mKeyTextColor);
             int[] drawableState = key.getCurrentDrawableState(); keyBackground.setState(drawableState);
@@ -459,7 +454,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
             if (yscale != 1.0f)  canvas.restore();
             boolean shouldDrawIcon = true;
             if (label != null) { final int labelSize;
-                final int centerX = (key.width + padding.left - padding.right) / 2; // orijnl
+                final int centerx = (key.width + padding.left - padding.right) / 2; // orijnl
                 final int lqpht_qks = padding.left * 2; // hksubord
                 if (label.length() > 1 && key.codes.length < 2)
                     {labelSize = (int)(mLabelTextSize * mLabelScale);paint.setTypeface(Typeface.DEFAULT);}
@@ -480,16 +475,16 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
 //                    int x = padding.left; // hksubord
                     x = (key.width + padding.left - padding.right) / 2;// hksubord
 //                    int baseline = padding.top + hintLabelHeight * 12/10; // orijnl
-                    x = centerX; x = lqpht_qks ;
+                    x = centerx; x = lqpht_qks ;
 //                    int baseline = key.height - hintLabelHeight * 12/10;//hksubord
                     float beslain = key.height - hintLabelHeight * 12/10;//hksubord
                     final float beslain_hint = beslain_lebql + hintLabelHeight * (hint.equals("") ? 14 : 26)/10;//hksubord
                     beslain = beslain_hint ; 
                     beslain = key.height - labelHeight;
                     if (Character.getType(hint.charAt(0)) == Character.NON_SPACING_MARK) {
-                        drawDeadKeyLabel(canvas, hint, centerX, beslain, paintHint);
+                        drawDeadKeyLabel(canvas, hint, centerx, beslain, paintHint);
                     }
-                    else canvas.drawText(hint, centerX, beslain, paintHint);
+                    else canvas.drawText(hint, centerx, beslain, paintHint);
                 }
                 String altHint = key.getAltHintLabel(showHints7Bit(), showHintsAll());
                 if (!altHint.equals("")) {
@@ -498,26 +493,26 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     paintHint.setTextSize(hintTextSize);
                     final int hintLabelHeight = getLabelHeight(paintHint, hintTextSize);
                     int x = key.width - padding.right;
-                    x = centerX; x = lqpht_qks ;
+                    x = centerx; x = lqpht_qks ;
 //                    int baseline = padding.top + hintLabelHeight * (hint.equals("") ? 12 : 26)/10; // orijnl
                     float beslain = key.height - hintLabelHeight * (hint.equals("") ? 12 : 26)/10; // hksubord
                     final float beslain_hint = beslain_lebql + hintLabelHeight * (hint.equals("") ? 12 : 26)/10;//hksubord
                     beslain = beslain_hint;  beslain = key.height - labelHeight;
                     if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
-                        drawDeadKeyLabel(canvas, altHint, centerX, beslain, paintHint);
-                    } else { canvas.drawText(altHint, centerX, beslain, paintHint); }
+                        drawDeadKeyLabel(canvas, altHint, centerx, beslain, paintHint);
+                    } else { canvas.drawText(altHint, centerx, beslain, paintHint); }
                 }
 
                 // Draw main key label
-//                final int centerX = padding.left ;
+//                final int centerx = padding.left ;
 //                 final int centerY = (key.height + padding.top - padding.bottom) / 2; // orijnl
 //                final float baseline = centerY + labelHeight * KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR; // orijnl
-                if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerX, beslain_lebql, paint);
-                else canvas.drawText(label, centerX, beslain_lebql, paint);
+                if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
+                else canvas.drawText(label, centerx, beslain_lebql, paint);
                 if (key.isCursor) {
                     paint.setShadowLayer(0, 0, 0, 0);
-                    canvas.drawText(label, centerX+0.5f, beslain_lebql, paint); canvas.drawText(label, centerX-0.5f, beslain_lebql, paint);
-                    canvas.drawText(label, centerX, beslain_lebql+0.5f, paint); canvas.drawText(label, centerX, beslain_lebql-0.5f, paint);
+                    canvas.drawText(label, centerx+0.5f, beslain_lebql, paint); canvas.drawText(label, centerx-0.5f, beslain_lebql, paint);
+                    canvas.drawText(label, centerx, beslain_lebql+0.5f, paint); canvas.drawText(label, centerx, beslain_lebql-0.5f, paint);
                 }
                 paint.setShadowLayer(0, 0, 0, 0);
                 shouldDrawIcon = shouldDrawLabelAndIcon(key);

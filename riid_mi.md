@@ -1,7 +1,7 @@
 # hpop
 qndroed popqp kibord klond &amp; cenjd phrom 
 [hqkqr's kiibord on gitHb onli](https://github.com/klausw/hackerskeyboard)
-![](https://i.pinimg.com/originals/f7/0d/ae/f70daee69cf53d101c1e5af0303aca52.gif)
+![](https://i.pinimg.com/originals/e8/e8/c8/e8e8c80df0952ad32725b24fdbaff83b.gif)
 [mor imejis qt:](https://pin.it/1ztSTHM)
 
 --------bilo tekst tu bi viyud in roboto_heks_jk.ttf phont--------

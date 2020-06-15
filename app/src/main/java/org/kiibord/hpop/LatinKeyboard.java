@@ -506,7 +506,7 @@ public class LatinKeyboard extends Keyboard {
             final float baseline = height * SPACEBAR_LANGUAGE_BASELINE;
             final float descent = paint.descent();
             paint.setColor(shadowColor);
-            canvas.drawText(language, width / 2, baseline - descent - 1, paint);
+            canvas.drawText(language, width / 2, baseline - descent - 1, paint); // language
             paint.setColor(mRes.getColor(R.color.latinkeyboard_dim_color_white));
 
             canvas.drawText(language, width / 2, baseline - descent, paint);

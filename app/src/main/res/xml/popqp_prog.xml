@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Keyboard xmlns:android="http://schemas.android.com/apk/res-auto" android:keyWidth="10%p" android:horizontalGap="0px"
     android:verticalGap="0px" android:keyHeight="@dimen/popup_key_height" >
-<!--     <Row android:rowEdgeFlags="top" >
-        <Key android:keyLabel=":" android:keyEdgeFlags="left" />
-        <Key android:keyLabel="/" />
-        <Key android:keyLabel="&amp;" />
-        <Key android:keyLabel="(" />
-        <Key android:keyLabel=")" />
-        <Key android:keyLabel="-" />
-        <Key android:keyLabel="+" android:keyEdgeFlags="right" />
-    </Row>
-    <Row android:rowEdgeFlags="bottom" >
-        <Key android:keyLabel=";" android:keyEdgeFlags="left" />
-        <Key android:keyLabel="\@" />
-        <Key android:keyLabel="\'" />
-        <Key android:keyLabel="&quot;" />
-        <Key android:keyLabel="\?" />
-        <Key android:keyLabel="!" />
-        <Key android:keyLabel="," android:keyEdgeFlags="right" />
-    </Row> -->
     <Row android:rowEdgeFlags="top" >
-        <Key android:keyLabel="1" android:keyEdgeFlags="left" />
-        <Key android:keyLabel="2" />
-        <Key android:keyLabel="3" />
+        <Key android:keyLabel="C" android:keyEdgeFlags="left" />
+        <Key android:keyLabel="E" />
+        <Key android:keyLabel="" />
         <Key android:keyLabel="4" />
         <Key android:keyLabel="5" />
         <Key android:keyLabel="6" />

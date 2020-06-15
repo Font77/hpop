@@ -3449,7 +3449,7 @@ public class LatinIME extends InputMethodService implements
         setNextSuggestions();
     }
 
-    private boolean isSuggestedPunctuation(int code) {
+private boolean isSuggestedPunctuation(int code) {
         return sKeyboardSettings.suggestedPunctuation.contains(String.valueOf((char) code));
     }
 
