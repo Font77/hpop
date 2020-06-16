@@ -3,8 +3,9 @@ qndroed popqp kibord klond &amp; cenjd phrom
 [hqkqr's kiibord on gitHb onli](https://github.com/klausw/hackerskeyboard)
 ![](https://i.pinimg.com/originals/e8/e8/c8/e8e8c80df0952ad32725b24fdbaff83b.gif)
 
+phrst pliij instal phont ( hao tu instal dipAnds on yuAr phon modAl)
 [1. daunlod & install roboto_heks_jk phont]( https://github.com/Font77/hpop/tree/master/app/src/main/res/font )
-[2. daulod hpop.apk & Dn instal on yuAr Androed mobail] (
+[2. daulod hpop.apk & Dn instal on yuAr Androed mobail] (https://github.com/Font77/hpop/tree/master/app/release)
 
 phonetiks
 ![](https://i.pinimg.com/originals/60/58/4c/60584c782e503836de8e6ad6a88da824.gif)
@@ -22,5 +23,6 @@ heksi translitresn_translesqn stqps:
 1) al smal kes ( kntrol u ) 2) w -> v , q->k , z->j 3) x->qks 
 4a) : -> A 4b) ; -> B 4c) < -> C 4d) = -> D 4e) > -> E 4e) ? -> F
 
+![heksifglish phonts](https://i.pinimg.com/originals/a6/c0/94/a6c094248a071ea0e99197429f6cfc03.gif)
 marketifg lifks:
 1. [heksadesiml marketifg qt plqrk](https://www.plurk.com/heksadesiml)
