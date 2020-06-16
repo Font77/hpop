@@ -2,6 +2,12 @@
 qndroed popqp kibord klond &amp; cenjd phrom 
 [hqkqr's kiibord on gitHb onli](https://github.com/klausw/hackerskeyboard)
 ![](https://i.pinimg.com/originals/e8/e8/c8/e8e8c80df0952ad32725b24fdbaff83b.gif)
+
+phonetiks
+![](https://i.pinimg.com/originals/60/58/4c/60584c782e503836de8e6ad6a88da824.gif)
+
+[pintrqst:] ( https://pin.it/18NqAVy)
+
 [mor imejis qt:](https://pin.it/1ztSTHM)
 
 --------bilo tekst tu bi viyud in roboto_heks_jk.ttf phont--------
