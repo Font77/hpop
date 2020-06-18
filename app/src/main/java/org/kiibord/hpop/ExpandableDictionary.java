@@ -219,25 +219,6 @@ public class ExpandableDictionary extends Dictionary {
         return (node == null) ? -1 : node.frequency;
     }
 
-    /**
-     * Recursively traverse the tree for words that match the input. Input consists of
-     * a list of arrays. Each item in the list is one input character position. An input
-     * character is actually an array of multiple possible candidates. This function is not
-     * optimized for speed, assuming that the user dictionary will only be a few hundred words in
-     * size.
-     * @param roots node whose children have to be search for matches
-     * @param codes the input character codes
-     * @param word the word being composed as a possible match
-     * @param depth the depth of traversal - the length of the word being composed thus far
-     * @param completion whether the traversal is now in completion mode - meaning that we've
-     * exhausted the input and we're looking for all possible suffixes.
-     * @param snr current weight of the word being formed
-     * @param inputIndex position in the input characters. This can be off from the depth in 
-     * case we skip over some punctuations such as apostrophe in the traversal. That is, if you type
-     * "wouldve", it could be matching "would've", so the depth will be one more than the
-     * inputIndex
-     * @param callback the callback class for adding a word
-     */
     protected void getWordsRec(NodeArray roots, final WordComposer codes, final char[] word, 
             final int depth, boolean completion, int snr, int inputIndex, int skipPos,
             WordCallback callback) {
