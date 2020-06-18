@@ -44,7 +44,7 @@ import java.util.WeakHashMap;
 
 import static org.kiibord.hpop.aski_hksu.aski_dijit_kya;
 public class LatinKeyboardBaseView extends View implements PointerTracker.UIProxy {
-    private static final String TAG = "HK/LatinKbdBaseView";
+    private static final String TAG = "hpop_tag";
     private static final boolean DEBUG = false;
     public static final int NOT_A_TOUCH_COORDINATE = -1;
     public interface OnKeyboardActionListener {
@@ -455,6 +455,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
             boolean shouldDrawIcon = true;
             if (label != null) { final int labelSize;
                 final int centerx = (key.width + padding.left - padding.right) / 2; // orijnl
+                final int centerxhint = padding.left ; // (key.width + padding.left - padding.right) / 2; // orijnl
+                final int centerx_alt_hint = padding.left ; // (key.width + padding.left - padding.right) / 2; // orijnl
                 final int lqpht_qks = padding.left * 2; // hksubord
                 if (label.length() > 1 && key.codes.length < 2)
                     {labelSize = (int)(mLabelTextSize * mLabelScale);paint.setTypeface(Typeface.DEFAULT);}
@@ -481,10 +483,15 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     final float beslain_hint = beslain_lebql + hintLabelHeight * (hint.equals("") ? 14 : 26)/10;//hksubord
                     beslain = beslain_hint ; 
                     beslain = key.height - labelHeight;
+                    Log.i(TAG, "centerxhint = " + centerxhint);
+                    Log.i(TAG, "hint = " + hint);
+                    Log.i(TAG, "beslain = " + beslain);
+                    Log.i(TAG, "key.height = " + key.height);
+                    Log.i(TAG, "mKeyTextSize = " + mKeyTextSize);
                     if (Character.getType(hint.charAt(0)) == Character.NON_SPACING_MARK) {
-                        drawDeadKeyLabel(canvas, hint, centerx, beslain, paintHint);
+                        drawDeadKeyLabel(canvas, hint, centerxhint, beslain, paintHint);
                     }
-                    else canvas.drawText(hint, centerx, beslain, paintHint);
+                    else canvas.drawText(hint, centerxhint, beslain, paintHint);
                 }
                 String altHint = key.getAltHintLabel(showHints7Bit(), showHintsAll());
                 if (!altHint.equals("")) {
@@ -498,15 +505,25 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     float beslain = key.height - hintLabelHeight * (hint.equals("") ? 12 : 26)/10; // hksubord
                     final float beslain_hint = beslain_lebql + hintLabelHeight * (hint.equals("") ? 12 : 26)/10;//hksubord
                     beslain = beslain_hint;  beslain = key.height - labelHeight;
+                    Log.i(TAG, "centerx_alt_hint = " + centerx_alt_hint);
+                    Log.i(TAG, "altHint = " + altHint);
+                    Log.i(TAG, "beslain = " + beslain);
+                    Log.i(TAG, "key.height = " + key.height);
+                    Log.i(TAG, "mKeyTextSize = " + mKeyTextSize);
                     if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
-                        drawDeadKeyLabel(canvas, altHint, centerx, beslain, paintHint);
-                    } else { canvas.drawText(altHint, centerx, beslain, paintHint); }
+                        drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain, paintHint);
+                    } else { canvas.drawText(altHint, centerx_alt_hint, beslain, paintHint); }
                 }
 
                 // Draw main key label
 //                final int centerx = padding.left ;
 //                 final int centerY = (key.height + padding.top - padding.bottom) / 2; // orijnl
 //                final float baseline = centerY + labelHeight * KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR; // orijnl
+                Log.i(TAG, "centerx = " + centerx);
+                Log.i(TAG, "label = " + label);
+                Log.i(TAG, "beslain_lebql = " + beslain_lebql);
+                Log.i(TAG, "key.height = " + key.height);
+                Log.i(TAG, "mKeyTextSize = " + mKeyTextSize);
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);
                 if (key.isCursor) {
