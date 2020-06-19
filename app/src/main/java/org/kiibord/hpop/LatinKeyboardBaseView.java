@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BlurMaskFilter;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
@@ -524,7 +525,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 Log.i(TAG, "beslain_lebql = " + beslain_lebql);
                 Log.i(TAG, "key.height = " + key.height);
                 Log.i(TAG, "mKeyTextSize = " + mKeyTextSize);
-                paint.setColor(0xffff0000);  // hksu
+                if(i>9 && i<20)
+                    paint.setColor(Color.RED);
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);
                 if (key.isCursor) {
@@ -567,7 +569,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     icon.draw(canvas);
                     icon.setColorFilter(null);
                 } else {
-                    icon.draw(canvas);                    
+                    icon.draw(canvas);
                 }
                 canvas.translate(-drawableX, -drawableY);
             }
@@ -651,7 +653,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         int popupWidth = Math.max(mPreviewText.getMeasuredWidth(), key.width + mPreviewText.getPaddingLeft() + mPreviewText.getPaddingRight());
         final int popupHeight = mPreviewHeight;
         LayoutParams lp = mPreviewText.getLayoutParams();
-        if (lp != null) { lp.width = popupWidth; lp.height = popupHeight; } 
+        if (lp != null) { lp.width = popupWidth; lp.height = popupHeight; }
         int popupPreviewX = key.x - (popupWidth - key.width) / 2;
         int popupPreviewY = key.y - popupHeight + mPreviewOffset;
         mHandler.cancelDismissPreview();
@@ -691,7 +693,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 key.x + key.width + getPaddingLeft(), key.y + key.height + getPaddingTop());
     }
     private boolean openPopupIfRequired(int keyIndex, PointerTracker tracker) {
-        if (mPopupLayout == 0) { return false; } 
+        if (mPopupLayout == 0) { return false; }
         Key popupKey = tracker.getKey(keyIndex);
         if (popupKey == null) return false;
         if (tracker.isInSlidingKeyInput()) return false;
@@ -710,8 +712,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 mKeyboardActionListener.onKey(primaryCode, keyCodes, x, y);
                 dismissPopupKeyboard();
             }
-            public void onText(CharSequence text) { mKeyboardActionListener.onText(text); dismissPopupKeyboard(); } 
-            public void onCancel() { mKeyboardActionListener.onCancel(); dismissPopupKeyboard(); } 
+            public void onText(CharSequence text) { mKeyboardActionListener.onText(text); dismissPopupKeyboard(); }
+            public void onCancel() { mKeyboardActionListener.onCancel(); dismissPopupKeyboard(); }
             public boolean swipeLeft() { return false; }
             public boolean swipeRight() { return false; }
             public boolean swipeUp() { return false; }
