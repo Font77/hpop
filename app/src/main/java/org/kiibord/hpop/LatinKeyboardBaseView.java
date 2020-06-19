@@ -44,6 +44,7 @@ import java.util.List;
 import java.util.WeakHashMap;
 
 import static org.kiibord.hpop.aski_hksu.aski_dijit_kya;
+
 public class LatinKeyboardBaseView extends View implements PointerTracker.UIProxy {
     private static final String TAG = "hpop_tag";
     private static final boolean DEBUG = false;
@@ -106,7 +107,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
     private Canvas mCanvas; private final Paint mPaint; private final Paint mPaintHint;
     private final Rect mPadding; private final Rect mClipRegion = new Rect(0, 0, 0, 0); private int mViewWidth;
     private final HashMap<Integer, Integer> mTextHeightCache = new HashMap<Integer, Integer>();
-    private final float KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR = 1.55f; // hksu_
+    private final float KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR = 1.55f; // pij
 //    private final float KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR = 0.55f; // orijnql
     private final String KEY_LABEL_HEIGHT_REFERENCE_CHAR = "H";
     /* package */ static Method sSetRenderMode;
