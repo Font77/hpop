@@ -524,6 +524,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 Log.i(TAG, "beslain_lebql = " + beslain_lebql);
                 Log.i(TAG, "key.height = " + key.height);
                 Log.i(TAG, "mKeyTextSize = " + mKeyTextSize);
+                paint.setColor(0xffff0000);  // hksu
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);
                 if (key.isCursor) {
