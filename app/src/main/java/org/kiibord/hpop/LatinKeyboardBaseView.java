@@ -429,6 +429,9 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         mKeyTextSize = Math.min(medianKeyHeight * 6 / 10, medianKeyWidth * 6 / 10);
         mLabelTextSize = mKeyTextSize * 3 / 4;
         int keysDrawn = 0;
+        Paint paint_red = new Paint();
+        paint_red.setColor(Color.RED);
+        paint_red.setStyle(Paint.Style.FILL);
         for (int i = 0; i < keyCount; i++) {
             final Key key = keys[i];
             if (drawSingleKey && invalidKey != key) continue;
@@ -522,14 +525,20 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 Log.i(TAG, "beslain_lebql = " + beslain_lebql);
                 Log.i(TAG, "key.height = " + key.height);
                 Log.i(TAG, "mkeytextsize = " + mKeyTextSize);
-                if(i>9 && i<20)
-                    paint.setColor(Color.BLACK);
+                if(i>9 && i<20) {
+//                    canvas.drawPaint(paint_red);
+                    paint.setColor(0xFFFF7777); // darkred
+                    paint.setTypeface(Typeface.DEFAULT_BOLD);
+                    //paint.set
+                }
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);
                 if (key.isCursor) {
                     paint.setShadowLayer(0, 0, 0, 0);
-                    canvas.drawText(label, centerx+0.5f, beslain_lebql, paint); canvas.drawText(label, centerx-0.5f, beslain_lebql, paint);
-                    canvas.drawText(label, centerx, beslain_lebql+0.5f, paint); canvas.drawText(label, centerx, beslain_lebql-0.5f, paint);
+                    canvas.drawText(label, centerx+0.5f, beslain_lebql, paint);
+                    canvas.drawText(label, centerx-0.5f, beslain_lebql, paint);
+                    canvas.drawText(label, centerx, beslain_lebql+0.5f, paint);
+                    canvas.drawText(label, centerx, beslain_lebql-0.5f, paint);
                 }
                 paint.setShadowLayer(0, 0, 0, 0);
                 shouldDrawIcon = shouldDrawLabelAndIcon(key);

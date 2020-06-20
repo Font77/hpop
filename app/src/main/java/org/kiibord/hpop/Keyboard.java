@@ -416,7 +416,7 @@ public class Keyboard {
                 if (popup.length() > 1) {
                     char c = popup.charAt(1);
                     if (wantAll || wantAscii && is7BitAscii(c)) {
-                        altHint += c;
+                        altHint = altHint + " " + c;
                     }
                 }
             }
