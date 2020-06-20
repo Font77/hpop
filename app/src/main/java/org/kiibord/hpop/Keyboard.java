@@ -413,6 +413,12 @@ public class Keyboard {
                         altHint = Character.toString(c);
                     }
                 }
+                if (popup.length() > 1) {
+                    char c = popup.charAt(1);
+                    if (wantAll || wantAscii && is7BitAscii(c)) {
+                        altHint += c;
+                    }
+                }
             }
             return altHint;
         }

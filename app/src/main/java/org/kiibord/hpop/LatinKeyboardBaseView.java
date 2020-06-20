@@ -457,8 +457,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
             boolean shouldDrawIcon = true;
             if (label != null) { final int labelSize;
                 final int centerx = (key.width + padding.left - padding.right) / 2; // orijnl
-                final int centerxhint = padding.left ; // (key.width + padding.left - padding.right) / 2; // orijnl
-                final int centerx_alt_hint = padding.left ; // (key.width + padding.left - padding.right) / 2; // orijnl
+                final int centerxhint = 2*padding.left ; // (key.width + padding.left - padding.right) / 2; // orijnl
+                final int centerx_alt_hint = 2*padding.left ; // (key.width + padding.left - padding.right) / 2; // orijnl
                 final int lqpht_qks = padding.left * 2; // hksubord
                 if (label.length() > 1 && key.codes.length < 2)
                     {labelSize = (int)(mLabelTextSize * mLabelScale);paint.setTypeface(Typeface.DEFAULT);}
@@ -477,12 +477,12 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     final int hintLabelHeight = getLabelHeight(paintHint, hintTextSize);
                     int x = key.width - padding.right; // orijnl
 //                    int x = padding.left; // hksubord
-                    x = (key.width + padding.left - padding.right) / 2;// hksubord
+                    x = (key.width + padding.left - padding.right) / 2;// pij
 //                    int baseline = padding.top + hintLabelHeight * 12/10; // orijnl
                     x = centerx; x = lqpht_qks ;
-//                    int baseline = key.height - hintLabelHeight * 12/10;//hksubord
-                    float beslain = key.height - hintLabelHeight * 12/10;//hksubord
-                    final float beslain_hint = beslain_lebql + hintLabelHeight * (hint.equals("") ? 14 : 26)/10;//hksubord
+//                    int baseline = key.height - hintLabelHeight * 12/10;//pij
+                    float beslain = key.height - hintLabelHeight * 12/10;//pij
+                    final float beslain_hint = key.height - labelHeight/2 ; // beslain_lebql + hintLabelHeight * (hint.equals("") ? 14 : 26)/10;//hksubord
                     beslain = beslain_hint ; 
                     beslain = key.height - labelHeight;
                     Log.i(TAG, "centerxhint = " + centerxhint);
@@ -491,9 +491,9 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     Log.i(TAG, "key.height = " + key.height);
                     Log.i(TAG, "mKeyTextSize = " + mKeyTextSize);
                     if (Character.getType(hint.charAt(0)) == Character.NON_SPACING_MARK) {
-                        drawDeadKeyLabel(canvas, hint, centerxhint, beslain, paintHint);
+                        drawDeadKeyLabel(canvas, hint, centerxhint, beslain_hint, paintHint);
                     }
-                    else canvas.drawText(hint, centerxhint, beslain, paintHint);
+                    else canvas.drawText(hint, centerxhint, beslain_hint, paintHint);
                 }
                 String altHint = key.getAltHintLabel(showHints7Bit(), showHintsAll());
                 if (!altHint.equals("")) {
@@ -505,29 +505,25 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     x = centerx; x = lqpht_qks ;
 //                    int baseline = padding.top + hintLabelHeight * (hint.equals("") ? 12 : 26)/10; // orijnl
                     float beslain = key.height - hintLabelHeight * (hint.equals("") ? 12 : 26)/10; // hksubord
-                    final float beslain_hint = beslain_lebql + hintLabelHeight * (hint.equals("") ? 12 : 26)/10;//hksubord
-                    beslain = beslain_hint;  beslain = key.height - labelHeight;
+                    final float beslain_alt_hint = key.height - labelHeight/2 ; // beslain_lebql + hintLabelHeight * (hint.equals("") ? 12 : 26)/10;//hksubord
+                    beslain = beslain_alt_hint;
+                    beslain = key.height - labelHeight;
                     Log.i(TAG, "centerx_alt_hint = " + centerx_alt_hint);
                     Log.i(TAG, "altHint = " + altHint);
                     Log.i(TAG, "beslain = " + beslain);
                     Log.i(TAG, "key.height = " + key.height);
                     Log.i(TAG, "mKeyTextSize = " + mKeyTextSize);
                     if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
-                        drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain, paintHint);
-                    } else { canvas.drawText(altHint, centerx_alt_hint, beslain, paintHint); }
+                        drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
+                    } else { canvas.drawText(altHint, centerx_alt_hint, beslain_alt_hint, paintHint); }
                 }
-
-                // Draw main key label
-//                final int centerx = padding.left ;
-//                 final int centerY = (key.height + padding.top - padding.bottom) / 2; // orijnl
-//                final float baseline = centerY + labelHeight * KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR; // orijnl
                 Log.i(TAG, "centerx = " + centerx);
                 Log.i(TAG, "label = " + label);
                 Log.i(TAG, "beslain_lebql = " + beslain_lebql);
                 Log.i(TAG, "key.height = " + key.height);
-                Log.i(TAG, "mKeyTextSize = " + mKeyTextSize);
+                Log.i(TAG, "mkeytextsize = " + mKeyTextSize);
                 if(i>9 && i<20)
-                    paint.setColor(Color.RED);
+                    paint.setColor(Color.BLACK);
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);
                 if (key.isCursor) {
