@@ -31,9 +31,9 @@
         <Key android:keyLabel="j" android:popupCharacters="UY+-XL/" />
         <Key android:keyLabel="t" android:popupCharacters="\@#$%" />
         <Key android:keyLabel="d" android:popupCharacters="}{[]|!\" />
-        <Key android:keyLabel="x" android:popupCharacters="-+*/LX" />
+        <Key android:keyLabel="x" android:popupCharacters="_X-+*/L^|&amp;~" />
         <Key android:keyLabel="w" android:popupCharacters="`~Z^'&quot;" />
-        <Key android:keyLabel="p" android:popupCharacters="+-SXL%/N" />
+        <Key android:keyLabel="p" android:popupCharacters="+_-SXL%/N" />
         <Key android:keyLabel="b" android:popupCharacters="&amp;%$#" android:keyEdgeFlags="right" />
     </Row>
     <Row>
