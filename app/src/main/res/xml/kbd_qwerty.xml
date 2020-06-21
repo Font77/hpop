@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Keyboard xmlns:android="http://schemas.android.com/apk/res-auto" android:keyWidth="10%p" android:horizontalGap="0px" android:verticalGap="@dimen/key_bottom_gap">
-    <Row android:extension="true">
+    <!--<Row android:extension="true">
         <Key android:keyLabel="1" android:shiftLabel="!" />
         <Key android:keyLabel="2" android:shiftLabel="\@" />
         <Key android:keyLabel="3" android:shiftLabel="\#" />
@@ -11,11 +11,11 @@
         <Key android:keyLabel="8" android:shiftLabel="&quot;" />
         <Key android:keyLabel="|" android:shiftLabel="/" />
         <Key android:keyLabel="^" android:shiftLabel="\?" />
-    </Row>    
+    </Row>    -->
     <Row>
-        <Key android:keyLabel="q" android:popupCharacters="CEDJKQRZ" android:keyEdgeFlags="left" />
-        <Key android:keyLabel="a" android:popupCharacters="JK[]{}()" />
-        <Key android:keyLabel="i" android:popupCharacters="QROP" />
+        <Key android:keyLabel="q" android:popupCharacters="ECDJKQRZ" android:keyEdgeFlags="left" />
+        <Key android:keyLabel="a" android:popupCharacters="KJ[]{}()" />
+        <Key android:keyLabel="i" android:popupCharacters="RQOP" />
         <Key android:keyLabel="u" android:popupCharacters="GH~^*Z`'&quot;/\JKVW" />
         <Key android:keyLabel="e" android:popupCharacters="~ZIABCDEF" />
         <Key android:keyLabel="o" android:popupCharacters="IOP" />
@@ -27,10 +27,10 @@
     <Row>
         <Key android:keyLabel="k" android:popupCharacters="F^`~'&quot;" android:keyEdgeFlags="left"/>
         <Key android:keyLabel="g" android:popupCharacters="GHDVW" />
-        <Key android:keyLabel="c" android:popupCharacters="VW.A,B!F" />
+        <Key android:keyLabel="c" android:popupCharacters="VOWP.A,B!F" />
         <Key android:keyLabel="j" android:popupCharacters="UY+-XL/" />
         <Key android:keyLabel="t" android:popupCharacters="\@#$%" />
-        <Key android:keyLabel="d" android:popupCharacters="{}[]|!\" />
+        <Key android:keyLabel="d" android:popupCharacters="}{[]|!\" />
         <Key android:keyLabel="x" android:popupCharacters="-+*/LX" />
         <Key android:keyLabel="w" android:popupCharacters="`~Z^'&quot;" />
         <Key android:keyLabel="p" android:popupCharacters="~Z" />
@@ -42,7 +42,7 @@
         <Key android:keyLabel="r" android:popupCharacters="-" />
         <Key android:keyLabel="l" android:popupCharacters="X" />
         <Key android:keyLabel="v" android:popupCharacters="L" />
-        <Key android:keyLabel="m" android:popupCharacters="/\\|![]" />
+        <Key android:keyLabel="m" android:popupCharacters="/F\\|![]" />
         <Key android:keyLabel="n" android:popupCharacters="QCER" />
         <Key android:keyLabel="!" android:popupCharacters="|^&quot;'" />
         <Key android:keyLabel="_" android:popupCharacters="D-GH" />
@@ -117,7 +117,6 @@
         <Key android:keyLabel="." android:keyIcon="@drawable/hint_popup" android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" />
         <Key android:codes="@integer/key_return" android:keyIcon="@drawable/sym_keyboard_return" android:iconPreview="@drawable/sym_keyboard_feedback_return" android:isModifier="true" 
         android:keyWidth="10%p" android:keyEdgeFlags="right" />
-        <!-- android:keyWidth="25%p" android:keyEdgeFlags="right" /> -->
     </Row>
     <Row android:keyboardMode="@+id/mode_im_with_settings_key" android:rowEdgeFlags="bottom">
         <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="15%p" android:isModifier="true" android:keyEdgeFlags="left" />

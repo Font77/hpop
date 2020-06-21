@@ -390,17 +390,9 @@ public class Keyboard {
             }
         }
         public String getHintLabel(boolean wantAscii, boolean wantAll) {
-            if (hint == null) {
-                hint = "";
-                if (shiftLabel != null 
-                // && !isSimpleUppercase
-                ) {
-                    char c = shiftLabel.charAt(0);
-                    if (wantAll || wantAscii && is7BitAscii(c)) {
-                        hint = Character.toString(c);
-                    }
-                }
-            }
+            if (hint == null) { hint = "";if (shiftLabel != null) { char c = shiftLabel.charAt(0);
+                if (wantAll || wantAscii && is7BitAscii(c)) hint = Character.toString(c);
+            }}
             return hint;
         }
         public String getAltHintLabel(boolean wantAscii, boolean wantAll) {
@@ -416,7 +408,7 @@ public class Keyboard {
                 if (popup.length() > 1) {
                     char c = popup.charAt(1);
                     if (wantAll || wantAscii && is7BitAscii(c)) {
-                        altHint = altHint + " " + c;
+                        altHint = altHint + c;
                     }
                 }
             }
