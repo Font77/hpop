@@ -40,8 +40,7 @@ public final class GlobalKeyboardSettings {
     public boolean showTouchPos = false;
     //
     // Read by LatinIME
-    public String suggestedPunctuation = "0123456789:;<=>?";
-//    public String suggestedPunctuation = "!?,.";
+    public String suggestedPunctuation = "0123456789:;<=>?"; // public String suggestedPunctuation = "!?,.";
     public int keyboardModePortrait = 0;
     public int keyboardModeLandscape = 2;
     public boolean compactModeEnabled = true;  // always on

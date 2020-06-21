@@ -288,11 +288,14 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 int travelX = getWidth() / 3;int travelY = getHeight() / 3;int travelMin = Math.min(travelX, travelY);
                 if (velocityX > mSwipeThreshold && absY < absX && deltaX > travelMin) {
                     if (mDisambiguateSwipe && endingVelocityX >= velocityX / 4 && swipeRight()) return true;
-                } else if (velocityX < -mSwipeThreshold && absY < absX && deltaX < -travelMin) {
+                }
+                else if (velocityX < -mSwipeThreshold && absY < absX && deltaX < -travelMin) {
                     if (mDisambiguateSwipe && endingVelocityX <= velocityX / 4 && swipeLeft()) return true;
-                } else if (velocityY < -mSwipeThreshold && absX < absY && deltaY < -travelMin) {
+                }
+                else if (velocityY < -mSwipeThreshold && absX < absY && deltaY < -travelMin) {
                     if (mDisambiguateSwipe && endingVelocityY <= velocityY / 4 && swipeUp()) return true;
-                } else if (velocityY > mSwipeThreshold && absX < absY / 2 && deltaY > travelMin) {
+                }
+                else if (velocityY > mSwipeThreshold && absX < absY / 2 && deltaY > travelMin) {
                     if (mDisambiguateSwipe && endingVelocityY >= velocityY / 4 && swipeDown()) return true;
                 }
                 return false;

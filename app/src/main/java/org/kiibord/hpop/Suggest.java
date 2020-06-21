@@ -1,21 +1,4 @@
-/*
- * Copyright (C) 2008 The Android Open Source Project
- * 
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- * 
- * http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package org.kiibord.hpop;
-
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,13 +11,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
-/**
- * This class loads a dictionary and provides a list of suggestions for a given sequence of 
- * characters. This includes corrections and completions.
- * @hide pending API Council Approval
- */
 public class Suggest implements Dictionary.WordCallback {
-	private static String TAG = "PCKeyboard";
+	private static String TAG = "hpop"; //"PCKeyboard";
 	
     public static final int APPROX_MAX_WORD_LENGTH = 32;
 
@@ -42,31 +20,16 @@ public class Suggest implements Dictionary.WordCallback {
     public static final int CORRECTION_BASIC = 1;
     public static final int CORRECTION_FULL = 2;
     public static final int CORRECTION_FULL_BIGRAM = 3;
-
-    /**
-     * Words that appear in both bigram and unigram data gets multiplier ranging from
-     * BIGRAM_MULTIPLIER_MIN to BIGRAM_MULTIPLIER_MAX depending on the frequency score from
-     * bigram data.
-     */
     public static final double BIGRAM_MULTIPLIER_MIN = 1.2;
     public static final double BIGRAM_MULTIPLIER_MAX = 1.5;
-
-    /**
-     * Maximum possible bigram frequency. Will depend on how many bits are being used in data
-     * structure. Maximum bigram freqeuncy will get the BIGRAM_MULTIPLIER_MAX as the multiplier.
-     */
     public static final int MAXIMUM_BIGRAM_FREQUENCY = 127;
-
     public static final int DIC_USER_TYPED = 0;
     public static final int DIC_MAIN = 1;
     public static final int DIC_USER = 2;
     public static final int DIC_AUTO = 3;
     public static final int DIC_CONTACTS = 4;
-    // If you add a type of dictionary, increment DIC_TYPE_LAST_ID
     public static final int DIC_TYPE_LAST_ID = 4;
-
     static final int LARGE_DICTIONARY_THRESHOLD = 200 * 1000;
-
     private BinaryDictionary mMainDict;
 
     private Dictionary mUserDictionary;
