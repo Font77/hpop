@@ -1,14 +1,15 @@
 # hpop
 qndroed popqp kibord klond &amp; cenjd phrom 
-[hqkqr's kiibord on gitHb onli](https://github.com/klausw/hackerskeyboard)
+[hpop kiibord on gitHb onli](https://github.com/klausw/hackerskeyboard)
 ![](https://i.pinimg.com/originals/e8/e8/c8/e8e8c80df0952ad32725b24fdbaff83b.gif)
+![](https://photos.app.goo.gl/xb4q21EsQ6yWAo6m7)
 
 phrst pliij instal phont ( hao tu instal dipAnds on yuAr phon modAl)
 [1. daunlod & install roboto_heks_jk phont]( https://github.com/Font77/hpop/tree/master/app/src/main/res/font )
 [2. daulod hpop.apk & Dn instal on yuAr Androed mobail] (https://github.com/Font77/hpop/tree/master/app/release)
 
 phonetiks
-![](https://i.pinimg.com/originals/60/58/4c/60584c782e503836de8e6ad6a88da824.gif)
+![](https://photos.app.goo.gl/xb4q21EsQ6yWAo6m7)
 
 [pintrqst:] ( https://pin.it/18NqAVy)
 
