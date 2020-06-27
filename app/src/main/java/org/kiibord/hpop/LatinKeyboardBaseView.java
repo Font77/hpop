@@ -479,8 +479,6 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 if (!hint.equals("") && !(key.isShifted() && key.shiftLabel != null && hint.charAt(0) == key.shiftLabel.charAt(0))) {
                     int hintTextSize = (int)(mKeyTextSize * mLabelScale);
                     paintHint.setTextSize(hintTextSize);
-//                    final int hintLabelHeight = getLabelHeight(paintHint, hintTextSize);
-//                    int x = key.width - padding.right; // orijnl
                     final float beslain_hint = key.height - labelHeight/2 ;
                     if (Character.getType(hint.charAt(0)) == Character.NON_SPACING_MARK) {
                         drawDeadKeyLabel(canvas, hint, centerxhint, beslain_hint, paintHint);
@@ -496,8 +494,14 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                         drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
                     } else { canvas.drawText(altHint, centerx_alt_hint, beslain_alt_hint, paintHint); }
                 }
-//                Log.i(TAG, "centerx = " + centerx);Log.i(TAG, "label = " + label);Log.i(TAG, "beslain_lebql = " + beslain_lebql);Log.i(TAG, "key.height = " + key.height);Log.i(TAG, "mkeytextsize = " + mKeyTextSize);
-                if(i>9 && i<20) { paint.setColor(0xFFFF7777);paint.setTypeface(Typeface.DEFAULT_BOLD); }
+//                if(i>9 && i<20) { paint.setColor(0xFFFF7777);paint.setTypeface(Typeface.DEFAULT_BOLD); }
+                switch (label.charAt(0))
+                {
+                    case 'k': case 'g': case 'c': case 'j': case 't': case 'd': case 'x':
+                    case 'w': case 'p': case 'b': case 's':
+                        paint.setColor(0xFFFF7777);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
+                    case '_': paint.setColor(0xFF7777FF);paint.setTypeface(Typeface.DEFAULT_BOLD);
+                }
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);
                 if (key.isCursor) {
