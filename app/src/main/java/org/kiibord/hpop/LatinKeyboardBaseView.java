@@ -476,7 +476,10 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 final float beslain_lebql = top_y + labelHeight * KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR; // pij
                 paint.setShadowLayer(mShadowRadius, 0, 0, mShadowColor);
                 String hint = key.getHintLabel(showHints7Bit(), showHintsAll());
-                if (!hint.equals("") && !(key.isShifted() && key.shiftLabel != null && hint.charAt(0) == key.shiftLabel.charAt(0))) {
+                if (!hint.equals("")
+//                    &&
+//                    !(key.isShifted() && key.shiftLabel != null && hint.charAt(0) == key.shiftLabel.charAt(0))
+                ) {
                     int hintTextSize = (int)(mKeyTextSize * mLabelScale);
                     paintHint.setTextSize(hintTextSize);
                     final float beslain_hint = key.height - labelHeight/2 ;

@@ -7,10 +7,12 @@ public class aski_hksu {
     }
     public static boolean is7BitAscii(char c) {
         if (
-           // (c >= 'A' && c <= 'Z') || 
            (c > 0x60 && c < 0x7b)
         ) return false;
         return c > 0x1f && c < 0x7f;
+    }
+    public static boolean printebl_kya(char c) {
+        return c > 0x20 && c < 0x7f;
     }
     public static boolean voes_or_dijit_kya(char c) {
         return (

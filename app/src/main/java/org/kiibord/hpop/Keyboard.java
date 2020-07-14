@@ -19,6 +19,7 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 import static org.kiibord.hpop.aski_hksu.is7BitAscii;
+import static org.kiibord.hpop.aski_hksu.printebl_kya;
 
 public class Keyboard {
     static final String TAG = "Keyboard";
@@ -391,24 +392,20 @@ public class Keyboard {
         }
         public String getHintLabel(boolean wantAscii, boolean wantAll) {
             if (hint == null) { hint = "";if (shiftLabel != null) { char c = shiftLabel.charAt(0);
-                if (wantAll || wantAscii && is7BitAscii(c)) hint = Character.toString(c);
+                if (wantAll || wantAscii && printebl_kya(c)) hint = Character.toString(c);
             }}
             return hint;
         }
         public String getAltHintLabel(boolean wantAscii, boolean wantAll) {
-            if (altHint == null) {
-                altHint = "";
+            if (altHint == null) { altHint = "";
                 String popup = getPopupKeyboardContent( false, false);
-                if (popup.length() > 0) {
-                    char c = popup.charAt(0);
-                    if (wantAll || wantAscii && is7BitAscii(c)) {
-                        altHint = Character.toString(c);
-                    }
-                }
-                if (popup.length() > 1) {
-                    char c = popup.charAt(1);
-                    if (wantAll || wantAscii && is7BitAscii(c)) {
-                        altHint = altHint + c;
+                if (popup.length() > 0) { char c = popup.charAt(0);
+                    if (wantAll || wantAscii && printebl_kya(c)) altHint = Character.toString(c);
+                    if (popup.length() > 1) { c = popup.charAt(1);
+                        if (wantAll || wantAscii && printebl_kya(c)) altHint = altHint + c;
+                        if (popup.length() > 2) { c = popup.charAt(2);
+                            if (wantAll || wantAscii && printebl_kya(c)) altHint = altHint + c;
+                        }
                     }
                 }
             }
@@ -463,30 +460,11 @@ public class Keyboard {
         }
         public int[] getCurrentDrawableState() {
             int[] states = KEY_STATE_NORMAL;
-            if (locked) {
-                if (pressed) {
-                    states = KEY_STATE_PRESSED_LOCK;
-                } else {
-                    states = KEY_STATE_NORMAL_LOCK;
-                }
-            } else if (on) {
-                if (pressed) {
-                    states = KEY_STATE_PRESSED_ON;
-                } else {
-                    states = KEY_STATE_NORMAL_ON;
-                }
-            } else {
-                if (sticky) {
-                    if (pressed) {
-                        states = KEY_STATE_PRESSED_OFF;
-                    } else {
-                        states = KEY_STATE_NORMAL_OFF;
-                    }
-                } else {
-                    if (pressed) {
-                        states = KEY_STATE_PRESSED;
-                    }
-                }
+            if (locked) if (pressed) states = KEY_STATE_PRESSED_LOCK; else states = KEY_STATE_NORMAL_LOCK;
+            else if (on) if (pressed) states = KEY_STATE_PRESSED_ON; else states = KEY_STATE_NORMAL_ON;
+            else {
+                if (sticky) if (pressed) states = KEY_STATE_PRESSED_OFF; else states = KEY_STATE_NORMAL_OFF;
+                else if (pressed) states = KEY_STATE_PRESSED;
             }
             return states;
         }
