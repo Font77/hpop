@@ -503,7 +503,10 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     case 'k': case 'g': case 'c': case 'j': case 't': case 'd': case 'x':
                     case 'w': case 'p': case 'b': case 's':
                         paint.setColor(0xFFFF7777);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
-                    case '_': paint.setColor(0xFF7777FF);paint.setTypeface(Typeface.DEFAULT_BOLD);
+                    case '_':
+                        paint.setColor(0xFF7777FF);
+                        paint.setTypeface(Typeface.DEFAULT_BOLD);
+                        break;
                 }
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);

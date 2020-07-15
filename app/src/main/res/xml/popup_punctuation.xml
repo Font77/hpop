@@ -9,7 +9,9 @@
         <Key android:keyLabel="5" />
         <Key android:keyLabel="6" />
         <Key android:keyLabel="7" />
-        <Key android:keyLabel="8" android:keyEdgeFlags="right" />
+        <Key android:keyLabel="8" />
+        <Key android:keyLabel="." />
+        <Key android:keyLabel="-" android:keyEdgeFlags="right" />
     </Row>
     <Row android:rowEdgeFlags="bottom" >
         <Key android:keyLabel="9" android:keyEdgeFlags="left" />
@@ -19,6 +21,8 @@
         <Key android:keyLabel="=" />
         <Key android:keyLabel="&gt;" />
         <Key android:keyLabel="\?" />
-        <Key android:keyLabel="0" android:keyEdgeFlags="right" />
+        <Key android:keyLabel="0" />
+        <Key android:keyLabel="N" />
+        <Key android:keyLabel="," android:keyEdgeFlags="right" />
     </Row>
 </Keyboard>
