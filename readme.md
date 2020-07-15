@@ -25,15 +25,21 @@ heksi translitresn_translesqn stqps:
 4a) : -> A 4b) ; -> B 4c) < -> C 4d) = -> D 4e) > -> E 4e) ? -> F
 
 heksa_bainri vi kaunt on phiNgArs.Thmb is yujd tu sho & haid.
+hpop smal_kes_onli kiibord :
 
+vn_1) onli phur smal_kes roboto_heks_jk/zk/jq/zq phonts heksifglish
+tu_2) 2 minu kiij tu suport mintos ( minu tri opretifg sistm)
+ a) phfksnl minu ki b) objqkt minu ki
+xhri_3 Thri_3) qndqrskor is gud phur programifg. kqmql_kes & qpqr_kes not gud
+phor_4) GZ not weyr. riplesd bai gud simbqls phur modqrn programifg lqfgyuejis laik html5 javaskript templet_programifg
+phaiv_5) heksadesiml nmbrs
+
+[vn_1] (github.com/Font77/hpop)
+[tu_2] (github.com/Font77/hpop/tree/master/app/src/main/res/font)
+[Thri_3] (vk.com/etphor)
+[phor_4] (heksinglish.tumblr.com)
+[phaiv_5] (linkedin.com/in/vnti10vnso100)
+[siks_6] (en.wikipedia.org/wiki/Subject%E2%80%93object%E2%80%93verb)
+[seven_7] (heksadesiml.blogspot.com)
+[et_8] (reddit.com/user/heksadesiml)
 ![heksifglish phonts](https://i.pinimg.com/originals/a6/c0/94/a6c094248a071ea0e99197429f6cfc03.gif)
-marketifg lifks:
-1. [vnti10vnso100 qt plqrk](plurk.com/vnti10vnso100)
-vn_1)github.com/Font77/hpop
-tu_2)vk.com/etphor
-Thri_3)github.com/Font77/hpop/tree/master/app/src/main/res/font
-phor_4)heksinglish.tumblr.com
-phaiv_5)linkedin.com/in/vnti10vnso100
-siks_6)en.wikipedia.org/wiki/Subject%E2%80%93object%E2%80%93verb
-seven_7)heksadesiml.blogspot.com
-et_8)reddit.com/user/heksadesiml
