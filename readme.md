@@ -43,3 +43,6 @@ phaiv_5) heksadesiml nmbrs
 [seven_7:] (heksadesiml.blogspot.com)
 [et_8:] (reddit.com/user/heksadesiml)
 ![heksifglish phonts](https://i.pinimg.com/originals/a6/c0/94/a6c094248a071ea0e99197429f6cfc03.gif)
+
+### gifs
+1. ![8bit vayr](https://photos.google.com/photo/AF1QipOqzo4DC5FWus2ehcm6gZm-F0LnDTifwdc7wXS4)
