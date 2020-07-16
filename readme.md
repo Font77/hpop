@@ -14,7 +14,7 @@ phrst pliij instal phont ( hao tu instal dipAnds on yuAr phon modAl)
 
 [mor imejis qt:](https://pin.it/1ztSTHM)
 
---------bilo tekst tu bi viyud in roboto_heks_jk.ttf phont--------
+### bilo tekst tu bi viyud in roboto_heks_jk.ttf phont
 **hpop** kibord is sopht_kiiboard phur heksifglish vic hqj **onli smal kes**  ~~ no kqps ~~ .
 in heksi aski kods phur :;&lt;=&gt;? got siphtid siks stqps rait
 so bilo translitresn_translesqn is nidid phur 
@@ -25,7 +25,7 @@ heksi translitresn_translesqn stqps:
 
 > heksa_bainri vi kaunt on phiNgArs.Thmb is yujd tu sho & haid.
 
-hpop smal_kes_onli kiibord :  
+### hpop smal_kes_onli kiibord :  
 1. onli phur smal_kes roboto_heks_jk/zk/jq/zq phonts heksifglish
 2. minu kiij tu suport mintos ( minu tri opretifg sistm)
  1. phfksnl minu ki
@@ -34,14 +34,15 @@ hpop smal_kes_onli kiibord :
 4. GZ not weyr. riplesd bai gud simbqls phur modqrn programifg lqfgyuejis laik html5 javaskript templet_programifg
 5. heksadesiml nmbrs
 
-1. [vn_1:](github.com/Font77/hpop)
-2. [tu_2:](github.com/Font77/hpop/tree/master/app/src/main/res/font)
-3. [Thri_3:](vk.com/etphor)
-4. [phor_4:](heksinglish.tumblr.com)
-5. [phaiv_5:](linkedin.com/in/vnti10vnso100)
-6. [siks_6:](en.wikipedia.org/wiki/Subject%E2%80%93object%E2%80%93verb)
-7. [seven_7:](heksadesiml.blogspot.com)
-8. [et_8:](reddit.com/user/heksadesiml)
+### reletis liNks
+1. [gitHb ripojitri](http://github.com/Font77/hpop)
+2. [roboto heksbin phonts](http://github.com/Font77/hpop/tree/master/app/src/main/res/font)
+3. [vk](http://vk.com/etphor)
+4. [tmblr](http://heksinglish.tumblr.com)
+5. [liNkdin](http://linkedin.com/in/vnti10vnso100)
+6. [sos](http://en.wikipedia.org/wiki/Subject%E2%80%93object%E2%80%93verb)
+7. [blogspot](http://heksadesiml.blogspot.com)
+8. [rAdit](http://reddit.com/user/heksadesiml)
 
 ### gifs
 1. ![8bit vayr](https://photos.google.com/photo/AF1QipOqzo4DC5FWus2ehcm6gZm-F0LnDTifwdc7wXS4)
