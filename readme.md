@@ -1,5 +1,8 @@
-# hpop  
-#####qndroed popqp kibord klond &amp; cenjd phrom  
+##### is riid_mi phail ko roboto_heks_jk.ttf me likha gya. isliye kirpya 
+[roboto phonts daunlod qur instal kre][roboto heksbin phonts]
+
+#### heksifglish ke liye hpop kibord h. ye kevAl roboto_heks_***  phonts ke liye h.
+#### qndroed popqp kibord klond &amp; cenjd phrom  
 1. [hpop kiibord on gitHb onli](https://github.com/klausw/hackerskeyboard)
 2. ![](https://i.pinimg.com/originals/e8/e8/c8/e8e8c80df0952ad32725b24fdbaff83b.gif)
 3. ![](https://photos.app.goo.gl/xb4q21EsQ6yWAo6m7)  
@@ -34,7 +37,7 @@ heksi translitresn_translesqn stqps:
 
 ### reletis liNks
 1. [gitHb ripojitri](http://github.com/Font77/hpop)
-2. [roboto heksbin phonts](http://github.com/Font77/hpop/tree/master/app/src/main/res/font)
+2. [roboto phonts daunlod qur instal kre][roboto heksbin phonts]
 3. [vk](http://vk.com/etphor)
 4. [tmblr](http://heksinglish.tumblr.com)
 5. [liNkdin](http://linkedin.com/in/vnti10vnso100)
@@ -47,3 +50,5 @@ heksi translitresn_translesqn stqps:
 2. ![heksifglish phonts](https://i.pinimg.com/originals/a6/c0/94/a6c094248a071ea0e99197429f6cfc03.gif)
 3. ![phonetiks](https://photos.app.goo.gl/xb4q21EsQ6yWAo6m7)
 4. ![heksoen](https://photos.app.goo.gl/wGSzsBxjmJjFAbAm9)
+
+[roboto heksbin phonts]: http://github.com/Font77/hpop/tree/master/app/src/main/res/font
