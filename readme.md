@@ -11,8 +11,8 @@
    
 
 #### phrst pliij instal phont ( hao tu instal dipAnds on yuAr phon modAl)
-[1. daunlod & install roboto_heks_jk phont]( https://github.com/Font77/hpop/tree/master/app/src/main/res/font )
-[2. daulod hpop.apk & Dn instal on yuAr Androed mobail] (https://github.com/Font77/hpop/tree/master/app/release)
+1. [daunlod & install roboto_heks_jk phont]( https://github.com/Font77/hpop/tree/master/app/src/main/res/font )
+2. [daulod hpop.apk & Dn instal on yuAr Androed mobail] (https://github.com/Font77/hpop/tree/master/app/release)
 
 #### qbaut heksadesiml  
 1. [pintrqst:] ( https://pin.it/18NqAVy)
