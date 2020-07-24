@@ -10,7 +10,7 @@
 ![pintrqst](https://i.pinimg.com/originals/e8/e8/c8/e8e8c80df0952ad32725b24fdbaff83b.gif)
    
 
-####phrst pliij instal phont ( hao tu instal dipAnds on yuAr phon modAl)
+#### phrst pliij instal phont ( hao tu instal dipAnds on yuAr phon modAl)
 [1. daunlod & install roboto_heks_jk phont]( https://github.com/Font77/hpop/tree/master/app/src/main/res/font )
 [2. daulod hpop.apk & Dn instal on yuAr Androed mobail] (https://github.com/Font77/hpop/tree/master/app/release)
 
