@@ -24,8 +24,15 @@ in heksi aski kods phur :;&lt;=&gt;? got siphtid siks stqps rait
 so bilo translitresn_translesqn is nidid phur 
 ifglish tu heksifnglish knvrjn.
 heksi translitresn_translesqn stqps:
-1) al smal kes ( kntrol u ) 2) w -> v , q->k , z->j 3) x->qks 
-4a) : -> A 4b) ; -> B 4c) < -> C 4d) = -> D 4e) > -> E 4e) ? -> F
+1. al smal kes ( laik kntrol u in noppqd++)
+2. w -&gt; v , q-&gt;k , z-&gt;j
+3. x->qks 
+4. : -> A
+5. ; -> B 
+6. < -> C
+7. = -> D
+8. > -> E
+9. ? -> F
 
 > heksa_bainri vi kaunt on phiNgArs.Thmb is yujd tu sho & haid.
 
