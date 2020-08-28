@@ -1,42 +1,48 @@
-##### is riid_mi phail ko roboto_heks_jk.ttf me likha gya. isliye kirpya 
-# [roboto phonts daunlod kre, phir instal kre][roboto heksbin phonts]
+# hpop kibord phur qndroed (Android)
+![hpop imej giphy](https://media.giphy.com/media/eMIoiERHxSTmDCKL5x/giphy.gif)
+![heksadesiml mqxhs](https://media.giphy.com/media/H69JHPOAQLNfT0OgPv/giphy.gif)  
 
-#### heksifglish ke liye hpop kibord h. ye kevAl roboto_heks_***  phonts ke liye h.
-#### qndroed popqp kibord klond &amp; cenjd phrom  
-1. [hpop kiibord on gitHb onli][hqkqrskibord_yu_ar_ql] 
-2. [gugql photos yu_ar_ql](https://photos.app.goo.gl/xb4q21EsQ6yWAo6m7)
+## steps tu instal **roboto_heks_jk.ttf** phont & **hpop kibord** on android mobail
+1. daunload & install [roboto_heks_jk phont][roboto heksbin phonts]
+    1. font can be edited using **fontforge** open source softveyr.
+    2. hao tu **instal** phont on yuAr mobile **dipAnds** on yuAr mobail **modAl**
+    3. yu kn du gugAl src - custom font install android 2019
+    4. iph it is xiomi Dn use **miui font installer old** method.
+2. hpop instalesAn
+    1. aphtr instaling roboto_heks_jk.ttf daunload [hpop.apk][github hpop apk lifk]
+    2. Dn opAn **hpop.apk** & **instal** in yuAr Androed mobail.  
 
-##### pintrqst imej
-![pintrqst](https://i.pinimg.com/originals/e8/e8/c8/e8e8c80df0952ad32725b24fdbaff83b.gif)
-   
+# heksifglish hbord leaut
+![heksifglish](https://i.imgur.com/UzOrDiU.gif)  
 
-#### phrst pliij instal phont ( hao tu instal dipAnds on yuAr phon modAl)
-1. [daunlod & install roboto_heks_jk phont]( https://github.com/Font77/hpop/tree/master/app/src/main/res/font )
-2. [daulod hpop.apk & Dn instal on yuAr Androed mobail] (https://github.com/Font77/hpop/tree/master/app/release)
+![hbord](https://i.imgur.com/UeQGSyb.jpg)
 
-#### qbaut heksadesiml  
-1. [pintrqst:] ( https://pin.it/18NqAVy)
-2.  [mor imejis qt:](https://pin.it/1ztSTHM)
+![bhasa](https://media.giphy.com/media/h1nksDAIfSGcAyqT0L/giphy.gif)
 
-### bilo tekst tu bi viyud in roboto_heks_jk.ttf phont
-**hpop** kibord is sopht_kiiboard phur heksifglish vic hqj **onli smal kes**  ~~ no kqps ~~ .
-in heksi aski kods phur :;&lt;=&gt;? got siphtid siks stqps rait
-so bilo translitresn_translesqn is nidid phur 
-ifglish tu heksifnglish knvrjn.
-heksi translitresn_translesqn stqps:
-1. al smal kes ( laik kntrol u in noppqd++)
-2. w -&gt; v , q-&gt;k , z-&gt;j
-3. x->qks 
-4. : -> A
-5. ; -> B 
-6. < -> C
-7. = -> D
-8. > -> E
-9. ? -> F
+## heksa_bin binary f/f% kmpliit digital mAThs :- 
+> **it siims vi shud kaunt on phiNgArs & yuj Thmbs tu sho & haid.**
+![hmqxhs1](https://media.giphy.com/media/iFyfkrakAT9L6qs0RM/giphy.gif)
 
-> heksa_bainri vi kaunt on phiNgArs.Thmb is yujd tu sho & haid.
+photos & qnimesqns bilo  
 
-### hpop smal_kes_onli kiibord :  
+  
+  
+[vidiolist](https://www.youtube.com/playlist?list=PLlYCdgTLt8n9FbT69DieXkc00VdW3wa1W)
+[hbord vidio](https://youtu.be/VogKRvYheDM)
+[heksmqxhs2 giphyvidio](https://giphy.com/gifs/SuBYdWOLQraLIEALbp/html5)
+
+haski_8_10 midori braujr project viwh heksifglish button "h"  
+midori braujr viwh heksifglish button vith 'h' label.  
+vhen user press this button , tekst on current vebpage gets changed as in bilo steps :
+1. all capital case gets changed to small case:  A-Z -> a-z   ( like cntr+u in notepad++) 
+2. all f, q, w, x, z gets changed as :     f->ph , q->k , w -> v , x->qks, z->j
+3. all :;&lt;=&gt;? gets changed as  : -&gt; A , ; -&gt; B , &lt; -&gt; C , = -&gt; D , &gt; -&gt; E , ? -&gt; F
+4) page gets refreshed but phonts gets changed to roboto_heks_jk.ttf  
+  
+
+
+
+###### mintos minu tri os:  
 1. onli phur smal_kes roboto_heks_jk/zk/jq/zq phonts heksifglish
 2. minu kiij tu suport mintos ( minu tri opretifg sistm)
  1. phfksnl minu ki
@@ -45,7 +51,7 @@ heksi translitresn_translesqn stqps:
 4. GZ not weyr. riplesd bai gud simbqls phur modqrn programifg lqfgyuejis laik html5 javaskript templet_programifg
 5. heksadesiml nmbrs
 
-### reletis liNks
+### reletid liNks
 1. [gitHb ripojitri](http://github.com/Font77/hpop)
 2. [roboto phonts daunlod qur instal kre][roboto heksbin phonts]
 3. [vk](http://vk.com/etphor)
@@ -54,13 +60,27 @@ heksi translitresn_translesqn stqps:
 6. [sos](http://en.wikipedia.org/wiki/Subject%E2%80%93object%E2%80%93verb)
 7. [blogspot](http://heksadesiml.blogspot.com)
 8. [rAdit](http://reddit.com/user/heksadesiml)
+9. [lifkdin artikl](https://www.linkedin.com/pulse/kibord-leaut-phur-heksaikod-vnti-heksinglish)
 
 ### giphs
-1. ![8bit vayr](https://photos.google.com/photo/AF1QipOqzo4DC5FWus2ehcm6gZm-F0LnDTifwdc7wXS4)
+1. 8bit vayr  
+![8bit vayr](https://media.giphy.com/media/fZ8Avc2KMqQjH9xAwk/giphy.gif)
 2. ![heksifglish phonts](https://i.pinimg.com/originals/a6/c0/94/a6c094248a071ea0e99197429f6cfc03.gif)
-3. ![phonetiks](https://photos.app.goo.gl/xb4q21EsQ6yWAo6m7)
-4. ![heksoen](https://photos.app.goo.gl/wGSzsBxjmJjFAbAm9)
+3. ![al lANgyuejis](https://media.giphy.com/media/eNY2sAKEmP5IyYwXB6/giphy.gif)
+4. [hekskaunt](https://photos.app.goo.gl/wGSzsBxjmJjFAbAm9)  
+5. ![8+8=10](https://media.giphy.com/media/jRAoDORsyXmAzgt6uM/giphy.gif)
+6. siks heksifglish midiAm  
+![b](https://media.giphy.com/media/h6s5EFwoeAM3s6noRX/giphy.gif)
+7. heksadesiml taim
+![htaim](https://media.giphy.com/media/eflaGl8GtsItg7Hj72/giphy.gif)
+8. et hrignomtri
+![hrignomtri](https://media.giphy.com/media/LNkRqaHsd7vgu0vz4o/giphy.gif)
 
 #### rephrens lifks:  
 [roboto heksbin phonts]: http://github.com/Font77/hpop/tree/master/app/src/main/res/font
+[github hpop apk lifk]: https://github.com/Font77/hpop/tree/master/app/release
 [hqkqrskibord_yu_ar_ql]: https://github.com/klausw/hackerskeyboard
+
+### kontAkt mi
+2. [fb vnti10](fb.me/vnti10)
+3. [m vnti10](m.me/vnti10)
