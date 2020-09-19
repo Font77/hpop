@@ -36,7 +36,7 @@
     />
 
     <TextView android:id="@+id/text"
-        android:fontFamily="@font/roboto_heks_jk"
+        android:fontFamily="@font/heks_smal_roboto"
         android:text="@string/voice_punctuation_hint"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
