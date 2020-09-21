@@ -251,18 +251,6 @@ public class LatinKeyboardView extends LatinKeyboardBaseView {
                 LatinKeyboardBaseView.NOT_A_TOUCH_COORDINATE);
         return true;
     }
-
-    /**
-     * This function checks to see if we need to handle any sudden jumps in the pointer location
-     * that could be due to a multi-touch being treated as a move by the firmware or hardware.
-     * Once a sudden jump is detected, all subsequent move events are discarded
-     * until an UP is received.<P>
-     * When a sudden jump is detected, an UP event is simulated at the last position and when
-     * the sudden moves subside, a DOWN event is simulated for the second key.
-     * @param me the motion event
-     * @return true if the event was consumed, so that it doesn't continue to be handled by
-     * KeyboardView.
-     */
     private boolean handleSuddenJump(MotionEvent me) {
         final int action = me.getAction();
         final int x = (int) me.getX();

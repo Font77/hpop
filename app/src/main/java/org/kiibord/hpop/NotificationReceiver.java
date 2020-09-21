@@ -10,12 +10,8 @@ public class NotificationReceiver extends BroadcastReceiver {
     static final String TAG = "PCKeyboard/Notification";
     static public final String ACTION_SHOW = "org.kiibord.kiibord.SHOW";
     static public final String ACTION_SETTINGS = "org.kiibord.kiibord.SETTINGS";
-
     private LatinIME mIME;
-
-    NotificationReceiver(LatinIME ime) {
-        super();
-        mIME = ime;
+    NotificationReceiver(LatinIME ime) { super(); mIME = ime;
         Log.i(TAG, "NotificationReceiver created, ime=" + mIME);
     }
 
@@ -23,7 +19,6 @@ public class NotificationReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
         Log.i(TAG, "NotificationReceiver.onReceive called, action=" + action);
-
         if (action.equals(ACTION_SHOW)) {
             InputMethodManager imm = (InputMethodManager)
                 context.getSystemService(Context.INPUT_METHOD_SERVICE);
