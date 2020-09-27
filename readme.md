@@ -1,5 +1,5 @@
 # hpop kibord phur qndroed (Android)
-![hpop imej giphy](https://media.giphy.com/media/eMIoiERHxSTmDCKL5x/giphy.gif)
+![hpop imej giphy](https://media.giphy.com/media/BZ78kudbc1xy5C1Wp2/giphy.gif)
 ![heksadesiml mqxhs](https://media.giphy.com/media/H69JHPOAQLNfT0OgPv/giphy.gif)  
 
 ## steps tu instal **roboto_heks_jk.ttf** phont & **hpop kibord** on android mobail
