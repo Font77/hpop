@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/seekVal"
-        android:fontFamily="@font/heks_smal_roboto"
+        android:fontFamily="@font/roboto510"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -25,7 +25,7 @@
 
         <TextView
             android:id="@+id/seekMin"
-            android:fontFamily="@font/heks_smal_roboto"
+            android:fontFamily="@font/roboto510"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -34,7 +34,7 @@
 
         <TextView
             android:id="@+id/seekMax"
-            android:fontFamily="@font/heks_smal_roboto"
+            android:fontFamily="@font/roboto510"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
