@@ -1,4 +1,5 @@
 # hpop kibord phur qndroed (Android)
+[ascii810 heksbin maths](https://imgur.com/gallery/R5JKsW6)
 ![hpop imej giphy](https://media.giphy.com/media/BZ78kudbc1xy5C1Wp2/giphy.gif)
 ![heksadesiml mqxhs](https://media.giphy.com/media/H69JHPOAQLNfT0OgPv/giphy.gif)  
 
