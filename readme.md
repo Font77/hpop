@@ -14,11 +14,11 @@ yh app custom font ko install krne me kam aaTi h.<br>
     8. roboto810b me A->**:** , B->**;** C->**<** ; D->**=** ; E->**>** ; F->**?** hoTa h.
     9. isliye aap ? < > = ; : Dekhkr glAT na smjhe. yh sHi h.
 
-3. Ab [hpop_heks.apk] ko Android mobile me daunlod krke Aur open kre. INSTALL btn Dbae.
+3. Ab **[hpop_heks.apk]** ko Android mobile me **daunlod** krke Aur open kre. INSTALL btn Dbae.
 
 4. open kre.
     1. st input mATHAd btn klik kre
-    2. hpop selekt kre
+    2. **hpop** selekt kre
     
 5. Ab apke phone me hpop keyboard ke saTh roboto810s.ttf instal ho gye h.
 
