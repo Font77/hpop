@@ -112,5 +112,5 @@ vhen user press this button , tekst on current vebpage gets changed as in bilo s
 
 #### rephrens lifks:  
 [roboto810s phont]: https://github.com/Font77/heks810/blob/master/roboto810s.ttf
-[hpop_heks]: https://github.com/Font77/heks810/blob/master/hpop_heks.apk
+[hpop_heks.apk]: https://github.com/Font77/heks810/blob/master/hpop_heks.apk
 
