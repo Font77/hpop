@@ -1,17 +1,28 @@
+roboto810b.ttf font aur hpop kibord install krne ke steps is prkar h:
+
+1. google play store me jae Aur custom font installer app **zFont** search kre Aur **install** kre.<br>
+yh app custom font ko install krne me kam aaTi h.<br>
+
+2. android mobile me **[roboto810b phont] daunload kre** , sev kre , Aur khole. ye Apne ap zFont ke saTh khulegi.
+    1. "SET" button Dbae , Apne phone ka model select kre ( jaise ki xiomi ).
+    2. method 1 (old) select kre. ok Dbae. Font pej khul jaega.
+    3. system font me jae Aur roBoto810B pr klik kre.
+    4. Apply btn klik kre.
+    5. reboot btn klik kre.
+    6. reboot hone Tk inTjar kre.
+    7. reboot hone ke baaD phone ki skriin pr sb kuch roboto810b phont me likha hoga.
+    8. roboto810b me A->**:** , B->**;** C->**<** ; D->**=** ; E->**>** ; F->**?** hoTa h.
+    9. isliye aap ? < > = ; : Dekhkr glAT na smjhe. yh sHi h.
+
+2. Ab [hpop.apk] ko Android mobile me daunlod krke save kre.
+3. jis folder me hpop.apk ko sev kiye h vha jae or use click krke install kre.
+    2. uske baaD **hpop.apk** ko Androed mobail me **instal** kre. 
+3. font can be edited using **fontforge** open source softveyr.
+ 
 # hpop kibord phur qndroed (Android)
 ![h33hinglish](https://media.giphy.com/media/D4Ky2d7aRz64WvQ2uU/giphy.gif)
 ![hpop imej giphy](https://media.giphy.com/media/BZ78kudbc1xy5C1Wp2/giphy.gif)
-![heksadesiml mqxhs](https://media.giphy.com/media/H69JHPOAQLNfT0OgPv/giphy.gif)  
-
-## steps tu instal **roboto_heks_jk.ttf** phont & **hpop kibord** on android mobail
-1. daunload & install [roboto_heks_jk phont][roboto heksbin phonts]
-    1. font can be edited using **fontforge** open source softveyr.
-    2. hao tu **instal** phont on yuAr mobile **dipAnds** on yuAr mobail **modAl**
-    3. yu kn du gugAl src - custom font install android 2019
-    4. iph it is xiomi Dn use **miui font installer old** method.
-2. hpop instalesAn
-    1. aphtr instaling roboto_heks_jk.ttf daunload [hpop.apk][github hpop apk lifk]
-    2. Dn opAn **hpop.apk** & **instal** in yuAr Androed mobail.  
+![heksadesiml mqxhs](https://media.giphy.com/media/H69JHPOAQLNfT0OgPv/giphy.gif) 
 
 # heksifglish hbord leaut
 ![heksifglish](https://i.imgur.com/UzOrDiU.gif)  
@@ -80,9 +91,10 @@ vhen user press this button , tekst on current vebpage gets changed as in bilo s
 [iot maths](https://heksinglish.tumblr.com/post/629519441992007680/iot-maths-mathematics-future-technology)
 
 #### rephrens lifks:  
-[roboto heksbin phonts]: http://github.com/Font77/hpop/tree/master/app/src/main/res/font
+[roboto heksbin 810 510 fonts]: http://github.com/Font77/heks810/tree/master/app/src/main/res/font
 [github hpop apk lifk]: https://github.com/Font77/hpop/tree/master/app/release
 [hqkqrskibord_yu_ar_ql]: https://github.com/klausw/hackerskeyboard
+[roboto810b phont]: https://github.com/Font77/heks810/blob/master/roboto810b.ttf
 
 ### kontAkt mi
 2. [fb vnti10](fb.me/vnti10)
