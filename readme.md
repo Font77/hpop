@@ -1,17 +1,49 @@
+roboto810s.ttf font aur hpop kibord install krne ke steps is prkar h:
+
+1. google play store me jae Aur custom font installer app **zFont** search kre Aur **install** kre.<br>
+yh app custom font ko install krne me kam aaTi h.<br>
+
+2. android mobile me **[roboto810s phont] daunload kre** , sev kre , Aur khole. ye Apne ap zFont ke saTh khulegi.
+    1. "SET" button Dbae , Apne phone ka model select kre ( jaise ki xiomi ).
+    2. method 1 (old) select kre. ok Dbae. Font pej khul jaega.
+    3. system font me jae Aur roBoto810B pr klik kre.
+    4. Apply btn klik kre.
+    5. reboot btn klik kre.
+    6. reboot hone Tk inTjar kre.
+    7. reboot hone ke baaD phone ki skriin pr sb kuch roboto810s phont me likha hoga.
+    8. roboto810b me A->**:** , B->**;** C->**<** ; D->**=** ; E->**>** ; F->**?** hoTa h.
+    9. isliye aap ? < > = ; : Dekhkr glAT na smjhe. yh sHi h.
+
+3. Ab **[hpop_heks.apk]** ko Android mobile me **daunlod** krke Aur open kre. INSTALL btn Dbae.
+
+4. open kre.
+    1. st input mATHAd btn klik kre
+    2. **hpop** selekt kre
+    
+5. Ab apke phone me hpop keyboard ke saTh roboto810s.ttf instal ho gye h.
+
+6. Ab aap Apne kisi DosT ke phone me bhi ye install kre Aur phir ek Dusre ke saTh roboto810 me :
+    1. hinDi
+    2. Telugu
+    3. Tmil
+    4. mlyalm
+    5. gujraTi
+    6. mrathi
+    7. bfgali
+    8. orriya
+    9. pnjabi
+    :. gujraxi
+    ;. heksadesiml nmbrs
+    
+me ek Dusre ko messaging kr skTe h.
+
+---------------- kuch Aur important liNks -----------
+3. font can be edited using **fontforge** open source softveyr.
+ 
 # hpop kibord phur qndroed (Android)
 ![h33hinglish](https://media.giphy.com/media/D4Ky2d7aRz64WvQ2uU/giphy.gif)
 ![hpop imej giphy](https://media.giphy.com/media/BZ78kudbc1xy5C1Wp2/giphy.gif)
-![heksadesiml mqxhs](https://media.giphy.com/media/H69JHPOAQLNfT0OgPv/giphy.gif)  
-
-## steps tu instal **roboto_heks_jk.ttf** phont & **hpop kibord** on android mobail
-1. daunload & install [roboto_heks_jk phont][roboto heksbin phonts]
-    1. font can be edited using **fontforge** open source softveyr.
-    2. hao tu **instal** phont on yuAr mobile **dipAnds** on yuAr mobail **modAl**
-    3. yu kn du gugAl src - custom font install android 2019
-    4. iph it is xiomi Dn use **miui font installer old** method.
-2. hpop instalesAn
-    1. aphtr instaling roboto_heks_jk.ttf daunload [hpop.apk][github hpop apk lifk]
-    2. Dn opAn **hpop.apk** & **instal** in yuAr Androed mobail.  
+![heksadesiml mqxhs](https://media.giphy.com/media/H69JHPOAQLNfT0OgPv/giphy.gif) 
 
 # heksifglish hbord leaut
 ![heksifglish](https://i.imgur.com/UzOrDiU.gif)  
@@ -24,10 +56,8 @@
 > **it siims vi shud kaunt on phiNgArs & yuj Thmbs tu sho & haid.**
 ![hmqxhs1](https://media.giphy.com/media/iFyfkrakAT9L6qs0RM/giphy.gif)
 
-photos & qnimesqns bilo  
+photos & qnimesqns bilo
 
-  
-  
 [vidiolist](https://www.youtube.com/playlist?list=PLlYCdgTLt8n9FbT69DieXkc00VdW3wa1W)
 [hbord vidio](https://youtu.be/VogKRvYheDM)
 [heksmqxhs2 giphyvidio](https://giphy.com/gifs/SuBYdWOLQraLIEALbp/html5)
@@ -38,10 +68,7 @@ vhen user press this button , tekst on current vebpage gets changed as in bilo s
 1. all capital case gets changed to small case:  A-Z -> a-z   ( like cntr+u in notepad++) 
 2. all f, q, w, x, z gets changed as :     f->ph , q->k , w -> v , x->qks, z->j
 3. all :;&lt;=&gt;? gets changed as  : -&gt; A , ; -&gt; B , &lt; -&gt; C , = -&gt; D , &gt; -&gt; E , ? -&gt; F
-4) page gets refreshed but phonts gets changed to roboto_heks_jk.ttf  
-  
-
-
+4) page gets refreshed but phonts gets changed to roboto810s.ttf
 
 ###### mintos minu tri os:  
 1. onli phur smal_kes roboto_heks_jk/zk/jq/zq phonts heksifglish
@@ -79,11 +106,11 @@ vhen user press this button , tekst on current vebpage gets changed as in bilo s
 9. hesbin cart
 [iot maths](https://heksinglish.tumblr.com/post/629519441992007680/iot-maths-mathematics-future-technology)
 
-#### rephrens lifks:  
-[roboto heksbin phonts]: http://github.com/Font77/hpop/tree/master/app/src/main/res/font
-[github hpop apk lifk]: https://github.com/Font77/hpop/tree/master/app/release
-[hqkqrskibord_yu_ar_ql]: https://github.com/klausw/hackerskeyboard
-
 ### kontAkt mi
 2. [fb vnti10](fb.me/vnti10)
 3. [m vnti10](m.me/vnti10)
+
+#### rephrens lifks:  
+[roboto810s phont]: https://github.com/Font77/heks810/blob/master/roboto810s.ttf
+[hpop_heks.apk]: https://github.com/Font77/heks810/blob/master/hpop_heks.apk
+
