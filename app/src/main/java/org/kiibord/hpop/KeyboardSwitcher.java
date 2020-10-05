@@ -78,7 +78,8 @@ public class KeyboardSwitcher implements
     private static final int KBD_SYMBOLS = R.xml.kbd_symbols;
     private static final int KBD_SYMBOLS_SHIFT = R.xml.kbd_symbols_shift;
     private static final int KBD_QWERTY = R.xml.kbd_qwerty;
-    private static final int KBD_FULL = R.xml.kbd_full;
+//    private static final int KBD_FULL = R.xml.kbd_full;
+    private static final int KBD_FULL = R.xml.kbd510_full;
     private static final int KBD_FULL_FN = R.xml.kbd_full_fn;
     private static final int KBD_COMPACT = R.xml.kbd_compact;
     private static final int KBD_COMPACT_FN = R.xml.kbd_compact_fn;

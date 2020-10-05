@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- <string name="key510_tlde_main">`</string><string name="key510_tlde_shift">~</string><string name="key510_tlde_alt">`~</string>     -->
+    <string name="key510_ae01_main">q</string><string name="key510_ae01_shift">!</string><string name="key510_ae01_alt">q!</string>
+    <string name="key510_ae02_main">a</string><string name="key510_ae02_shift">\@</string><string name="key510_ae02_alt">a\@</string>
+    <string name="key510_ae03_main">i</string><string name="key510_ae03_shift">#</string><string name="key510_ae03_alt">i#</string>
+    <string name="key510_ae04_main">u</string><string name="key510_ae04_shift">$</string><string name="key510_ae04_alt">u$</string>
+    <string name="key510_ae05_main">e</string><string name="key510_ae05_shift">%</string><string name="key510_ae05_alt">e%</string>
+    <string name="key510_ae06_main">o</string><string name="key510_ae06_shift">^</string><string name="key510_ae06_alt">o^</string>
+    <string name="key510_ae07_main">f</string><string name="key510_ae07_shift">&amp;</string><string name="key510_ae07_alt">f&amp;</string>
+    <string name="key510_ae08_main">z</string><string name="key510_ae08_shift">*</string><string name="key510_ae08_alt">z*</string>
+    <string name="key510_ae09_main">y</string><string name="key510_ae09_shift">(</string><string name="key510_ae09_alt">y(</string>
+    <string name="key510_ae0t_main">r</string><string name="key510_ae0t_shift">)</string><string name="key510_ae0t_alt">r)</string>
+    <string name="key510_ae0j_main">l</string><string name="key510_ae0j_shift">_</string><string name="key510_ae0j_alt">l_</string>
+    <string name="key510_ae0k_main">v</string><string name="key510_ae0k_shift">+</string><string name="key510_ae0k_alt">v+N</string>
+    <string name="key510_ae0d_main">m</string><string name="key510_ae0d_shift">~</string><string name="key510_ae0d_alt">m~M</string>
+    <string name="key510_ae0x_main">n</string><string name="key510_ae0x_shift">~</string><string name="key510_ae0x_alt">n~N</string>
+    
+    <string name="key510_ad01_main">k</string><string name="key510_ad01_shift"></string><string name="key510_ad01_alt">@string/alternates_for_k</string>
+    <string name="key510_ad02_main">g</string><string name="key510_ad02_shift"></string><string name="key510_ad02_alt">@string/alternates_for_g</string>
+    <string name="key510_ad03_main">c</string><string name="key510_ad03_shift"></string><string name="key510_ad03_alt">@string/alternates_for_c</string>
+    <string name="key510_ad04_main">j</string><string name="key510_ad04_shift"></string><string name="key510_ad04_alt">@string/alternates_for_j</string>
+    <string name="key510_ad05_main">t</string><string name="key510_ad05_shift"></string><string name="key510_ad05_alt">@string/alternates_for_t</string>
+    <string name="key510_ad06_main">d</string><string name="key510_ad06_shift"></string><string name="key510_ad06_alt">@string/alternates_for_d</string>
+    <string name="key510_ad07_main">x</string><string name="key510_ad07_shift"></string><string name="key510_ad07_alt">@string/alternates_for_x</string>
+    <string name="key510_ad08_main">w</string><string name="key510_ad08_shift"></string><string name="key510_ad08_alt">@string/alternates_for_w</string>
+    <string name="key510_ad09_main">p</string><string name="key510_ad09_shift"></string><string name="key510_ad09_alt">@string/alternates_for_p</string>
+    <string name="key510_ad0t_main">b</string><string name="key510_ad0t_shift"></string><string name="key510_ad0t_alt">@string/alternates_for_b</string>
+    <string name="key510_ad0j_main">s</string><string name="key510_ad0j_shift">{</string><string name="key510_ad0j_alt">[{</string>
+    <string name="key510_ad0k_main">h</string><string name="key510_ad0k_shift">}</string><string name="key510_ad0k_alt">]}</string>
+    
+    <string name="key510_ac01_main">1</string><string name="key510_ac01_shift"></string><string name="key510_ac01_alt">@string/alternates_for_k</string>
+    <string name="key510_ac02_main">2</string><string name="key510_ac02_shift"></string><string name="key510_ac02_alt">@string/alternates_for_g</string>
+    <string name="key510_ac03_main">3</string><string name="key510_ac03_shift"></string><string name="key510_ac03_alt">@string/alternates_for_c</string>
+    <string name="key510_ac04_main">4</string><string name="key510_ac04_shift"></string><string name="key510_ac04_alt">@string/alternates_for_j</string>
+    <string name="key510_ac05_main">5</string><string name="key510_ac05_shift"></string><string name="key510_ac05_alt">@string/alternates_for_t</string>
+    <string name="key510_ac06_main">6</string><string name="key510_ac06_shift"></string><string name="key510_ac06_alt">@string/alternates_for_d</string>
+    <string name="key510_ac07_main">7</string><string name="key510_ac07_shift"></string><string name="key510_ac07_alt">@string/alternates_for_x</string>
+    <string name="key510_ac08_main">8</string><string name="key510_ac08_shift"></string><string name="key510_ac08_alt">@string/alternates_for_w</string>
+    <string name="key510_ac09_main">[</string><string name="key510_ac09_shift"></string><string name="key510_ac09_alt">@string/alternates_for_p</string>
+    <string name="key510_ac0t_main">]</string><string name="key510_ac0t_shift">:</string><string name="key510_ac0t_alt">@string/alternates_for_b</string>
+    <string name="key510_ac0j_main">\\</string><string name="key510_ac0j_shift">\"</string><string name="key510_ac0j_alt">@string/alternates_for_s</string>
+
+    <string name="key510_ab01_main">9</string><string name="key510_ab01_shift"></string><string name="key510_ab01_alt">@string/alternates_for_z</string>
+    <string name="key510_ab02_main">:</string><string name="key510_ab02_shift"></string><string name="key510_ab02_alt">@string/alternates_for_x</string>
+    <string name="key510_ab03_main">;</string><string name="key510_ab03_shift"></string><string name="key510_ab03_alt">@string/alternates_for_c</string>
+    <string name="key510_ab04_main">&lt;</string><string name="key510_ab04_shift"></string><string name="key510_ab04_alt">@string/alternates_for_v</string>
+    <string name="key510_ab05_main">=</string><string name="key510_ab05_shift"></string><string name="key510_ab05_alt">@string/alternates_for_b</string>
+    <string name="key510_ab06_main">&gt;</string><string name="key510_ab06_shift"></string><string name="key510_ab06_alt">@string/alternates_for_n</string>
+    <string name="key510_ab07_main">\?</string><string name="key510_ab07_shift"></string><string name="key510_ab07_alt">@string/alternates_for_m</string>
+    <string name="key510_ab08_main">0</string><string name="key510_ab08_shift">&lt;</string><string name="key510_ab08_alt">,&lt;≤«‹</string>
+    <string name="key510_ab09_main">.</string><string name="key510_ab09_shift">&gt;</string><string name="key510_ab09_alt">.&gt;≥»›…</string>
+    <string name="key510_ab0t_main">/</string><string name="key510_ab0t_shift">\?</string><string name="key510_ab0t_alt">/\?¿</string>
+ 
+    <string name="key510_bksl_main">\\</string><string name="key510_bksl_shift">|</string><string name="key510_bksl_alt">\\|</string>
+    <string name="key510_lsgt_main"></string><string name="key510_lsgt_shift"></string><string name="key510_lsgt_alt"></string>
+    <string name="key510_space_shift"></string>
+</resources>
