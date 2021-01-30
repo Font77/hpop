@@ -28,8 +28,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class KeyboardSwitcher implements
-        SharedPreferences.OnSharedPreferenceChangeListener {
+public class KeyboardSwitcher implements SharedPreferences.OnSharedPreferenceChangeListener {
     private static String TAG = "PCKeyboardKbSw";
 
     public static final int MODE_NONE = 0;
