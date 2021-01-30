@@ -30,49 +30,25 @@ import android.os.AsyncTask;
 import android.provider.BaseColumns;
 import android.util.Log;
 
-/**
- * Stores new words temporarily until they are promoted to the user dictionary
- * for longevity. Words in the auto dictionary are used to determine if it's ok
- * to accept a word that's not in the main or user dictionary. Using a new word
- * repeatedly will promote it to the user dictionary.
- */
+
 public class AutoDictionary extends ExpandableDictionary {
-    // Weight added to a user picking a new word from the suggestion strip
     static final int FREQUENCY_FOR_PICKED = 3;
-    // Weight added to a user typing a new word that doesn't get corrected (or is reverted)
     static final int FREQUENCY_FOR_TYPED = 1;
-    // A word that is frequently typed and gets promoted to the user dictionary, uses this
-    // frequency.
     static final int FREQUENCY_FOR_AUTO_ADD = 250;
-    // If the user touches a typed word 2 times or more, it will become valid.
     private static final int VALIDITY_THRESHOLD = 2 * FREQUENCY_FOR_PICKED;
-    // If the user touches a typed word 4 times or more, it will be added to the user dict.
     private static final int PROMOTION_THRESHOLD = 4 * FREQUENCY_FOR_PICKED;
-
     private LatinIME mIme;
-    // Locale for which this auto dictionary is storing words
     private String mLocale;
-
     private HashMap<String,Integer> mPendingWrites = new HashMap<String,Integer>();
     private final Object mPendingWritesLock = new Object();
-
     private static final String DATABASE_NAME = "auto_dict.db";
     private static final int DATABASE_VERSION = 1;
-
-    // These are the columns in the dictionary
-    // TODO: Consume less space by using a unique id for locale instead of the whole
-    // 2-5 character string.
     private static final String COLUMN_ID = BaseColumns._ID;
     private static final String COLUMN_WORD = "word";
     private static final String COLUMN_FREQUENCY = "freq";
     private static final String COLUMN_LOCALE = "locale";
-
-    /** Sort by descending order of frequency. */
     public static final String DEFAULT_SORT_ORDER = COLUMN_FREQUENCY + " DESC";
-
-    /** Name of the words table in the auto_dict.db */
     private static final String AUTODICT_TABLE_NAME = "words";
-
     private static HashMap<String, String> sDictProjectionMap;
 
     static {

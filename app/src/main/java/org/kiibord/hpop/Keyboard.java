@@ -93,32 +93,19 @@ public class Keyboard {
         }
         public Row(Resources res, Keyboard parent, XmlResourceParser parser) {
             this.parent = parent;
-            TypedArray a = res.obtainAttributes(Xml.asAttributeSet(parser),
-                    R.styleable.Keyboard);
-            defaultWidth = getDimensionOrFraction(a,
-                    R.styleable.Keyboard_keyWidth,
-                    parent.mDisplayWidth, parent.mDefaultWidth);
-            defaultHeight = Math.round(getDimensionOrFraction(a,
-                    R.styleable.Keyboard_keyHeight,
-                    parent.mDisplayHeight, parent.mDefaultHeight));
-            defaultHorizontalGap = getDimensionOrFraction(a,
-                    R.styleable.Keyboard_horizontalGap,
-                    parent.mDisplayWidth, parent.mDefaultHorizontalGap);
-            verticalGap = Math.round(getDimensionOrFraction(a,
-                    R.styleable.Keyboard_verticalGap,
-                    parent.mDisplayHeight, parent.mDefaultVerticalGap));
+            TypedArray a = res.obtainAttributes(Xml.asAttributeSet(parser), R.styleable.Keyboard);
+            defaultWidth = getDimensionOrFraction(a, R.styleable.Keyboard_keyWidth, parent.mDisplayWidth, parent.mDefaultWidth);
+            defaultHeight = Math.round(getDimensionOrFraction(a, R.styleable.Keyboard_keyHeight, parent.mDisplayHeight, parent.mDefaultHeight));
+            defaultHorizontalGap = getDimensionOrFraction(a, R.styleable.Keyboard_horizontalGap, parent.mDisplayWidth, parent.mDefaultHorizontalGap);
+            verticalGap = Math.round(getDimensionOrFraction(a, R.styleable.Keyboard_verticalGap, parent.mDisplayHeight, parent.mDefaultVerticalGap));
             a.recycle();
-            a = res.obtainAttributes(Xml.asAttributeSet(parser),
-                    R.styleable.Keyboard_Row);
-            mode = a.getResourceId(R.styleable.Keyboard_Row_keyboardMode,
-                    0);
+            a = res.obtainAttributes(Xml.asAttributeSet(parser), R.styleable.Keyboard_Row);
+            mode = a.getResourceId(R.styleable.Keyboard_Row_keyboardMode, 0);
             extension = a.getBoolean(R.styleable.Keyboard_Row_extension, false);
             if (parent.mLayoutRows >= 5 || extension) {
                 boolean isTop = (extension || parent.mRowCount - parent.mExtensionRowCount <= 0);
                 float topScale = LatinIME.sKeyboardSettings.topRowScale;
-                float scale = isTop ?
-                        topScale :
-                        1.0f + (1.0f - topScale) / (parent.mLayoutRows - 1);
+                float scale = isTop ? topScale : 1.0f + (1.0f - topScale) / (parent.mLayoutRows - 1);
                 defaultHeight = Math.round(defaultHeight * scale);
             }
             a.recycle();
@@ -589,9 +576,7 @@ public class Keyboard {
         for (Key key : mKeys) {
             if (key.popupCharacters == null) continue;
             int popupLen = key.popupCharacters.length();
-            if (popupLen == 0) {
-                continue;
-            }
+            if (popupLen == 0) continue;
             if (key.x >= mTotalWidth / 2) {
                 key.popupReversed = true;
             }
