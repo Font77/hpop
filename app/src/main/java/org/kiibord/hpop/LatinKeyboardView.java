@@ -124,10 +124,8 @@ public class LatinKeyboardView extends LatinKeyboardBaseView {
         super(context, attrs, defStyle);
 
         // TODO(klausw): migrate attribute styles to LatinKeyboardView?
-        TypedArray a = context.obtainStyledAttributes(
-                attrs, R.styleable.LatinKeyboardBaseView, defStyle, R.style.LatinKeyboardBaseView);
-        LayoutInflater inflate =
-                (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.LatinKeyboardBaseView, defStyle, R.style.LatinKeyboardBaseView);
+        LayoutInflater inflate = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         int previewLayout = 0;
         int n = a.getIndexCount();
@@ -208,7 +206,6 @@ public class LatinKeyboardView extends LatinKeyboardBaseView {
     public void setKeyboard(Keyboard newKeyboard) {
         final Keyboard oldKeyboard = getKeyboard();
         if (oldKeyboard instanceof LatinKeyboard) {
-            // Reset old keyboard state before switching to new keyboard.
             ((LatinKeyboard)oldKeyboard).keyReleased();
         }
         super.setKeyboard(newKeyboard);

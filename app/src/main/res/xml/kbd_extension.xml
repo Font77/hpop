@@ -26,12 +26,12 @@
     </Row>
     <Row android:rowEdgeFlags="bottom">
         <Key android:codes="57" android:keyLabel="9" android:keyEdgeFlags="left" />
-        <Key android:codes="58" android:keyLabel=":" />
-        <Key android:codes="59" android:keyLabel=";" />
-        <Key android:codes="60" android:keyLabel="&lt;" />
-        <Key android:codes="61" android:keyLabel="=" />
-        <Key android:codes="62" android:keyLabel="&gt;"/>
-        <Key android:codes="63" android:keyLabel="\?" />
+        <Key android:codes="116" android:keyLabel="t" />
+        <Key android:codes="106" android:keyLabel="j" />
+        <Key android:codes="113" android:keyLabel="q" />
+        <Key android:codes="119" android:keyLabel="w" />
+        <Key android:codes="120" android:keyLabel="x"/>
+        <Key android:codes="70" android:keyLabel="F" />
         <Key android:codes="48" android:keyLabel="0" />
         <Key android:codes="126" android:keyLabel="~" />
         <Key android:codes="38" android:keyLabel="&amp;" android:keyEdgeFlags="right"/>

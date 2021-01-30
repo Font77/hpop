@@ -18,14 +18,14 @@
     </Row>
     <Row android:rowEdgeFlags="top">
         <!-- <Key android:keyLabel="@string/key_tlde_main" android:shiftLabel="@string/key_tlde_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_tlde_alt" android:keyWidth="4.5714285%p" android:keyEdgeFlags="left" /> -->
-        <Key android:keyLabel="@string/key_ae01_main" android:shiftLabel="Q" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="Q&amp;" />
+        <Key android:keyLabel="A" android:shiftLabel="Q" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="Q&amp;" />
         <Key android:keyLabel="@string/key_ae02_main" android:shiftLabel="\@" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="\@\#$%" />
         <Key android:keyLabel="@string/key_ae03_main" android:shiftLabel="I" android:popupKeyboard="@xml/kbd_popup_narrow_template" android:popupCharacters="I" />
         <Key android:keyLabel="@string/key_ae04_main" android:shiftLabel="U" android:popupKeyboard="@xml/kbd_popup_narrow_template" android:popupCharacters="U" />
         <Key android:keyLabel="@string/key_ae05_main" android:shiftLabel="E" android:popupKeyboard="@xml/kbd_popup_narrow_template" android:popupCharacters="E%" />
         <Key android:keyLabel="@string/key_ae06_main" android:shiftLabel="O" android:popupKeyboard="@xml/kbd_popup_narrow_template" android:popupCharacters="O^" />
-        <Key android:keyLabel="@string/key_ae07_main" android:shiftLabel="F" android:popupKeyboard="@xml/kbd_popup_narrow_template" android:popupCharacters="F" />
-        <Key android:keyLabel="@string/key_ae08_main" android:shiftLabel="Z" android:popupKeyboard="@xml/kbd_popup_narrow_template" android:popupCharacters="Z*" />
+        <Key android:keyLabel="N" android:shiftLabel="F" android:popupKeyboard="@xml/kbd_popup_narrow_template" android:popupCharacters="F" />
+        <Key android:keyLabel="H" android:shiftLabel="Z" android:popupKeyboard="@xml/kbd_popup_narrow_template" android:popupCharacters="Z*" />
         <Key android:keyLabel="@string/key_ae09_main" android:shiftLabel="Y" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="Y()[]{}:;" />
         <Key android:keyLabel="@string/key_ae0t_main" android:shiftLabel="R" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="R[](){}/\" />
         <Key android:keyLabel="@string/key_ae0j_main" android:shiftLabel="L" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="L+-*/%=" />
@@ -38,11 +38,11 @@
         <Key android:keyLabel="@string/key_ad01_main" android:shiftLabel="@string/key_ad01_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad01_alt" />
         <Key android:keyLabel="@string/key_ad02_main" android:shiftLabel="@string/key_ad02_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad02_alt" />
         <Key android:keyLabel="@string/key_ad03_main" android:shiftLabel="@string/key_ad03_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad03_alt" />
-        <Key android:keyLabel="@string/key_ad04_main" android:shiftLabel="@string/key_ad04_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad04_alt" />
+        <Key android:keyLabel="z" android:shiftLabel="@string/key_ad04_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad04_alt" />
         <Key android:keyLabel="@string/key_ad05_main" android:shiftLabel="@string/key_ad05_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad05_alt" />
         <Key android:keyLabel="@string/key_ad06_main" android:shiftLabel="@string/key_ad06_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad06_alt" />
-        <Key android:keyLabel="@string/key_ad07_main" android:shiftLabel="@string/key_ad07_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad07_alt" />
-        <Key android:keyLabel="@string/key_ad08_main" android:shiftLabel="@string/key_ad08_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad08_alt" />
+        <Key android:keyLabel="T" android:shiftLabel="@string/key_ad07_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad07_alt" />
+        <Key android:keyLabel="D" android:shiftLabel="@string/key_ad08_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad08_alt" />
         <Key android:keyLabel="@string/key_ad09_main" android:shiftLabel="@string/key_ad09_shift" android:popupKeyboard="@xml/kbd_popup_narrow_template" android:popupCharacters="@string/key_ad09_alt" />
         <Key android:keyLabel="@string/key_ad0t_main" android:shiftLabel="@string/key_ad0t_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad0t_alt" />
         <Key android:keyLabel="@string/key_ad0j_main" android:shiftLabel="@string/key_ad0j_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_ad0j_alt" />res/xml/kbd_full.xml

@@ -141,8 +141,6 @@ public class Keyboard {
         private Keyboard keyboard;
         public int popupResId;
         public boolean repeatable;
-//        private boolean isSimpleUppercase;
-//        private boolean isDistinctUppercase;
         private final static int[] KEY_STATE_NORMAL_ON = {
             android.R.attr.state_checkable,
             android.R.attr.state_checked
@@ -225,7 +223,6 @@ public class Keyboard {
                 if (codes != null && codes.length == 1) {
                     final Locale locale = LatinIME.sKeyboardSettings.inputLocale;
                     String upperLabel = label.toString();//.toUpperCase(locale);
-//                    String upperLabel = label.toString().toUpperCase(locale);
                     if (shiftLabel == null) {
                         if (!upperLabel.equals(label.toString()) && upperLabel.length() == 1) shiftLabel = upperLabel;
                     }
@@ -240,19 +237,13 @@ public class Keyboard {
             a.recycle();
         }
         public boolean isDistinctCaps() {
-//            return isDistinctUppercase && keyboard.isShiftCaps();
             return false;
         }
         public boolean isShifted() {
-            //boolean shifted = keyboard.isShifted(isSimpleUppercase);
             boolean shifted = keyboard.isShifted();
             return shifted;
         }
-//        public int getPrimaryCode(boolean isShiftCaps, boolean isShifted) {
         public int getPrimaryCode(boolean isShifted) {
-//            if (isDistinctUppercase && isShiftCaps) {
-//                return capsLabel.charAt(0);
-//            }
             if (isShifted && shiftLabel != null) {
                 if (shiftLabel.charAt(0) == DEAD_KEY_PLACEHOLDER && shiftLabel.length() >= 2) {
                     return shiftLabel.charAt(1);
@@ -285,45 +276,32 @@ public class Keyboard {
             }
         }
         public String getCaseLabel() {
-//            if (isDistinctUppercase && keyboard.isShiftCaps()) {
-//                return capsLabel.toString();
-//            }
             boolean isShifted = keyboard.isShifted();
-//            boolean isShifted = keyboard.isShifted(isSimpleUppercase);
             if (isShifted && shiftLabel != null) {
                 return shiftLabel.toString();
             } else {
                 return label != null ? label.toString() : null;
             }
         }
-//        private String getPopupKeyboardContent(boolean isShiftCaps, boolean isShifted, boolean addExtra) {
         private String getPopupKeyboardContent(boolean isShifted, boolean addExtra) {
             int mainChar = getPrimaryCode(false);
             int shiftChar = getPrimaryCode(true);
-//            int capsChar = getPrimaryCode(true, true);
             if (shiftChar == mainChar) shiftChar = 0;
-//            if (capsChar == shiftChar || capsChar == mainChar) capsChar = 0;
             int popupLen = (popupCharacters == null) ? 0 : popupCharacters.length();
             StringBuilder popup = new StringBuilder(popupLen);
             for (int i = 0; i < popupLen; ++i) {
                 char c = popupCharacters.charAt(i);
-//                if (isShifted || isShiftCaps) {
                 if (isShifted) {
-//                    String upper = Character.toString(c).toUpperCase(LatinIME.sKeyboardSettings.inputLocale);
-                    String upper = Character.toString(c);//.toUpperCase(LatinIME.sKeyboardSettings.inputLocale);
+                    String upper = Character.toString(c);
                     if (upper.length() == 1) c = upper.charAt(0);
                 }
                 if (c == mainChar || c == shiftChar ) continue;
-//                if (c == mainChar || c == shiftChar || c == capsChar) continue;
                 popup.append(c);
             }
             if (addExtra) {
                 StringBuilder extra = new StringBuilder(3 + popup.length());
                 int flags = LatinIME.sKeyboardSettings.popupKeyboardFlags;
                 if ((flags & POPUP_ADD_SELF) != 0) {
-//                    if (isDistinctUppercase && isShiftCaps) {
-//                        if (capsChar > 0) { extra.append((char) capsChar); capsChar = 0; }
-//                    } else
                     if (isShifted) {
                         if (shiftChar > 0) { extra.append((char) shiftChar); shiftChar = 0; }
                     } else {
@@ -331,22 +309,13 @@ public class Keyboard {
                     }
                 }
                 if ((flags & POPUP_ADD_CASE) != 0) {
-                    // if shifted, add unshifted key to popup, and vice versa
-//                    if (isDistinctUppercase && isShiftCaps) {
-//                        if (mainChar > 0) { extra.append((char) mainChar); mainChar = 0; }
-//                        if (shiftChar > 0) { extra.append((char) shiftChar); shiftChar = 0; }
-//                    } else
                     if (isShifted) {
                         if (mainChar > 0) { extra.append((char) mainChar); mainChar = 0; }
-//                        if (capsChar > 0) { extra.append((char) capsChar); capsChar = 0; }
                     } else {
                         if (shiftChar > 0) { extra.append((char) shiftChar); shiftChar = 0; }
-//                        if (capsChar > 0) { extra.append((char) capsChar); capsChar = 0; }
                     }
                 }
-                if (
-//                        !isSimpleUppercase &&
-                                (flags & POPUP_ADD_SHIFT) != 0) {
+                if ( (flags & POPUP_ADD_SHIFT) != 0) {
                     if (isShifted) {
                         if (mainChar > 0) { extra.append((char) mainChar); mainChar = 0; }
                     } else {
