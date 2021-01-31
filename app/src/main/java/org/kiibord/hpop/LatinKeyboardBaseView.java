@@ -502,7 +502,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 {
                     case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T':
                     case 'D': case 'p': case 'b': case 's':
-                        paint.setColor(0xFFFF7777);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
+                        paint.setColor(0xFFCE0000);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
                     case '_':
                         paint.setColor(0xFF7777FF);
                         paint.setTypeface(Typeface.DEFAULT_BOLD);
