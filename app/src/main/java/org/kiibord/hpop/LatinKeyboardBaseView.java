@@ -500,8 +500,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
 //                if(i>9 && i<20) { paint.setColor(0xFFFF7777);paint.setTypeface(Typeface.DEFAULT_BOLD); }
                 switch (label.charAt(0))
                 {
-                    case 'k': case 'g': case 'c': case 'j': case 't': case 'd': case 'x':
-                    case 'w': case 'p': case 'b': case 's':
+                    case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T':
+                    case 'D': case 'p': case 'b': case 's':
                         paint.setColor(0xFFFF7777);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
                     case '_':
                         paint.setColor(0xFF7777FF);

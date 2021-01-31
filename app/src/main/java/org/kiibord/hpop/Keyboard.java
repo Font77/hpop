@@ -115,7 +115,6 @@ public class Keyboard {
         public int[] codes;
         public CharSequence label;
         public CharSequence shiftLabel;
-//  vimql      public CharSequence capsLabel;
         public Drawable icon;
         public Drawable iconPreview;
         public int width;
@@ -141,38 +140,14 @@ public class Keyboard {
         private Keyboard keyboard;
         public int popupResId;
         public boolean repeatable;
-        private final static int[] KEY_STATE_NORMAL_ON = {
-            android.R.attr.state_checkable,
-            android.R.attr.state_checked
-        };
-        private final static int[] KEY_STATE_PRESSED_ON = {
-            android.R.attr.state_pressed,
-            android.R.attr.state_checkable,
-            android.R.attr.state_checked
-        };
-        private final static int[] KEY_STATE_NORMAL_LOCK = {
-            android.R.attr.state_active,
-            android.R.attr.state_checkable,
-            android.R.attr.state_checked
-        };
-        private final static int[] KEY_STATE_PRESSED_LOCK = {
-            android.R.attr.state_active,
-            android.R.attr.state_pressed,
-            android.R.attr.state_checkable,
-            android.R.attr.state_checked
-        };
-        private final static int[] KEY_STATE_NORMAL_OFF = {
-            android.R.attr.state_checkable
-        };
-        private final static int[] KEY_STATE_PRESSED_OFF = {
-            android.R.attr.state_pressed,
-            android.R.attr.state_checkable
-        };
-        private final static int[] KEY_STATE_NORMAL = {
-        };
-        private final static int[] KEY_STATE_PRESSED = {
-            android.R.attr.state_pressed
-        };
+        private final static int[] KEY_STATE_NORMAL_ON = {android.R.attr.state_checkable, android.R.attr.state_checked};
+        private final static int[] KEY_STATE_PRESSED_ON = {android.R.attr.state_pressed, android.R.attr.state_checkable, android.R.attr.state_checked};
+        private final static int[] KEY_STATE_NORMAL_LOCK = {android.R.attr.state_active, android.R.attr.state_checkable, android.R.attr.state_checked};
+        private final static int[] KEY_STATE_PRESSED_LOCK = {android.R.attr.state_active, android.R.attr.state_pressed, android.R.attr.state_checkable, android.R.attr.state_checked};
+        private final static int[] KEY_STATE_NORMAL_OFF = {android.R.attr.state_checkable};
+        private final static int[] KEY_STATE_PRESSED_OFF = {android.R.attr.state_pressed, android.R.attr.state_checkable};
+        private final static int[] KEY_STATE_NORMAL = {};
+        private final static int[] KEY_STATE_PRESSED = {android.R.attr.state_pressed};
         public Key(Row parent) {
             keyboard = parent.parent;
             height = parent.defaultHeight;
@@ -239,25 +214,14 @@ public class Keyboard {
         public boolean isDistinctCaps() {
             return false;
         }
-        public boolean isShifted() {
-            boolean shifted = keyboard.isShifted();
-            return shifted;
-        }
+        public boolean isShifted() { boolean shifted = keyboard.isShifted();return shifted; }
         public int getPrimaryCode(boolean isShifted) {
             if (isShifted && shiftLabel != null) {
-                if (shiftLabel.charAt(0) == DEAD_KEY_PLACEHOLDER && shiftLabel.length() >= 2) {
-                    return shiftLabel.charAt(1);
-                } else {
-                    return shiftLabel.charAt(0);
-                }
-            } else {
-                return codes[0];
-            }
+                if (shiftLabel.charAt(0) == DEAD_KEY_PLACEHOLDER && shiftLabel.length() >= 2) return shiftLabel.charAt(1);
+                else return shiftLabel.charAt(0);
+            } else return codes[0];
         }
-        public int getPrimaryCode() {
-            return getPrimaryCode(keyboard.isShifted());
-//            return getPrimaryCode(keyboard.isShiftCaps(), keyboard.isShifted(isSimpleUppercase));
-        }
+        public int getPrimaryCode() { return getPrimaryCode(keyboard.isShifted()); }
         public boolean isDeadKey() {
             if (codes == null || codes.length < 1) return false;
             return Character.getType(codes[0]) == Character.NON_SPACING_MARK;
@@ -266,22 +230,12 @@ public class Keyboard {
             if (str.length() > 1) {
                 if (str.charAt(0) == DEAD_KEY_PLACEHOLDER && str.length() >= 2) {
                     return new int[] { str.charAt(1) }; // FIXME: >1 length?
-                } else {
-                    text = str; // TODO: add space?
-                    return new int[] { 0 };
-                }
-            } else {
-                char c = str.charAt(0);
-                return new int[] { c };
-            }
+                } else { text = str; /* TODO: add space?*/return new int[] { 0 }; }
+            } else { char c = str.charAt(0);return new int[] { c }; }
         }
         public String getCaseLabel() {
             boolean isShifted = keyboard.isShifted();
-            if (isShifted && shiftLabel != null) {
-                return shiftLabel.toString();
-            } else {
-                return label != null ? label.toString() : null;
-            }
+            if (isShifted && shiftLabel != null) return shiftLabel.toString(); else return label != null ? label.toString() : null;
         }
         private String getPopupKeyboardContent(boolean isShifted, boolean addExtra) {
             int mainChar = getPrimaryCode(false);
@@ -331,20 +285,15 @@ public class Keyboard {
             if (popupCharacters == null) {
                 if (popupResId != 0) {
                     return new Keyboard(context, keyboard.mDefaultHeight, popupResId);
-                } else {
-                    if (modifier) return null; // Space, Return etc.
-                }
+                } else if (modifier) return null;
             }
             if ((LatinIME.sKeyboardSettings.popupKeyboardFlags & POPUP_DISABLE) != 0) return null;
             String popup = getPopupKeyboardContent(keyboard.isShifted(), true);
-//            String popup = getPopupKeyboardContent(keyboard.isShiftCaps(), keyboard.isShifted(isSimpleUppercase), true);
             if (popup.length() > 0) {
                 int resId = popupResId;
                 if (resId == 0) resId = R.xml.kbd_popup_template;
                 return new Keyboard(context, keyboard.mDefaultHeight, resId, popup, popupReversed, -1, padding);
-            } else {
-                return null;
-            }
+            } else return null;
         }
         public String getHintLabel(boolean wantAscii, boolean wantAll) {
             if (hint == null) { hint = "";if (shiftLabel != null) { char c = shiftLabel.charAt(0);
@@ -387,11 +336,8 @@ public class Keyboard {
             count = 0;
             StringTokenizer st = new StringTokenizer(value, ",");
             while (st.hasMoreTokens()) {
-                try {
-                    values[count++] = Integer.parseInt(st.nextToken());
-                } catch (NumberFormatException nfe) {
-                    Log.e(TAG, "Error parsing keycodes " + value);
-                }
+                try { values[count++] = Integer.parseInt(st.nextToken()); }
+                catch (NumberFormatException nfe) { Log.e(TAG, "Error parsing keycodes " + value); }
             }
             return values;
         }
@@ -433,7 +379,6 @@ public class Keyboard {
                     ((edgeFlags & Keyboard.EDGE_BOTTOM) != 0 ? "B" : "-"));
             return "KeyDebugFIXME(label=" + label +
                 (shiftLabel != null ? " shift=" + shiftLabel : "") +
-//                (capsLabel != null ? " caps=" + capsLabel : "") +
                 (text != null ? " text=" + text : "" ) +
                 " code=" + code +
                 (code <= 0 || Character.isWhitespace(code) ? "" : ":'" + (char)code + "'" ) +
@@ -468,8 +413,7 @@ public class Keyboard {
         setEdgeFlags();
         fixAltChars(LatinIME.sKeyboardSettings.inputLocale);
     }
-    private Keyboard(Context context, int defaultHeight, int layoutTemplateResId,
-            CharSequence characters, boolean reversed, int columns, int horizontalPadding) {
+    private Keyboard(Context context, int defaultHeight, int layoutTemplateResId, CharSequence characters, boolean reversed, int columns, int horizontalPadding) {
         this(context, defaultHeight, layoutTemplateResId);
         int x = 0;
         int y = 0;
@@ -487,8 +431,7 @@ public class Keyboard {
         int step = reversed ? -1 : 1;
         for (int i = start; i != end; i+=step) {
             char c = characters.charAt(i);
-            if (column >= maxColumns
-                    || x + mDefaultWidth + horizontalPadding > mDisplayWidth) {
+            if (column >= maxColumns || x + mDefaultWidth + horizontalPadding > mDisplayWidth) {
                 x = 0;
                 y += mDefaultVerticalGap + mDefaultHeight;
                 column = 0;
@@ -503,9 +446,7 @@ public class Keyboard {
             column++;
             x += key.width + key.gap;
             mKeys.add(key);
-            if (x > mTotalWidth) {
-                mTotalWidth = x;
-            }
+            if (x > mTotalWidth) mTotalWidth = x;
         }
         mTotalHeight = y + mDefaultHeight;
         mLayoutColumns = columns == -1 ? column : maxColumns;
@@ -519,9 +460,7 @@ public class Keyboard {
         for (Key key : mKeys) {
             int keyFlags = 0;
             if (prevKey == null || key.x <= prevKey.x) {
-                if (prevKey != null) {
-                    prevKey.edgeFlags |= Keyboard.EDGE_RIGHT;
-                }
+                if (prevKey != null) prevKey.edgeFlags |= Keyboard.EDGE_RIGHT;
                 rowFlags = 0;
                 if (row == 0) rowFlags |= Keyboard.EDGE_TOP;
                 if (row == mRowCount - 1) rowFlags |= Keyboard.EDGE_BOTTOM;
@@ -546,23 +485,11 @@ public class Keyboard {
             if (key.popupCharacters == null) continue;
             int popupLen = key.popupCharacters.length();
             if (popupLen == 0) continue;
-            if (key.x >= mTotalWidth / 2) {
-                key.popupReversed = true;
-            }
-/*            boolean needUpcase = key.label != null && key.label.length() == 1 && Character.isUpperCase(key.label.charAt(0));
-            if (needUpcase) {
-                key.popupCharacters = key.popupCharacters.toString().toUpperCase();
-                popupLen = key.popupCharacters.length();
-            }*/
+            if (key.x >= mTotalWidth / 2) key.popupReversed = true;
             StringBuilder newPopup = new StringBuilder(popupLen);
             for (int i = 0; i < popupLen; ++i) {
                 char c = key.popupCharacters.charAt(i);
-                if (mainKeys.contains(c)) continue;  //orijnl already present elsewhere
-//                if ((key.edgeFlags & EDGE_TOP) == 0) continue; //orijnl
-//                if ( aski_dijit_kya(c) && mainKeys.contains(c)) continue;  //orijnl already present elsewhere
-//                if ( aski_dijit_kya(c) && (key.edgeFlags & EDGE_TOP) == 0) continue; //orijnl
-                //vimql if (mainKeys.contains(c)) continue;  // already present elsewhere//vimql
-                //vimql if ((key.edgeFlags & EDGE_TOP) == 0 ) continue; //vimql
+                if (mainKeys.contains(c)) continue;
                 newPopup.append(c);
             }
             key.popupCharacters = newPopup.toString();
@@ -608,41 +535,17 @@ public class Keyboard {
         return mTotalWidth;
     }
     public boolean setShiftState(int shiftState, boolean updateKey) {
-        if (updateKey && mShiftKey != null) {
-            mShiftKey.on = (shiftState != SHIFT_OFF);
-        }
-        if (mShiftState != shiftState) {
-            mShiftState = shiftState;
-            return true;
-        }
+        if (updateKey && mShiftKey != null) mShiftKey.on = (shiftState != SHIFT_OFF);
+        if (mShiftState != shiftState) { mShiftState = shiftState;return true; }
         return false;
     }
     public boolean setShiftState(int shiftState) {
         return setShiftState(shiftState, true);
     }
-    public Key setCtrlIndicator(boolean active) {
-        if (mCtrlKey != null) mCtrlKey.on = active;
-        return mCtrlKey;
-    }
-    public Key setAltIndicator(boolean active) {
-        if (mAltKey != null) mAltKey.on = active;
-        return mAltKey;
-    }
-    public Key setMetaIndicator(boolean active) {
-        if (mMetaKey != null) mMetaKey.on = active;
-        return mMetaKey;
-    }
-//    public boolean isShiftCaps() {
-//        return mShiftState == SHIFT_CAPS || mShiftState == SHIFT_CAPS_LOCKED;
-//    }
-//    public boolean isShifted(boolean applyCaps) {
-    public boolean isShifted() {
-//        if (applyCaps) {
-//            return mShiftState != SHIFT_OFF;
-//        } else {
-            return mShiftState == SHIFT_ON || mShiftState == SHIFT_LOCKED;
-//        }
-    }
+    public Key setCtrlIndicator(boolean active) { if (mCtrlKey != null) mCtrlKey.on = active;return mCtrlKey; }
+    public Key setAltIndicator(boolean active) { if (mAltKey != null) mAltKey.on = active;return mAltKey; }
+    public Key setMetaIndicator(boolean active) { if (mMetaKey != null) mMetaKey.on = active;return mMetaKey; }
+    public boolean isShifted() { return mShiftState == SHIFT_ON || mShiftState == SHIFT_LOCKED; }
     public int getShiftState() {
         return mShiftState;
     }
@@ -661,12 +564,10 @@ public class Keyboard {
                 int count = 0;
                 for (int i = 0; i < mKeys.size(); i++) {
                     final Key key = mKeys.get(i);
-                    boolean isSpace = key.codes != null && key.codes.length > 0 &&
-                    		key.codes[0] == LatinIME.ASCII_SPACE;
+                    boolean isSpace = key.codes != null && key.codes.length > 0 && key.codes[0] == LatinIME.ASCII_SPACE;
                     if (key.squaredDistanceFrom(x, y) < mProximityThreshold ||
                             key.squaredDistanceFrom(x + mCellWidth - 1, y) < mProximityThreshold ||
-                            key.squaredDistanceFrom(x + mCellWidth - 1, y + mCellHeight - 1)
-                                < mProximityThreshold ||
+                            key.squaredDistanceFrom(x + mCellWidth - 1, y + mCellHeight - 1) < mProximityThreshold ||
                             key.squaredDistanceFrom(x, y + mCellHeight - 1) < mProximityThreshold ||
                             isSpace && !(
                             		x + mCellWidth - 1 < key.x ||
@@ -686,17 +587,14 @@ public class Keyboard {
         if (mGridNeighbors == null) computeNearestNeighbors();
         if (x >= 0 && x < getMinWidth() && y >= 0 && y < getHeight()) {
             int index = (y / mCellHeight) * mLayoutColumns + (x / mCellWidth);
-            if (index < mLayoutRows * mLayoutColumns) {
-                return mGridNeighbors[index];
-            }
+            if (index < mLayoutRows * mLayoutColumns) return mGridNeighbors[index];
         }
         return new int[0];
     }
     protected Row createRowFromXml(Resources res, XmlResourceParser parser) {
         return new Row(res, this, parser);
     }
-    protected Key createKeyFromXml(Resources res, Row parent, int x, int y,
-            XmlResourceParser parser) {
+    protected Key createKeyFromXml(Resources res, Row parent, int x, int y, XmlResourceParser parser) {
         return new Key(res, parent, x, y, parser);
     }
     private void loadKeyboard(Context context, XmlResourceParser parser) {
@@ -721,54 +619,33 @@ public class Keyboard {
                         currentRow = createRowFromXml(res, parser);
                         skipRow = currentRow.mode != 0 && currentRow.mode != mKeyboardMode;
                         if (currentRow.extension) {
-                            if (mUseExtension) {
-                                ++mExtensionRowCount;
-                            } else {
-                                skipRow = true;
-                            }
+                            if (mUseExtension) ++mExtensionRowCount; else skipRow = true;
                         }
-                        if (skipRow) {
-                            skipToEndOfRow(parser);
-                            inRow = false;
-                        }
+                        if (skipRow) { skipToEndOfRow(parser);inRow = false; }
                    } else if (TAG_KEY.equals(tag)) {
                         inKey = true;
                         key = createKeyFromXml(res, currentRow, Math.round(x), y, parser);
                         key.realX = x;
                         if (key.codes == null) {
-                          // skip this key, adding its width to the previous one
-                          if (prevKey != null) {
-                              prevKey.width += key.width;
-                          }
+                          if (prevKey != null) prevKey.width += key.width;
                         } else {
                           mKeys.add(key);
                           prevKey = key;
                           if (key.codes[0] == KEYCODE_SHIFT) {
-                              if (mShiftKeyIndex == -1) {
-                                  mShiftKey = key;
-                                  mShiftKeyIndex = mKeys.size()-1;
-                              }
+                              if (mShiftKeyIndex == -1) { mShiftKey = key;mShiftKeyIndex = mKeys.size()-1; }
                               mModifierKeys.add(key);
-                          } else if (key.codes[0] == KEYCODE_ALT_SYM) {
-                              mModifierKeys.add(key);
-                          } else if (key.codes[0] == LatinKeyboardView.KEYCODE_CTRL_LEFT) {
-                              mCtrlKey = key;
-                          } else if (key.codes[0] == LatinKeyboardView.KEYCODE_ALT_LEFT) {
-                              mAltKey = key;
-                          } else if (key.codes[0] == LatinKeyboardView.KEYCODE_META_LEFT) {
-                              mMetaKey = key;
                           }
+                          else if (key.codes[0] == KEYCODE_ALT_SYM) mModifierKeys.add(key);
+                          else if (key.codes[0] == LatinKeyboardView.KEYCODE_CTRL_LEFT) mCtrlKey = key;
+                          else if (key.codes[0] == LatinKeyboardView.KEYCODE_ALT_LEFT) mAltKey = key;
+                          else if (key.codes[0] == LatinKeyboardView.KEYCODE_META_LEFT) mMetaKey = key;
                         }
-                    } else if (TAG_KEYBOARD.equals(tag)) {
-                        parseKeyboardAttributes(res, parser);
-                    }
+                    } else if (TAG_KEYBOARD.equals(tag)) parseKeyboardAttributes(res, parser);
                 } else if (event == XmlResourceParser.END_TAG) {
                     if (inKey) {
                         inKey = false;
                         x += key.realGap + key.realWidth;
-                        if (x > mTotalWidth) {
-                            mTotalWidth = Math.round(x);
-                        }
+                        if (x > mTotalWidth) mTotalWidth = Math.round(x);
                     } else if (inRow) {
                         inRow = false;
                         y += currentRow.verticalGap;
@@ -779,10 +656,7 @@ public class Keyboard {
                     }
                 }
             }
-        } catch (Exception e) {
-            Log.e(TAG, "Parse error:" + e);
-            e.printStackTrace();
-        }
+        } catch (Exception e) { Log.e(TAG, "Parse error:" + e);e.printStackTrace(); }
         mTotalHeight = y - mDefaultVerticalGap;
     }
     public void setKeyboardWidth(int newWidth) {
@@ -791,42 +665,23 @@ public class Keyboard {
         if (mTotalWidth <= newWidth) return;  // it already fits
         float scale = (float) newWidth / mDisplayWidth;
         Log.i("PCKeyboard", "Rescaling keyboard: " + mTotalWidth + " => " + newWidth);
-        for (Key key : mKeys) {
-            key.x = Math.round(key.realX * scale);
-        }
+        for (Key key : mKeys) key.x = Math.round(key.realX * scale);
         mTotalWidth = newWidth;
     }
-    private void skipToEndOfRow(XmlResourceParser parser)
-            throws XmlPullParserException, IOException {
+    private void skipToEndOfRow(XmlResourceParser parser) throws XmlPullParserException, IOException {
         int event;
         while ((event = parser.next()) != XmlResourceParser.END_DOCUMENT) {
-            if (event == XmlResourceParser.END_TAG
-                    && parser.getName().equals(TAG_ROW)) {
-                break;
-            }
+            if (event == XmlResourceParser.END_TAG && parser.getName().equals(TAG_ROW)) break;
         }
     }
     private void parseKeyboardAttributes(Resources res, XmlResourceParser parser) {
-        TypedArray a = res.obtainAttributes(Xml.asAttributeSet(parser),
-                R.styleable.Keyboard);
-        mDefaultWidth = getDimensionOrFraction(a,
-                R.styleable.Keyboard_keyWidth,
-                mDisplayWidth, mDisplayWidth / 10);
-        mDefaultHeight = Math.round(getDimensionOrFraction(a,
-                R.styleable.Keyboard_keyHeight,
-                mDisplayHeight, mDefaultHeight));
-        mDefaultHorizontalGap = getDimensionOrFraction(a,
-                R.styleable.Keyboard_horizontalGap,
-                mDisplayWidth, 0);
-        mDefaultVerticalGap = Math.round(getDimensionOrFraction(a,
-                R.styleable.Keyboard_verticalGap,
-                mDisplayHeight, 0));
-        mHorizontalPad = getDimensionOrFraction(a,
-                R.styleable.Keyboard_horizontalPad,
-                mDisplayWidth, res.getDimension(R.dimen.key_horizontal_pad));
-        mVerticalPad = getDimensionOrFraction(a,
-                R.styleable.Keyboard_verticalPad,
-                mDisplayHeight, res.getDimension(R.dimen.key_vertical_pad));
+        TypedArray a = res.obtainAttributes(Xml.asAttributeSet(parser), R.styleable.Keyboard);
+        mDefaultWidth = getDimensionOrFraction(a, R.styleable.Keyboard_keyWidth, mDisplayWidth, mDisplayWidth / 10);
+        mDefaultHeight = Math.round(getDimensionOrFraction(a, R.styleable.Keyboard_keyHeight, mDisplayHeight, mDefaultHeight));
+        mDefaultHorizontalGap = getDimensionOrFraction(a, R.styleable.Keyboard_horizontalGap, mDisplayWidth, 0);
+        mDefaultVerticalGap = Math.round(getDimensionOrFraction(a, R.styleable.Keyboard_verticalGap, mDisplayHeight, 0));
+        mHorizontalPad = getDimensionOrFraction(a, R.styleable.Keyboard_horizontalPad, mDisplayWidth, res.getDimension(R.dimen.key_horizontal_pad));
+        mVerticalPad = getDimensionOrFraction(a, R.styleable.Keyboard_verticalPad, mDisplayHeight, res.getDimension(R.dimen.key_vertical_pad));
         mLayoutRows = a.getInteger(R.styleable.Keyboard_layoutRows, DEFAULT_LAYOUT_ROWS);
         mLayoutColumns = a.getInteger(R.styleable.Keyboard_layoutColumns, DEFAULT_LAYOUT_COLUMNS);
         if (mDefaultHeight == 0 && mKeyboardHeight > 0 && mLayoutRows > 0) {
@@ -839,11 +694,8 @@ public class Keyboard {
     static float getDimensionOrFraction(TypedArray a, int index, int base, float defValue) {
         TypedValue value = a.peekValue(index);
         if (value == null) return defValue;
-        if (value.type == TypedValue.TYPE_DIMENSION) {
-            return a.getDimensionPixelOffset(index, Math.round(defValue));
-        } else if (value.type == TypedValue.TYPE_FRACTION) {
-            return a.getFraction(index, base, base, defValue);
-        }
+        if (value.type == TypedValue.TYPE_DIMENSION) return a.getDimensionPixelOffset(index, Math.round(defValue));
+        else if (value.type == TypedValue.TYPE_FRACTION) return a.getFraction(index, base, base, defValue);
         return defValue;
     }
     @Override

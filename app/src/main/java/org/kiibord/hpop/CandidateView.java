@@ -135,7 +135,6 @@ public class CandidateView extends View {
                 mSelectedString = suggestion;
                 mSelectedIndex = i;
             }
-
             if (canvas != null) {
                 canvas.drawText(suggestion, 0, wordLength, x + wordWidth / 2, y, paint); //suggestion
                 paint.setColor(mColorOther);
@@ -151,7 +150,6 @@ public class CandidateView extends View {
         mTotalWidth = x;
         if (mTargetScrollX != scrollX) { scrollToTarget(); }
     }
-    
     private void scrollToTarget() {
         int scrollX = getScrollX();
         if (mTargetScrollX > scrollX) {
