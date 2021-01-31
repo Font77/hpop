@@ -569,11 +569,7 @@ public class Keyboard {
                             key.squaredDistanceFrom(x + mCellWidth - 1, y) < mProximityThreshold ||
                             key.squaredDistanceFrom(x + mCellWidth - 1, y + mCellHeight - 1) < mProximityThreshold ||
                             key.squaredDistanceFrom(x, y + mCellHeight - 1) < mProximityThreshold ||
-                            isSpace && !(
-                            		x + mCellWidth - 1 < key.x ||
-                            		x > key.x + key.width ||
-                            		y + mCellHeight - 1 < key.y ||
-                            		y > key.y + key.height)) {
+                            isSpace && !(x + mCellWidth - 1 < key.x || x > key.x + key.width || y + mCellHeight - 1 < key.y || y > key.y + key.height)) {
                         indices[count++] = i;
                     }
                 }
@@ -618,9 +614,7 @@ public class Keyboard {
                         x = 0;
                         currentRow = createRowFromXml(res, parser);
                         skipRow = currentRow.mode != 0 && currentRow.mode != mKeyboardMode;
-                        if (currentRow.extension) {
-                            if (mUseExtension) ++mExtensionRowCount; else skipRow = true;
-                        }
+                        if (currentRow.extension) if (mUseExtension) ++mExtensionRowCount; else skipRow = true;
                         if (skipRow) { skipToEndOfRow(parser);inRow = false; }
                    } else if (TAG_KEY.equals(tag)) {
                         inKey = true;
@@ -698,9 +692,5 @@ public class Keyboard {
         else if (value.type == TypedValue.TYPE_FRACTION) return a.getFraction(index, base, base, defValue);
         return defValue;
     }
-    @Override
-    public String toString() {
-        return "Keyboard(" + mLayoutColumns + "x" + mLayoutRows + " keys=" + mKeys.size() +
-            " rowCount=" + mRowCount + " mode=" + mKeyboardMode + " size=" + mTotalWidth + "x" + mTotalHeight + ")";
-    }
+    @Override public String toString() { return "Keyboard(" + mLayoutColumns + "x" + mLayoutRows + " keys=" + mKeys.size() + " rowCount=" + mRowCount + " mode=" + mKeyboardMode + " size=" + mTotalWidth + "x" + mTotalHeight + ")"; }
 }

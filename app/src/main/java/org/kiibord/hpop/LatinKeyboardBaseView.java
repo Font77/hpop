@@ -497,7 +497,6 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                         drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
                     } else { canvas.drawText(altHint, centerx_alt_hint, beslain_alt_hint, paintHint); }
                 }
-//                if(i>9 && i<20) { paint.setColor(0xFFFF7777);paint.setTypeface(Typeface.DEFAULT_BOLD); }
                 switch (label.charAt(0))
                 {
                     case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T':

@@ -163,14 +163,6 @@ public class KeyboardSwitcher implements SharedPreferences.OnSharedPreferenceCha
         sInstance.mSymbolsShiftedId = sInstance.makeSymbolsShiftedId(false);
     }
 
-    /**
-     * Sets the input locale, when there are multiple locales for input. If no
-     * locale switching is required, then the locale should be set to null.
-     *
-     * @param locale
-     *            the current input locale, or null for default locale with no
-     *            locale button.
-     */
     public void setLanguageSwitcher(LanguageSwitcher languageSwitcher) {
         mLanguageSwitcher = languageSwitcher;
         languageSwitcher.getInputLocale(); // for side effect
@@ -188,37 +180,20 @@ public class KeyboardSwitcher implements SharedPreferences.OnSharedPreferenceCha
     }
 
     private KeyboardId makeSymbolsShiftedId(boolean hasVoice) {
-        if (mFullMode > 0)
-            return null;
-        return new KeyboardId(KBD_SYMBOLS_SHIFT,
-                mHasSettingsKey ? KEYBOARDMODE_SYMBOLS_WITH_SETTINGS_KEY
-                        : KEYBOARDMODE_SYMBOLS, false, hasVoice);
+        if (mFullMode > 0) return null;
+        return new KeyboardId(KBD_SYMBOLS_SHIFT, mHasSettingsKey ? KEYBOARDMODE_SYMBOLS_WITH_SETTINGS_KEY : KEYBOARDMODE_SYMBOLS, false, hasVoice);
     }
 
     public void makeKeyboards(boolean forceCreate) {
         mFullMode = LatinIME.sKeyboardSettings.keyboardMode;
         mSymbolsId = makeSymbolsId(mHasVoice && !mVoiceOnPrimary);
         mSymbolsShiftedId = makeSymbolsShiftedId(mHasVoice && !mVoiceOnPrimary);
-
-        if (forceCreate)
-            mKeyboards.clear();
-        // Configuration change is coming after the keyboard gets recreated. So
-        // don't rely on that.
-        // If keyboards have already been made, check if we have a screen width
-        // change and
-        // create the keyboard layouts again at the correct orientation
+        if (forceCreate) mKeyboards.clear();
         int displayWidth = mInputMethodService.getMaxWidth();
-        if (displayWidth == mLastDisplayWidth)
-            return;
+        if (displayWidth == mLastDisplayWidth) return;
         mLastDisplayWidth = displayWidth;
-        if (!forceCreate)
-            mKeyboards.clear();
+        if (!forceCreate) mKeyboards.clear();
     }
-
-    /**
-     * Represents the parameters necessary to construct a new LatinKeyboard,
-     * which also serve as a unique identifier for each keyboard type.
-     */
     private static class KeyboardId {
         // TODO: should have locale and portrait/landscape orientation?
         public final int mXml;
@@ -231,17 +206,14 @@ public class KeyboardSwitcher implements SharedPreferences.OnSharedPreferenceCha
 
         private final int mHashCode;
 
-        public KeyboardId(int xml, int mode, boolean enableShiftLock,
-                boolean hasVoice) {
+        public KeyboardId(int xml, int mode, boolean enableShiftLock, boolean hasVoice) {
             this.mXml = xml;
             this.mKeyboardMode = mode;
             this.mEnableShiftLock = enableShiftLock;
             this.mHasVoice = hasVoice;
             this.mKeyboardHeightPercent = LatinIME.sKeyboardSettings.keyboardHeightPercent;
             this.mUsingExtension = LatinIME.sKeyboardSettings.useExtension;
-
-            this.mHashCode = Arrays.hashCode(new Object[] { xml, mode,
-                    enableShiftLock, hasVoice });
+            this.mHashCode = Arrays.hashCode(new Object[] { xml, mode, enableShiftLock, hasVoice });
         }
 
         @Override
@@ -286,8 +258,7 @@ public class KeyboardSwitcher implements SharedPreferences.OnSharedPreferenceCha
         try {
             setKeyboardMode(mode, imeOptions, enableVoice, mPreferSymbols);
         } catch (RuntimeException e) {
-            Log.e(TAG, "Got exception: " + mode + "," + imeOptions + ","
-                    + mPreferSymbols + " msg=" + e.getMessage());
+            Log.e(TAG, "Got exception: " + mode + "," + imeOptions + "," + mPreferSymbols + " msg=" + e.getMessage());
         }
     }
 
