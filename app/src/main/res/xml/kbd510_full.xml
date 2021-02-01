@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Keyboard xmlns:android="http://schemas.android.com/apk/res-auto" android:keyWidth="7.1428571485%p" android:horizontalGap="0px" android:verticalGap="@dimen/key_bottom_gap" android:layoutRows="5" android:layoutColumns="14">
     <Row android:rowEdgeFlags="top" android:extension="true">
-        <Key android:keyLabel="\?1" android:codes="@integer/key_fkey_f1" android:isModifier="true" android:keyEdgeFlags="left"/>
-        <Key android:keyLabel="\?2" android:codes="@integer/key_fkey_f2" android:isModifier="true" />
-        <Key android:keyLabel="\?3" android:codes="@integer/key_fkey_f3" android:isModifier="true" />
-        <Key android:keyLabel="\?4" android:codes="@integer/key_fkey_f4" android:isModifier="true" />
-        <Key android:keyLabel="\?5" android:codes="@integer/key_fkey_f5" android:isModifier="true" />
-        <Key android:keyLabel="\?6" android:codes="@integer/key_fkey_f6" android:isModifier="true" />
-        <Key android:keyLabel="\?7" android:codes="@integer/key_fkey_f7" android:isModifier="true" />
-        <Key android:keyLabel="\?8" android:codes="@integer/key_fkey_f8" android:isModifier="true" />
+        <Key android:keyLabel="A" android:codes="@integer/key_fkey_f1" android:isModifier="true" android:keyEdgeFlags="left"/>
+        <Key android:keyLabel="a" android:codes="@integer/key_fkey_f2" android:isModifier="true" />
+        <Key android:keyLabel="i" android:codes="@integer/key_fkey_f3" android:isModifier="true" />
+        <Key android:keyLabel="u" android:codes="@integer/key_fkey_f4" android:isModifier="true" />
+        <Key android:keyLabel="e" android:codes="@integer/key_fkey_f5" android:isModifier="true" />
+        <Key android:keyLabel="o" android:codes="@integer/key_fkey_f6" android:isModifier="true" />
+        <Key android:keyLabel="N" android:codes="@integer/key_fkey_f7" android:isModifier="true" />
+        <Key android:keyLabel="y" android:codes="@integer/key_fkey_f8" android:isModifier="true" />
         <Key android:keyLabel="\?9" android:codes="@integer/key_fkey_f9" android:isModifier="true" />
         <Key android:keyLabel="\?:" android:codes="@integer/key_fkey_f10" android:isModifier="true" />
         <Key android:keyLabel="\?;" android:codes="@integer/key_fkey_f11" android:isModifier="true" />

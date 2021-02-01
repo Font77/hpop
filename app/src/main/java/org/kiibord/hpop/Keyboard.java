@@ -539,19 +539,13 @@ public class Keyboard {
         if (mShiftState != shiftState) { mShiftState = shiftState;return true; }
         return false;
     }
-    public boolean setShiftState(int shiftState) {
-        return setShiftState(shiftState, true);
-    }
+    public boolean setShiftState(int shiftState) { return setShiftState(shiftState, true); }
     public Key setCtrlIndicator(boolean active) { if (mCtrlKey != null) mCtrlKey.on = active;return mCtrlKey; }
     public Key setAltIndicator(boolean active) { if (mAltKey != null) mAltKey.on = active;return mAltKey; }
     public Key setMetaIndicator(boolean active) { if (mMetaKey != null) mMetaKey.on = active;return mMetaKey; }
     public boolean isShifted() { return mShiftState == SHIFT_ON || mShiftState == SHIFT_LOCKED; }
-    public int getShiftState() {
-        return mShiftState;
-    }
-    public int getShiftKeyIndex() {
-        return mShiftKeyIndex;
-    }
+    public int getShiftState() { return mShiftState; }
+    public int getShiftKeyIndex() { return mShiftKeyIndex; }
     private void computeNearestNeighbors() {
         mCellWidth = (getMinWidth() + mLayoutColumns - 1) / mLayoutColumns;
         mCellHeight = (getHeight() + mLayoutRows - 1) / mLayoutRows;
@@ -587,12 +581,8 @@ public class Keyboard {
         }
         return new int[0];
     }
-    protected Row createRowFromXml(Resources res, XmlResourceParser parser) {
-        return new Row(res, this, parser);
-    }
-    protected Key createKeyFromXml(Resources res, Row parent, int x, int y, XmlResourceParser parser) {
-        return new Key(res, parent, x, y, parser);
-    }
+    protected Row createRowFromXml(Resources res, XmlResourceParser parser) { return new Row(res, this, parser); }
+    protected Key createKeyFromXml(Resources res, Row parent, int x, int y, XmlResourceParser parser) { return new Key(res, parent, x, y, parser); }
     private void loadKeyboard(Context context, XmlResourceParser parser) {
         boolean inKey = false;
         boolean inRow = false;
@@ -640,12 +630,7 @@ public class Keyboard {
                         inKey = false;
                         x += key.realGap + key.realWidth;
                         if (x > mTotalWidth) mTotalWidth = Math.round(x);
-                    } else if (inRow) {
-                        inRow = false;
-                        y += currentRow.verticalGap;
-                        y += currentRow.defaultHeight;
-                        mRowCount++;
-                    } else {
+                    } else if (inRow) { inRow = false;y += currentRow.verticalGap;y += currentRow.defaultHeight;mRowCount++; } else {
                         // TODO: error or extend?
                     }
                 }

@@ -141,8 +141,7 @@ public class LatinKeyboard extends Keyboard {
         m123MicPreviewIcon = res.getDrawable(R.drawable.sym_keyboard_feedback_123_mic);
         mHintIcon = res.getDrawable(R.drawable.hint_popup);
         setDefaultBounds(m123MicPreviewIcon);
-        sSpacebarVerticalCorrection = res.getDimensionPixelOffset(
-                R.dimen.spacebar_vertical_correction);
+        sSpacebarVerticalCorrection = res.getDimensionPixelOffset( R.dimen.spacebar_vertical_correction);
         mIsAlphaKeyboard = xmlLayoutResId == R.xml.kbd_qwerty;
         mIsAlphaFullKeyboard = xmlLayoutResId == R.xml.kbd510_full;
         mIsFnFullKeyboard = xmlLayoutResId == R.xml.kbd_full_fn || xmlLayoutResId == R.xml.kbd_compact_fn;

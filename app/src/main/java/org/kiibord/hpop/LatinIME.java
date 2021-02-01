@@ -1768,26 +1768,18 @@ public class LatinIME extends InputMethodService implements ComposeSequencing, L
 
     public void onKey(int primaryCode, int[] keyCodes, int x, int y) {
         long when = SystemClock.uptimeMillis();
-        if (primaryCode != Keyboard.KEYCODE_DELETE
-                || when > mLastKeyTime + QUICK_PRESS) {
-            mDeleteCount = 0;
-        }
+        if (primaryCode != Keyboard.KEYCODE_DELETE || when > mLastKeyTime + QUICK_PRESS)
+        { mDeleteCount = 0; }
         mLastKeyTime = when;
-        final boolean distinctMultiTouch = mKeyboardSwitcher
-                .hasDistinctMultitouch();
+        final boolean distinctMultiTouch = mKeyboardSwitcher.hasDistinctMultitouch();
         switch (primaryCode) {
         case Keyboard.KEYCODE_DELETE:
-            if (processMultiKey(primaryCode)) {
-                break;
-            }
+            if (processMultiKey(primaryCode)) { break; }
             handleBackspace();
             mDeleteCount++;
             break;
         case Keyboard.KEYCODE_SHIFT:
-            // Shift key is handled in onPress() when device has distinct
-            // multi-touch panel.
-            if (!distinctMultiTouch)
-                handleShift();
+            if (!distinctMultiTouch) handleShift();
             break;
         case Keyboard.KEYCODE_MODE_CHANGE:
             // Symbol key is handled in onPress() when device has distinct
@@ -1802,11 +1794,8 @@ public class LatinIME extends InputMethodService implements ComposeSequencing, L
                 setModCtrl(!mModCtrl);
             break;
         case LatinKeyboardView.KEYCODE_ALT_LEFT:
-            // Alt key is handled in onPress() when device has distinct
-            // multi-touch panel.
-            if (!distinctMultiTouch)
-                setModAlt(!mModAlt);
-            break;
+            // Alt key is handled in onPress() when device has distinct             // multi-touch panel.
+            if (!distinctMultiTouch) setModAlt(!mModAlt); break;
         case LatinKeyboardView.KEYCODE_META_LEFT:
             // Meta key is handled in onPress() when device has distinct
             // multi-touch panel.
@@ -1883,28 +1872,20 @@ public class LatinIME extends InputMethodService implements ComposeSequencing, L
         case LatinKeyboardView.KEYCODE_BREAK:
         case LatinKeyboardView.KEYCODE_NUM_LOCK:
         case LatinKeyboardView.KEYCODE_SCROLL_LOCK:
-            if (processMultiKey(primaryCode)) {
-                break;
-            }
-            // send as plain keys, or as escape sequence if needed
+            if (processMultiKey(primaryCode)) { break; }
             sendSpecialKey(-primaryCode);
             break;
         default:
             if (!mComposeMode && mDeadKeysActive && Character.getType(primaryCode) == Character.NON_SPACING_MARK) {
                 //Log.i(TAG, "possible dead character: " + primaryCode);
-                if (!mDeadAccentBuffer.execute(primaryCode)) {
-                    //Log.i(TAG, "double dead key");
-                    break; // pressing a dead key twice produces spacing equivalent
-                }
+                if (!mDeadAccentBuffer.execute(primaryCode)) { break; }
                 updateShiftKeyState(getCurrentInputEditorInfo());
                 break;
             }
             if (processMultiKey(primaryCode)) {
                 break;
             }
-            if (primaryCode != ASCII_ENTER) {
-                mJustAddedAutoSpace = false;
-            }
+            if (primaryCode != ASCII_ENTER) { mJustAddedAutoSpace = false; }
             RingCharBuffer.getInstance().push((char) primaryCode, x, y);
             if (isWordSeparator(primaryCode)) {
                 handleSeparator(primaryCode);
@@ -1989,16 +1970,7 @@ public class LatinIME extends InputMethodService implements ComposeSequencing, L
                 && sameAsTextBeforeCursor(ic, mEnteredText)) {
             ic.deleteSurroundingText(mEnteredText.length(), 0);
         } else if (deleteChar) {
-            if (mCandidateView != null
-                    && mCandidateView.dismissAddToDictionaryHint()) {
-                // Go back to the suggestion mode if the user canceled the
-                // "Touch again to save".
-                // NOTE: In gerenal, we don't revert the word when backspacing
-                // from a manual suggestion pick. We deliberately chose a
-                // different behavior only in the case of picking the first
-                // suggestion (typed word). It's intentional to have made this
-                // inconsistent with backspacing after selecting other
-                // suggestions.
+            if (mCandidateView != null && mCandidateView.dismissAddToDictionaryHint()) {
                 revertLastWord(deleteChar);
             } else {
                 sendDownUpKeyEvents(KeyEvent.KEYCODE_DEL);
@@ -2100,7 +2072,6 @@ public class LatinIME extends InputMethodService implements ComposeSequencing, L
     }
 
     private void handleShiftInternal(boolean forceState, int newState) {
-        //Log.i(TAG, "handleShiftInternal forceNormal=" + forceNormal);
         mHandler.removeMessages(MSG_UPDATE_SHIFT_STATE);
         KeyboardSwitcher switcher = mKeyboardSwitcher;
         if (switcher.isAlphabetMode()) {
