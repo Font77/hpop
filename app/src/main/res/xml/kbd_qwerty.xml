@@ -21,7 +21,7 @@
         <Key android:keyLabel="o" android:popupCharacters="" />
         <Key android:keyLabel="N" android:popupCharacters="" />
         <Key android:keyLabel="y" android:popupCharacters="" />
-        <Key android:keyLabel="H" android:popupCharacters="" />
+        <Key android:codes="72" android:keyIcon="@drawable/simbql_kibord_hh" android:popupCharacters="" />
         <Key android:keyLabel="s" android:popupCharacters="" android:keyEdgeFlags="right" />
     </Row>
     <Row>
