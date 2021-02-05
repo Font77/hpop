@@ -690,14 +690,6 @@ public class LatinKeyboard extends Keyboard {
                     }
                 }
 
-                // Get the surrounding keys and intersect with the preferred list
-                // For all in the intersection
-                //   if distance from touch point is within a reasonable distance
-                //       make this the pref letter
-                // If no pref letter
-                //   return inside;
-                // else return thiskey == prefletter;
-
                 for (int i = 0; i < nearby.length; i++) {
                     Key k = nearbyKeys.get(nearby[i]);
                     if (inPrefList(k.codes[0], pref)) {
@@ -712,11 +704,7 @@ public class LatinKeyboard extends Keyboard {
                     }
                 }
                 // Didn't find any
-                if (mPrefLetter == 0) {
-                    return inside;
-                } else {
-                    return mPrefLetter == code;
-                }
+                if (mPrefLetter == 0) { return inside; } else { return mPrefLetter == code; }
             }
         }
 
@@ -785,47 +773,29 @@ public class LatinKeyboard extends Keyboard {
                 android.R.attr.state_pressed
         };
 
-        public LatinKey(Resources res, Keyboard.Row parent, int x, int y,
-                XmlResourceParser parser) {
+        public LatinKey(Resources res, Keyboard.Row parent, int x, int y, XmlResourceParser parser) {
             super(res, parent, x, y, parser);
         }
 
-        // sticky is used for shift key.  If a key is not sticky and is modifier,
-        // the key will be treated as functional.
-        private boolean isFunctionalKey() {
-            return !sticky && modifier;
-        }
-
-        /**
-         * Overriding this method so that we can reduce the target area for certain keys.
-         */
-        @Override
-        public boolean isInside(int x, int y) {
-            // TODO This should be done by parent.isInside(this, x, y)
-            // if Key.parent were protected.
+        private boolean isFunctionalKey() { return !sticky && modifier; }
+        
+        @Override public boolean isInside(int x, int y) {
             boolean result = LatinKeyboard.this.isInside(this, x, y);
             return result;
         }
 
-        boolean isInsideSuper(int x, int y) {
-            return super.isInside(x, y);
-        }
+        boolean isInsideSuper(int x, int y) { return super.isInside(x, y); }
 
         @Override
         public int[] getCurrentDrawableState() {
             if (isFunctionalKey()) {
-                if (pressed) {
-                    return KEY_STATE_FUNCTIONAL_PRESSED;
-                } else {
-                    return KEY_STATE_FUNCTIONAL_NORMAL;
-                }
+                if (pressed) { return KEY_STATE_FUNCTIONAL_PRESSED; } else { return KEY_STATE_FUNCTIONAL_NORMAL; }
             }
             return super.getCurrentDrawableState();
         }
 
         @Override
         public int squaredDistanceFrom(int x, int y) {
-            // We should count vertical gap between rows to calculate the center of this Key.
             final int verticalGap = LatinKeyboard.this.mVerticalGap;
             final int xDist = this.x + width / 2 - x;
             final int yDist = this.y + (height + verticalGap) / 2 - y;
