@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-<string name="english_ime_name">hpop</string>
-<string name="english_ime_settings">hpop sqtifgs</string>
+<string name="english_ime_name">hpop_u5</string>
+<string name="english_ime_settings">hpop settings</string>
 <string name="english_ime_input_options">input opsqns</string>
 <string name="title_keyboard_view_settings">kiibord viyu sqtifgs</string>
 <string name="title_keyboard_height_portrait">kiibord hait portret</string>

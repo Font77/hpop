@@ -188,16 +188,16 @@ public class CandidateView extends View {
     @Override public boolean onTouchEvent(MotionEvent me) { if (mGestureDetector.onTouchEvent(me)) { return true; } 
         int action = me.getAction(); int x = (int) me.getX(); int y = (int) me.getY(); mTouchX = x; 
         switch (action) { case MotionEvent.ACTION_DOWN: invalidate(); break;
-        case MotionEvent.ACTION_MOVE:
-            if (y <= 0) { if (mSelectedString != null) { // if there are completions from the application, we don't change the state to state_picked_suggestion
-                    if (!mShowingCompletions) { }
-                    mService.pickSuggestionManually(mSelectedIndex, mSelectedString);
-                    mSelectedString = null;
-                    mSelectedIndex = -1;
+            case MotionEvent.ACTION_MOVE:
+                if (y <= 0) { if (mSelectedString != null) { // if there are completions from the application, we don't change the state to state_picked_suggestion
+                        if (!mShowingCompletions) { }
+                        mService.pickSuggestionManually(mSelectedIndex, mSelectedString);
+                        mSelectedString = null;
+                        mSelectedIndex = -1;
+                    }
                 }
-            }
-            break;
-        case MotionEvent.ACTION_UP: if (!mScrolled) { if (mSelectedString != null) {
+                break;
+            case MotionEvent.ACTION_UP: if (!mScrolled) { if (mSelectedString != null) {
                 if (mShowingAddToDictionary) { longPressFirstWord(); clear(); } else {
                     if (!mShowingCompletions) { }
                     mService.pickSuggestionManually(mSelectedIndex, mSelectedString);

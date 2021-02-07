@@ -100,21 +100,14 @@ public class LatinKeyboard extends Keyboard {
     private static final float SPACEBAR_DRAG_THRESHOLD = 0.51f;
     private static final float OVERLAP_PERCENTAGE_LOW_PROB = 0.70f;
     private static final float OVERLAP_PERCENTAGE_HIGH_PROB = 0.85f;
-    // Minimum width of space key preview (proportional to keyboard width)
     private static final float SPACEBAR_POPUP_MIN_RATIO = 0.4f;
-    // Minimum width of space key preview (proportional to screen height)
     private static final float SPACEBAR_POPUP_MAX_RATIO = 0.4f;
-    // Height in space key the language name will be drawn. (proportional to space key height)
-    private static final float SPACEBAR_LANGUAGE_BASELINE = 0.6f;
-    // If the full language name needs to be smaller than this value to be drawn on space key,
-    // its short language name will be used instead.
+    private static final float SPACEBAR_LANGUAGE_BASELINE = 0.4f;
     private static final float MINIMUM_SCALE_OF_LANGUAGE_NAME = 0.8f;
 
     private static int sSpacebarVerticalCorrection;
 
-    public LatinKeyboard(Context context, int xmlLayoutResId) {
-        this(context, xmlLayoutResId, 0, 0);
-    }
+    public LatinKeyboard(Context context, int xmlLayoutResId) { this(context, xmlLayoutResId, 0, 0); }
 
     public LatinKeyboard(Context context, int xmlLayoutResId, int mode, float kbHeightPercent) {
         super(context, 0, xmlLayoutResId, mode, kbHeightPercent);
@@ -267,14 +260,8 @@ public class LatinKeyboard extends Keyboard {
         // Update KEYCODE_MODE_CHANGE key only on alphabet mode, not on symbol mode.
         if (m123Key != null && mIsAlphaKeyboard) {
             if (mVoiceEnabled && !mHasVoiceButton) {
-                m123Key.icon = m123MicIcon;
-                m123Key.iconPreview = m123MicPreviewIcon;
-                m123Key.label = null;
-            } else {
-                m123Key.icon = null;
-                m123Key.iconPreview = null;
-                m123Key.label = m123Label;
-            }
+                m123Key.icon = m123MicIcon; m123Key.iconPreview = m123MicPreviewIcon; m123Key.label = null;
+            } else { m123Key.icon = null;m123Key.iconPreview = null;m123Key.label = m123Label; }
         }
     }
 
@@ -417,10 +404,8 @@ public class LatinKeyboard extends Keyboard {
 
         // Draw main icon at the center of the key visual
         // Assuming the hintIcon shares the same padding with the key's background drawable
-        final int drawableX = (width + hintIconPadding.left - hintIconPadding.right
-                - mainIcon.getIntrinsicWidth()) / 2;
-        final int drawableY = (height + hintIconPadding.top - hintIconPadding.bottom
-                - mainIcon.getIntrinsicHeight()) / 2;
+        final int drawableX = (width + hintIconPadding.left - hintIconPadding.right - mainIcon.getIntrinsicWidth()) / 2;
+        final int drawableY = (height + hintIconPadding.top - hintIconPadding.bottom - mainIcon.getIntrinsicHeight()) / 2;
         setDefaultBounds(mainIcon);
         canvas.translate(drawableX, drawableY);
         mainIcon.draw(canvas);
@@ -451,8 +436,7 @@ public class LatinKeyboard extends Keyboard {
         if (allowVariableTextSize) {
             textWidth = getTextWidth(paint, language, textSize, bounds);
             // If text size goes too small or text does not fit, use short name
-            useShortName = textSize / origTextSize < MINIMUM_SCALE_OF_LANGUAGE_NAME
-                    || textWidth > maxTextWidth;
+            useShortName = textSize / origTextSize < MINIMUM_SCALE_OF_LANGUAGE_NAME || textWidth > maxTextWidth;
         } else {
             useShortName = textWidth > maxTextWidth;
             textSize = origTextSize;
@@ -550,11 +534,8 @@ public class LatinKeyboard extends Keyboard {
             mSpaceKey.iconPreview = mSlidingLocaleIcon;
         }
         mSlidingLocaleIcon.setDiff(diff);
-        if (Math.abs(diff) == Integer.MAX_VALUE) {
-            mSpaceKey.iconPreview = mSpacePreviewIcon;
-        } else {
-            mSpaceKey.iconPreview = mSlidingLocaleIcon;
-        }
+        if (Math.abs(diff) == Integer.MAX_VALUE) mSpaceKey.iconPreview = mSpacePreviewIcon;
+        else mSpaceKey.iconPreview = mSlidingLocaleIcon;
         mSpaceKey.iconPreview.invalidateSelf();
     }
 
@@ -568,9 +549,7 @@ public class LatinKeyboard extends Keyboard {
 
     public void setLanguageSwitcher(LanguageSwitcher switcher, boolean isAutoCompletion) {
         mLanguageSwitcher = switcher;
-        Locale locale = mLanguageSwitcher.getLocaleCount() > 0
-                ? mLanguageSwitcher.getInputLocale()
-                : null;
+        Locale locale = mLanguageSwitcher.getLocaleCount() > 0 ? mLanguageSwitcher.getInputLocale() : null;
         // If the language count is 1 and is the same as the system language, don't show it.
         if (locale != null
                 && mLanguageSwitcher.getLocaleCount() == 1
@@ -585,12 +564,7 @@ public class LatinKeyboard extends Keyboard {
     boolean isCurrentlyInSpace() {
         return mCurrentlyInSpace;
     }
-
-    void setPreferredLetters(int[] frequencies) {
-        mPrefLetterFrequencies = frequencies;
-        mPrefLetter = 0;
-    }
-
+    void setPreferredLetters(int[] frequencies) { mPrefLetterFrequencies = frequencies;mPrefLetter = 0; }
     void keyReleased() {
         mCurrentlyInSpace = false;
         mSpaceDragLastDiff = 0;
@@ -598,15 +572,9 @@ public class LatinKeyboard extends Keyboard {
         mPrefLetterX = 0;
         mPrefLetterY = 0;
         mPrefDistance = Integer.MAX_VALUE;
-        if (mSpaceKey != null) {
-            updateLocaleDrag(Integer.MAX_VALUE);
-        }
+        if (mSpaceKey != null) updateLocaleDrag(Integer.MAX_VALUE);
     }
 
-    /**
-     * Does the magic of locking the touch gesture into the spacebar when
-     * switching input languages.
-     */
     boolean isInside(LatinKey key, int x, int y) {
         final int code = key.codes[0];
         if (code == KEYCODE_SHIFT ||

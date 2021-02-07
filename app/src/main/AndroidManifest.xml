@@ -9,12 +9,12 @@
     <application android:label="@string/english_ime_name" android:allowBackup="true"
         android:backupAgent="org.kiibord.hpop.LatinIMEBackupAgent"
         android:restoreAnyVersion="true" android:hardwareAccelerated="false" android:killAfterRestore="false"
-        android:icon="@drawable/icon">
+        android:icon="@drawable/simbql_kibord_hh">
     <service android:name="org.kiibord.hpop.LatinIME" android:label="@string/english_ime_name" android:permission="android.permission.BIND_INPUT_METHOD">
         <intent-filter><action android:name="android.view.InputMethod"/></intent-filter>
         <meta-data android:name="android.view.im" android:resource="@xml/method" />
     </service>
-    <activity android:name="org.kiibord.hpop.Main" android:label="hpop">
+    <activity android:name="org.kiibord.hpop.Main" android:label="hpop_u5">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/>

@@ -13,9 +13,9 @@
         <Key android:keyLabel="^" android:shiftLabel="\?" />
     </Row>    -->
     <Row>
-        <Key android:keyLabel="A" android:popupCharacters="" android:keyEdgeFlags="left" />
-        <Key android:keyLabel="a" android:popupCharacters="" />
-        <Key android:keyLabel="i" android:popupCharacters="" />
+        <Key android:keyLabel="A" android:popupCharacters="&amp;" android:keyEdgeFlags="left" />
+        <Key android:keyLabel="a" android:popupCharacters="\@" />
+        <Key android:keyLabel="i" android:popupCharacters="[]{}I" />
         <Key android:keyLabel="u" android:popupCharacters="" />
         <Key android:keyLabel="e" android:popupCharacters="" />
         <Key android:keyLabel="o" android:popupCharacters="" />
