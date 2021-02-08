@@ -21,7 +21,8 @@
         <Key android:keyLabel="o" android:popupCharacters="O" />
         <Key android:keyLabel="N" android:popupCharacters="&lt;=&gt;" />
         <Key android:keyLabel="y" android:popupCharacters="Y" />
-        <Key android:codes="72" android:keyIcon="@drawable/simbql_kibord_hh" android:popupCharacters="" />
+        <Key android:keyLabel="H" android:popupCharacters="=&lt;&gt;+-*\\/%[|]{;}(:)" />
+<!--        <Key android:codes="72" android:keyIcon="@drawable/simbql_kibord_hh" android:popupCharacters="" />-->
         <Key android:keyLabel="s" android:popupCharacters="S" android:keyEdgeFlags="right" />
     </Row>
     <Row>
@@ -33,7 +34,7 @@
         <Key android:keyLabel="d" android:popupCharacters="W=:;&quot;" />
         <Key android:keyLabel="T" android:popupCharacters="xX" />
         <Key android:keyLabel="D" android:popupCharacters="w" />
-        <Key android:keyLabel="p" android:popupCharacters="P" />
+        <Key android:keyLabel="p" android:popupCharacters="+-*\\/%[|]{;}(:)P" />
         <Key android:keyLabel="b" android:popupCharacters="B" android:keyEdgeFlags="right" />
     </Row>
     <Row>
@@ -46,8 +47,8 @@
         <Key android:keyLabel="n" android:popupCharacters="N" />
         <Key android:keyLabel="f" android:popupCharacters="F" />
 <!--        <Key android:keyLabel="." android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" />-->
-        <Key android:keyLabel="." android:popupCharacters="" android:isModifier="true" />
-        <Key android:keyLabel="\@" android:popupCharacters="" />
+        <Key android:keyLabel="." android:popupCharacters=",;:'&quot;" android:isModifier="true" />
+        <Key android:keyLabel="\@" android:popupCharacters="#!~$%^*(&amp;)[|]{\\}" />
         <Key android:codes="@integer/key_delete" android:keyIcon="@drawable/sym_keyboard_delete" android:iconPreview="@drawable/sym_keyboard_feedback_delete" android:keyWidth="10%p" android:isModifier="true" android:isRepeatable="true" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_normal" android:rowEdgeFlags="bottom"> <!-- <Key android:codes="@integer/key_f1" android:isModifier="true" /> -->

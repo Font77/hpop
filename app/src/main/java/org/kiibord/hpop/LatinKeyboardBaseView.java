@@ -481,7 +481,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
 //                    !(key.isShifted() && key.shiftLabel != null && hint.charAt(0) == key.shiftLabel.charAt(0))
                 ) {
                     int hintTextSize = (int)(mKeyTextSize * mLabelScale);
-                    paintHint.setTextSize(hintTextSize); paint.setColor(0xFF000000);
+                    paintHint.setTextSize(hintTextSize); paintHint.setColor(0xFF000000);
                     final float beslain_hint = key.height - labelHeight/2 ;
                     if (Character.getType(hint.charAt(0)) == Character.NON_SPACING_MARK) {
                         drawDeadKeyLabel(canvas, hint, centerxhint, beslain_hint, paintHint);
@@ -491,7 +491,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 String altHint = key.getAltHintLabel(showHints7Bit(), showHintsAll());
                 if (!altHint.equals("")) {
                     int hintTextSize = (int)(mKeyTextSize  * mLabelScale); // pij
-                    paintHint.setTextSize(hintTextSize); paint.setColor(0xFF000000);
+                    paintHint.setTextSize(hintTextSize); paintHint.setColor(0xFF000000);
                     final float beslain_alt_hint = key.height - labelHeight/2 ;
                     if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
                         drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
@@ -501,6 +501,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 {
                     case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T': case 'D': case 'p': case 'b': case 's':
                         paint.setColor(0xFFFF7777);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
+//                    case 'A': case 'a': case 'i': case 'u': case 'e': case 'o': case 'N': case 'y': case 'r': case 'l': case 'v': case 'm': case 'n': case 'f':
+//                        paint.setColor(0xFFFFFFFF);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
                     case '_': paint.setColor(0xFF7777FF);paint.setTypeface(Typeface.DEFAULT_BOLD);break;
                 }
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
