@@ -39,32 +39,17 @@ import java.util.List;
 import java.util.Locale;
 
 public class LatinKeyboard extends Keyboard {
-
     private static final boolean DEBUG_PREFERRED_LETTER = true;
-    private static final String TAG = "PCKeyboardLK";
+    private static final String TAG = "hpop_u5";
     private static final int OPACITY_FULLY_OPAQUE = 255;
     private static final int SPACE_LED_LENGTH_PERCENT = 80;
-
-    private Drawable mShiftLockIcon;
-    private Drawable mShiftLockPreviewIcon;
-    private Drawable mOldShiftIcon;
-    private Drawable mSpaceIcon;
-    private Drawable mSpaceAutoCompletionIndicator;
-    private Drawable mSpacePreviewIcon;
-    private Drawable mMicIcon;
-    private Drawable mMicPreviewIcon;
-    private Drawable mSettingsIcon;
-    private Drawable mSettingsPreviewIcon;
-    private Drawable m123MicIcon;
-    private Drawable m123MicPreviewIcon;
-    private final Drawable mButtonArrowLeftIcon;
-    private final Drawable mButtonArrowRightIcon;
-    private Key mShiftKey;
-    private Key mEnterKey;
-    private Key mF1Key;
+    private Drawable mShiftLockIcon;private Drawable mShiftLockPreviewIcon;private Drawable mOldShiftIcon;
+    private Drawable mSpaceIcon;private Drawable mSpaceAutoCompletionIndicator;private Drawable mSpacePreviewIcon;
+    private Drawable mMicIcon;private Drawable mMicPreviewIcon;private Drawable mSettingsIcon;
+    private Drawable mSettingsPreviewIcon;private Drawable m123MicIcon;private Drawable m123MicPreviewIcon;
+    private final Drawable mButtonArrowLeftIcon;private final Drawable mButtonArrowRightIcon;
+    private Key mShiftKey;private Key mEnterKey;private Key mF1Key;private Key mSpaceKey;private Key m123Key;
     private final Drawable mHintIcon;
-    private Key mSpaceKey;
-    private Key m123Key;
     private final int[] mSpaceKeyIndexArray;
     private int mSpaceDragStartX;
     private int mSpaceDragLastDiff;
@@ -164,31 +149,11 @@ public class LatinKeyboard extends Keyboard {
             mEnterKey.popupResId = 0;
             mEnterKey.text = null;
             switch (options&(EditorInfo.IME_MASK_ACTION|EditorInfo.IME_FLAG_NO_ENTER_ACTION)) {
-                case EditorInfo.IME_ACTION_GO:
-                    mEnterKey.iconPreview = null;
-                    mEnterKey.icon = null;
-                    mEnterKey.label = res.getText(R.string.label_go_key);
-                    break;
-                case EditorInfo.IME_ACTION_NEXT:
-                    mEnterKey.iconPreview = null;
-                    mEnterKey.icon = null;
-                    mEnterKey.label = res.getText(R.string.label_next_key);
-                    break;
-                case EditorInfo.IME_ACTION_DONE:
-                    mEnterKey.iconPreview = null;
-                    mEnterKey.icon = null;
-                    mEnterKey.label = res.getText(R.string.label_done_key);
-                    break;
-                case EditorInfo.IME_ACTION_SEARCH:
-                    mEnterKey.iconPreview = res.getDrawable(R.drawable.sym_keyboard_feedback_search);
-                    mEnterKey.icon = res.getDrawable(R.drawable.sym_keyboard_search);
-                    mEnterKey.label = null;
-                    break;
-                case EditorInfo.IME_ACTION_SEND:
-                    mEnterKey.iconPreview = null;
-                    mEnterKey.icon = null;
-                    mEnterKey.label = res.getText(R.string.label_send_key);
-                    break;
+                case EditorInfo.IME_ACTION_GO: mEnterKey.iconPreview = null;mEnterKey.icon = null;mEnterKey.label = res.getText(R.string.label_go_key);break;
+                case EditorInfo.IME_ACTION_NEXT: mEnterKey.iconPreview = null;mEnterKey.icon = null;mEnterKey.label = res.getText(R.string.label_next_key);break;
+                case EditorInfo.IME_ACTION_DONE: mEnterKey.iconPreview = null;mEnterKey.icon = null;mEnterKey.label = res.getText(R.string.label_done_key);break;
+                case EditorInfo.IME_ACTION_SEARCH: mEnterKey.iconPreview = res.getDrawable(R.drawable.sym_keyboard_feedback_search);mEnterKey.icon = res.getDrawable(R.drawable.sym_keyboard_search);mEnterKey.label = null;break;
+                case EditorInfo.IME_ACTION_SEND: mEnterKey.iconPreview = null;mEnterKey.icon = null;mEnterKey.label = res.getText(R.string.label_send_key);break;
                 default:
                     // Keep Return key in IM mode, we have a dedicated smiley key.
                     mEnterKey.iconPreview = res.getDrawable(R.drawable.sym_keyboard_feedback_return);
@@ -267,35 +232,19 @@ public class LatinKeyboard extends Keyboard {
 
     private void updateF1Key() {
         // Update KEYCODE_F1 key. Please note that some keyboard layouts have no F1 key.
-        if (mF1Key == null)
-            return;
-
+        if (mF1Key == null) return;
         if (mIsAlphaKeyboard) {
             if (mMode == KeyboardSwitcher.MODE_URL) {
                 setNonMicF1Key(mF1Key, "/", R.xml.popup_slash);
             } else if (mMode == KeyboardSwitcher.MODE_EMAIL) {
                 setNonMicF1Key(mF1Key, "@", R.xml.popup_at);
             } else {
-                if (mVoiceEnabled && mHasVoiceButton) {
-                    setMicF1Key(mF1Key);
-                } else {
-                    setNonMicF1Key(mF1Key, ",", R.xml.popup_comma);
-                }
+                if (mVoiceEnabled && mHasVoiceButton) setMicF1Key(mF1Key); else setNonMicF1Key(mF1Key, ",", R.xml.popup_comma);
             }
         } else if (mIsAlphaFullKeyboard) {
-        	if (mVoiceEnabled && mHasVoiceButton) {
-        		setMicF1Key(mF1Key);
-        	} else {
-        		setSettingsF1Key(mF1Key);
-        	}
-        } else if (mIsFnFullKeyboard) {
-    		setMicF1Key(mF1Key);        	
-        } else {  // Symbols keyboard
-            if (mVoiceEnabled && mHasVoiceButton) {
-                setMicF1Key(mF1Key);
-            } else {
-                setNonMicF1Key(mF1Key, ",", R.xml.popup_comma);
-            }
+        	if (mVoiceEnabled && mHasVoiceButton) setMicF1Key(mF1Key); else setSettingsF1Key(mF1Key);
+        } else if (mIsFnFullKeyboard) setMicF1Key(mF1Key); else {  // Symbols keyboard
+            if (mVoiceEnabled && mHasVoiceButton) setMicF1Key(mF1Key); else setNonMicF1Key(mF1Key, ",", R.xml.popup_comma);
         }
     }
 
@@ -758,11 +707,7 @@ public class LatinKeyboard extends Keyboard {
         }
 
         private void setDiff(int diff) {
-            if (diff == Integer.MAX_VALUE) {
-                mHitThreshold = false;
-                mCurrentLanguage = null;
-                return;
-            }
+            if (diff == Integer.MAX_VALUE) { mHitThreshold = false;mCurrentLanguage = null;return; }
             mDiff = diff;
             if (mDiff > mWidth) mDiff = mWidth;
             if (mDiff < -mWidth) mDiff = -mWidth;
@@ -774,13 +719,10 @@ public class LatinKeyboard extends Keyboard {
             return LanguageSwitcher.toTitleCase(locale.getDisplayLanguage(locale));
         }
 
-        @Override
-        public void draw(Canvas canvas) {
-            canvas.save();
+        @Override public void draw(Canvas canvas) { canvas.save();
             if (mHitThreshold) {
                 Paint paint = mTextPaint;
-                final int width = mWidth;
-                final int height = mHeight;
+                final int width = mWidth;final int height = mHeight;
                 final int diff = mDiff;
                 final Drawable lArrow = mLeftDrawable;
                 final Drawable rArrow = mRightDrawable;
@@ -799,40 +741,25 @@ public class LatinKeyboard extends Keyboard {
                 canvas.drawText(mPrevLanguage, diff + width + width / 2, baseline, paint);
 
                 setDefaultBounds(lArrow);
-                rArrow.setBounds(width - rArrow.getIntrinsicWidth(), 0, width,
-                        rArrow.getIntrinsicHeight());
+                rArrow.setBounds(width - rArrow.getIntrinsicWidth(), 0, width, rArrow.getIntrinsicHeight());
                 lArrow.draw(canvas);
                 rArrow.draw(canvas);
             }
-            if (mBackground != null) {
-                canvas.translate(mMiddleX, 0);
-                mBackground.draw(canvas);
-            }
+            if (mBackground != null) { canvas.translate(mMiddleX, 0);mBackground.draw(canvas); }
             canvas.restore();
         }
 
-        @Override
-        public int getOpacity() {
+        @Override public int getOpacity() {
             return PixelFormat.TRANSLUCENT;
         }
-
-        @Override
-        public void setAlpha(int alpha) {
+        @Override public void setAlpha(int alpha) {
             // Ignore
         }
-
-        @Override
-        public void setColorFilter(ColorFilter cf) {
+        @Override public void setColorFilter(ColorFilter cf) {
             // Ignore
         }
-
-        @Override
-        public int getIntrinsicWidth() {
-            return mWidth;
-        }
-
-        @Override
-        public int getIntrinsicHeight() {
+        @Override public int getIntrinsicWidth() { return mWidth; }
+        @Override public int getIntrinsicHeight() {
             return mHeight;
         }
     }

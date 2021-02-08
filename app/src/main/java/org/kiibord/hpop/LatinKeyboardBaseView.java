@@ -107,9 +107,9 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
     private Canvas mCanvas; private final Paint mPaint; private final Paint mPaintHint;
     private final Rect mPadding; private final Rect mClipRegion = new Rect(0, 0, 0, 0); private int mViewWidth;
     private final HashMap<Integer, Integer> mTextHeightCache = new HashMap<Integer, Integer>();
-    private final float KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR = 1.55f; // pij
+    private final float KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR = 1.20f; // pij
 //    private final float KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR = 0.55f; // orijnql
-    private final String KEY_LABEL_HEIGHT_REFERENCE_CHAR = "H";
+    private final String KEY_LABEL_HEIGHT_REFERENCE_CHAR = "A" ;//"H";
     /* package */ static Method sSetRenderMode;
     private static int sPrevRenderMode = -1;
     private static final float[] INVERTING_MATRIX = {
@@ -481,7 +481,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
 //                    !(key.isShifted() && key.shiftLabel != null && hint.charAt(0) == key.shiftLabel.charAt(0))
                 ) {
                     int hintTextSize = (int)(mKeyTextSize * mLabelScale);
-                    paintHint.setTextSize(hintTextSize);
+                    paintHint.setTextSize(hintTextSize); paint.setColor(0xFF000000);
                     final float beslain_hint = key.height - labelHeight/2 ;
                     if (Character.getType(hint.charAt(0)) == Character.NON_SPACING_MARK) {
                         drawDeadKeyLabel(canvas, hint, centerxhint, beslain_hint, paintHint);
@@ -491,7 +491,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 String altHint = key.getAltHintLabel(showHints7Bit(), showHintsAll());
                 if (!altHint.equals("")) {
                     int hintTextSize = (int)(mKeyTextSize  * mLabelScale); // pij
-                    paintHint.setTextSize(hintTextSize);
+                    paintHint.setTextSize(hintTextSize); paint.setColor(0xFF000000);
                     final float beslain_alt_hint = key.height - labelHeight/2 ;
                     if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
                         drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
@@ -499,14 +499,9 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 }
                 switch (label.charAt(0))
                 {
-//                    case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T':
-//                    case 'D': case 'p': case 'b': case 's':
-//                        paint.setColor(0xFF000000);
-//                        paint.setTypeface(Typeface.DEFAULT_BOLD); break;
-                    case '_':
-                        paint.setColor(0xFF7777FF);
-                        paint.setTypeface(Typeface.DEFAULT_BOLD);
-                        break;
+                    case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T': case 'D': case 'p': case 'b': case 's':
+                        paint.setColor(0xFFFF7777);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
+                    case '_': paint.setColor(0xFF7777FF);paint.setTypeface(Typeface.DEFAULT_BOLD);break;
                 }
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);

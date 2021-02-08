@@ -308,9 +308,9 @@ public class Keyboard {
                     if (wantAll || wantAscii && printebl_kya(c)) altHint = Character.toString(c);
                     if (popup.length() > 1) { c = popup.charAt(1);
                         if (wantAll || wantAscii && printebl_kya(c)) altHint = altHint + c;
-                        if (popup.length() > 2) { c = popup.charAt(2);
-                            if (wantAll || wantAscii && printebl_kya(c)) altHint = altHint + c;
-                        }
+//                        if (popup.length() > 2) { c = popup.charAt(2);
+//                            if (wantAll || wantAscii && printebl_kya(c)) altHint = altHint + c;
+//                        }
                     }
                 }
             }
