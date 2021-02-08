@@ -519,9 +519,7 @@ public class LatinKeyboard extends Keyboard {
     }
 
     private int getSpacePreviewWidth() {
-        final int width = Math.min(
-        		Math.max(mSpaceKey.width, (int)(getMinWidth() * SPACEBAR_POPUP_MIN_RATIO)), 
-        		(int)(getScreenHeight() * SPACEBAR_POPUP_MAX_RATIO));
+        final int width = Math.min(Math.max(mSpaceKey.width, (int)(getMinWidth() * SPACEBAR_POPUP_MIN_RATIO)), (int)(getScreenHeight() * SPACEBAR_POPUP_MAX_RATIO));
         return width;
     }
     
@@ -577,35 +575,22 @@ public class LatinKeyboard extends Keyboard {
 
     boolean isInside(LatinKey key, int x, int y) {
         final int code = key.codes[0];
-        if (code == KEYCODE_SHIFT ||
-                code == KEYCODE_DELETE) {
+        if (code == KEYCODE_SHIFT || code == KEYCODE_DELETE) {
         	// Adjust target area for these keys
             y -= key.height / 10;
-            if (code == KEYCODE_SHIFT) {
-            	if (key.x == 0) {
-            		x += key.width / 6;  // left shift
-            	} else {
-            		x -= key.width / 6;  // right shift
-            	}
-            }
+            if (code == KEYCODE_SHIFT) if (key.x == 0) x += key.width / 6; else x -= key.width / 6;
             if (code == KEYCODE_DELETE) x -= key.width / 6;
         } else if (code == LatinIME.ASCII_SPACE) {
             y += LatinKeyboard.sSpacebarVerticalCorrection;
             if (mLanguageSwitcher.getLocaleCount() > 1) {
                 if (mCurrentlyInSpace) {
                     int diff = x - mSpaceDragStartX;
-                    if (Math.abs(diff - mSpaceDragLastDiff) > 0) {
-                        updateLocaleDrag(diff);
-                    }
+                    if (Math.abs(diff - mSpaceDragLastDiff) > 0) updateLocaleDrag(diff);
                     mSpaceDragLastDiff = diff;
                     return true;
                 } else {
                     boolean insideSpace = key.isInsideSuper(x, y);
-                    if (insideSpace) {
-                        mCurrentlyInSpace = true;
-                        mSpaceDragStartX = x;
-                        updateLocaleDrag(0);
-                    }
+                    if (insideSpace) { mCurrentlyInSpace = true;mSpaceDragStartX = x;updateLocaleDrag(0); }
                     return insideSpace;
                 }
             }
@@ -655,14 +640,6 @@ public class LatinKeyboard extends Keyboard {
                     }
                 }
 
-                // Get the surrounding keys and intersect with the preferred list
-                // For all in the intersection
-                //   if distance from touch point is within a reasonable distance
-                //       make this the pref letter
-                // If no pref letter
-                //   return inside;
-                // else return thiskey == prefletter;
-
                 for (int i = 0; i < nearby.length; i++) {
                     Key k = nearbyKeys.get(nearby[i]);
                     if (inPrefList(k.codes[0], pref)) {
@@ -677,11 +654,7 @@ public class LatinKeyboard extends Keyboard {
                     }
                 }
                 // Didn't find any
-                if (mPrefLetter == 0) {
-                    return inside;
-                } else {
-                    return mPrefLetter == code;
-                }
+                if (mPrefLetter == 0) return inside; else return mPrefLetter == code;
             }
         }
 
@@ -695,38 +668,25 @@ public class LatinKeyboard extends Keyboard {
         if (code < pref.length && code >= 0) return pref[code] > 0;
         return false;
     }
-
     private int distanceFrom(Key k, int x, int y) {
-        if (y > k.y && y < k.y + k.height) {
-            return Math.abs(k.x + k.width / 2 - x);
-        } else {
-            return Integer.MAX_VALUE;
-        }
+        if (y > k.y && y < k.y + k.height) return Math.abs(k.x + k.width / 2 - x); else return Integer.MAX_VALUE;
     }
 
-    @Override
-    public int[] getNearestKeys(int x, int y) {
-        if (mCurrentlyInSpace) {
-            return mSpaceKeyIndexArray;
-        } else {
+    @Override public int[] getNearestKeys(int x, int y) {
+        if (mCurrentlyInSpace) return mSpaceKeyIndexArray; else {
             // Avoid dead pixels at edges of the keyboard
-            return super.getNearestKeys(Math.max(0, Math.min(x, getMinWidth() - 1)),
-                    Math.max(0, Math.min(y, getHeight() - 1)));
+            return super.getNearestKeys(Math.max(0, Math.min(x, getMinWidth() - 1)), Math.max(0, Math.min(y, getHeight() - 1)));
         }
     }
 
     private int indexOf(int code) {
         List<Key> keys = getKeys();
         int count = keys.size();
-        for (int i = 0; i < count; i++) {
-            if (keys.get(i).codes[0] == code) return i;
-        }
+        for (int i = 0; i < count; i++) if (keys.get(i).codes[0] == code) return i;
         return -1;
     }
-
     private int getTextSizeFromTheme(int style, int defValue) {
-        TypedArray array = mContext.getTheme().obtainStyledAttributes(
-                style, new int[] { android.R.attr.textSize });
+        TypedArray array = mContext.getTheme().obtainStyledAttributes(style, new int[] { android.R.attr.textSize });
         int resId = array.getResourceId(0, 0);
         if (resId >= array.length()) {
             Log.i(TAG, "getTextSizeFromTheme error: resId " + resId + " > " + array.length());
@@ -738,58 +698,23 @@ public class LatinKeyboard extends Keyboard {
 
     // TODO LatinKey could be static class
     class LatinKey extends Key {
-
-        // functional normal state (with properties)
-        private final int[] KEY_STATE_FUNCTIONAL_NORMAL = {
-                android.R.attr.state_single
-        };
-
-        // functional pressed state (with properties)
-        private final int[] KEY_STATE_FUNCTIONAL_PRESSED = {
-                android.R.attr.state_single,
-                android.R.attr.state_pressed
-        };
-
-        public LatinKey(Resources res, Keyboard.Row parent, int x, int y,
-                XmlResourceParser parser) {
-            super(res, parent, x, y, parser);
-        }
-
-        // sticky is used for shift key.  If a key is not sticky and is modifier,
-        // the key will be treated as functional.
+        private final int[] KEY_STATE_FUNCTIONAL_NORMAL = {android.R.attr.state_single};
+        private final int[] KEY_STATE_FUNCTIONAL_PRESSED = {android.R.attr.state_single, android.R.attr.state_pressed};
+        public LatinKey(Resources res, Keyboard.Row parent, int x, int y, XmlResourceParser parser) { super(res, parent, x, y, parser); }
         private boolean isFunctionalKey() {
             return !sticky && modifier;
         }
-
-        /**
-         * Overriding this method so that we can reduce the target area for certain keys.
-         */
-        @Override
-        public boolean isInside(int x, int y) {
-            // TODO This should be done by parent.isInside(this, x, y)
-            // if Key.parent were protected.
-            boolean result = LatinKeyboard.this.isInside(this, x, y);
-            return result;
-        }
-
+        @Override public boolean isInside(int x, int y) { boolean result = LatinKeyboard.this.isInside(this, x, y);return result; }
         boolean isInsideSuper(int x, int y) {
             return super.isInside(x, y);
         }
-
-        @Override
-        public int[] getCurrentDrawableState() {
+        @Override public int[] getCurrentDrawableState() {
             if (isFunctionalKey()) {
-                if (pressed) {
-                    return KEY_STATE_FUNCTIONAL_PRESSED;
-                } else {
-                    return KEY_STATE_FUNCTIONAL_NORMAL;
-                }
+                if (pressed) return KEY_STATE_FUNCTIONAL_PRESSED; else return KEY_STATE_FUNCTIONAL_NORMAL;
             }
             return super.getCurrentDrawableState();
         }
-
-        @Override
-        public int squaredDistanceFrom(int x, int y) {
+        @Override public int squaredDistanceFrom(int x, int y) {
             // We should count vertical gap between rows to calculate the center of this Key.
             final int verticalGap = LatinKeyboard.this.mVerticalGap;
             final int xDist = this.x + width / 2 - x;
@@ -797,12 +722,6 @@ public class LatinKeyboard extends Keyboard {
             return xDist * xDist + yDist * yDist;
         }
     }
-
-    /**
-     * Animation to be displayed on the spacebar preview popup when switching
-     * languages by swiping the spacebar. It draws the current, previous and
-     * next languages and moves them by the delta of touch movement on the spacebar.
-     */
     class SlidingLocaleDrawable extends Drawable {
 
         private final int mWidth;
