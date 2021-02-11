@@ -198,8 +198,8 @@
 
         <CheckBoxPreference
             android:key="quick_fixes"
-            android:title="@string/quick_fixes"
-            android:summary="@string/quick_fixes_summary"
+            android:title="@string/kyuik_fixes"
+            android:summary="@string/kyuik_fixes_summary"
             android:persistent="true"
             android:defaultValue="@bool/default_quick_fixes"
             />
@@ -285,7 +285,7 @@
     <!--            android:title="@string/title_debugging"-->
 
     <PreferenceCategory
-            android:title="@string/title_dibqgging"
+            android:title="@string/title_dibAgging"
             android:key="debugging">
 
     <CheckBoxPreference

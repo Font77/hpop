@@ -1,63 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 <string name="english_ime_name">hpop_u5</string>
-<string name="english_ime_settings">hpop settings</string>
-<string name="english_ime_input_options">input opsqns</string>
-<string name="title_keyboard_view_settings">kiibord viyu sqtifgs</string>
+<string name="english_ime_settings">hpop setiNgs</string>
+<string name="english_ime_input_options">input opsAns</string>
+<string name="title_keyboard_view_settings">kiibord viyu setiNgs</string>
 <string name="title_keyboard_height_portrait">kiibord hait portret</string>
-<string name="title_keyboard_height_landscape">kiibord hait lqndskep</string>
-<string name="title_key_layout_options">ki leaut sqksqn</string>
-<string name="title_key_behavior_settings">ki bizeviyr sqtifgs</string>
-<string name="title_long_press_alternate_keys">lofg prqs altrnet kiij</string>
-<string name="title_suggested_punctuation">sjqstid pfkchyuesn</string>
-<string name="title_input_mode_settings">input mod sqtifgs</string>
-<string name="title_dibqgging">dibqgifgs</string>
-<string name="title_input_connection_details">input knqksn ditels</string>
-<string name="title_version">vrjqn</string>
-<string name="title_swipe_gestures">svaip gqschrs (qksprimntql)</string>
-<string name="title_hardware_key_actions">hardveyr kii qksqns</string>
-<string name="vibrate_on_keypress">vaibret on  kiiprqs</string>
-<string name="sound_on_keypress">saund on  kiiprqs</string>
-<string name="popup_on_keypress">popqp on  kiiprqs</string>
-<string name="hit_correction">krqkt taipifg qrqrs</string>
+<string name="title_keyboard_height_landscape">kiibord hait lAndskep</string>
+<string name="title_key_layout_options">ki leaut sAksn</string>
+<string name="title_key_behavior_settings">ki biheviyr setiNgs</string>
+<string name="title_long_press_alternate_keys">loNg prAs altrnet kiiz</string>
+<string name="title_suggested_punctuation">szAstid pNkcyuesn</string>
+<string name="title_input_mode_settings">input mod setiNgs</string>
+<string name="title_dibAgging">dibAgiNgs</string>
+<string name="title_input_connection_details">input knAksn ditels</string>
+<string name="title_version">vrzn</string>
+<string name="title_swipe_gestures">svaip gAschrs (Aksprimntl)</string>
+<string name="title_hardware_key_actions">hardveyr kii AksAns</string>
+<string name="vibrate_on_keypress">vaibret on  kiipres</string>
+<string name="sound_on_keypress">saund on  kiipres</string>
+<string name="popup_on_keypress">popup on  kiipres</string>
+<string name="hit_correction">krAkt taipiNg errors</string>
 <string name="hit_correction_summary">inebl input error correction</string>
-<string name="hit_correction_land">lqndskep input errors</string>
+<string name="hit_correction_land">lAndskep input errors</string>
 <string name="hit_correction_land_summary">inebl input error correction</string>
-<string name="auto_correction">vrd sjqsqns</string>
-<string name="auto_correction_summary">otomqtikli krqkt priviyqs vrd</string>
-<string name="prediction">vrd sjqsqns</string>
-<string name="prediction_category">vrd sjqsn sqtifgs</string>
-<string name="prediction_summary">inebl auto kmplisqn while typing</string>
+<string name="auto_correction">vrd szAsns</string>
+<string name="auto_correction_summary">autometikli krAkt priviyAs vrd</string>
+<string name="prediction">vrd szAsns</string>
+<string name="prediction_category">vrd szAsn setiNgs</string>
+<string name="prediction_summary">inebl auto kmplisAn while typing</string>
 <string name="auto_complete_dialog_title">oto kmplisn</string>
-<string name="prediction_landscape">inkrij tqkst phild saij</string>
-<string name="prediction_landscape_summary">haid vrd sjqsqns in lqndskep viyu</string>
-<string name="auto_cap">oto-kqpitqlaijesn</string>
-<string name="auto_cap_summary">kqpitqlaij  start of q sentence</string>
+<string name="prediction_landscape">inkriz tAkst phild saiz</string>
+<string name="prediction_landscape_summary">haid vrd szAsns in lAndskep viyu</string>
+<string name="auto_cap">oto-kApitAlaizesn</string>
+<string name="auto_cap_summary">kepitAlaiz  start of sentence</string>
 <string name="auto_punctuate">auto-punctuate</string>
 <string name="auto_punctuate_summary"></string>
-<string name="quick_fixes">kyuik phiksis</string>
-<string name="quick_fixes_summary">krqkts komqnli taipd misteks</string>
-<string name="show_suggestions">sho sjqsns</string>
-<string name="show_suggestions_summary">disple sjqstid vrds vahil taipifg</string>
+<string name="kyuik_fixes">kyuik phiksis</string>
+<string name="kyuik_fixes_summary">krAkts komAnli taipd misteks</string>
+<string name="show_suggestions">sho szAsns</string>
+<string name="show_suggestions_summary">disple szAstid vrds vahil taipifg</string>
 <string name="auto_complete">oto-kmplit</string>
-<string name="auto_complete_summary">spesbar qnd pfkchyuesn otometikli insqrt hailaitid vrd</string>
-<string name="prefs_settings_key">sho sqtifgs kii</string>
+<string name="auto_complete_summary">spesbar And pfkchyuesn otometikli insArt hailaitid vrd</string>
+<string name="prefs_settings_key">sho setiNgs kii</string>
 <string-array name="settings_key_modes_values" translatable="false">
 <item>@string/settings_key_mode_auto</item>
 <item>@string/settings_key_mode_always_show</item>
 <item>@string/settings_key_mode_always_hide</item>
 </string-array>
 <string name="settings_key_mode_auto_name">otometik</string>
-<string name="settings_key_mode_always_show_name">alvej sho</string>
-<string name="settings_key_mode_always_hide_name">alvej haid</string>
+<string name="settings_key_mode_always_show_name">alvez sho</string>
+<string name="settings_key_mode_always_hide_name">alvez haid</string>
 <string-array name="settings_key_modes">
 <item>@string/settings_key_mode_auto_name</item>
 <item>@string/settings_key_mode_always_show_name</item>
 <item>@string/settings_key_mode_always_hide_name</item>
 </string-array>
-<string name="bigram_suggestion">bigram sjqsqns</string>
-<string name="bigram_suggestion_summary">yuj priviqs vrd tu impruv sjqsn</string>
-<string-array name="prediction_modes"><item>nn</item><item>besik</item><item>qdvansd</item></string-array>
+<string name="bigram_suggestion">bigram szAsAns</string>
+<string name="bigram_suggestion_summary">yuz priviAs vrd tu impruv szAsn</string>
+<string-array name="prediction_modes"><item>nn</item><item>besik</item><item>Advansd</item></string-array>
 <string name="prediction_none" translatable="false">0</string>
 <string name="prediction_basic" translatable="false">1</string>
 <string name="prediction_full"  translatable="false">2</string>
@@ -67,42 +67,42 @@
 <item>@string/prediction_full</item>
 </string-array>
 <string name="added_word"><xliff:g id="vrd">%s</xliff:g> : sevd</string>
-<string name="tip_long_press">hold kii daun tu sii qksqnts (ø, ö, etc.)</string>
-<string name="tip_dismiss">prqs  bqk kii \u21b6 tu kloj  kiibord qt qni point</string>
-<string name="tip_access_symbols">qksqs nmbqrs qnd simbqls</string>
-<string name="tip_add_to_dictionary">prqs qnd hold lqpht-most vrd tu qqd it tu diksneri</string>
+<string name="tip_long_press">hold kii daun tu sii AksAnts (ø, ö, etc.)</string>
+<string name="tip_dismiss">prAs  bAk kii \u21b6 tu kloz  kiibord At Ani point</string>
+<string name="tip_access_symbols">AksAs nmbArs And simbAls</string>
+<string name="tip_add_to_dictionary">prAs And hold lApht-most vrd tu AAd it tu diksneri</string>
 <string name="touch_to_continue">tch wis hint tu kontiniyu »</string>
-<string name="touch_to_finish">tch heyr tu kloj wis hint qnd start taipifg!</string>
+<string name="touch_to_finish">tch heyr tu kloz wis hint And start taipifg!</string>
 <string name="label_go_key">go</string>
-<string name="label_next_key">nqkst</string>
+<string name="label_next_key">nAkst</string>
 <string name="label_done_key">dn</string>
-<string name="label_send_key">sqnd</string>
+<string name="label_send_key">sAnd</string>
 <string name="label_symbol_key">a1!</string>
 <string name="label_phone_key">123</string>
-<string name="label_alpha_key">qai</string>
+<string name="label_alpha_key">Aai</string>
 <string name="label_alt_key">alt</string>
 <string name="voice_warning_title">voes input</string>
-<string name="voice_warning_locale_not_supported">voes input is not krqntli suportid phor yuqr lqfgyuej, bt dj vrk in ifglish.</string>
-<string name="voice_warning_may_not_understand">voes input is qn qksprimntql phichqr yujifg gugql\'s ntvrkd spiich rqkognisn.</string>
-<string name="voice_warning_how_to_turn_off">tu trn of voes input, go tu kiibord sqtifg.</string>
-<string name="voice_hint_dialog_message">tu yuj voes input, prqs  maikrophon btqn or slaid yuqr phifgqr qkros  on-skrin kiibord.</string>
+<string name="voice_warning_locale_not_supported">voes input is not krAntli suportid phor yuAr lAfgyuez, bt dz vrk in ifglish.</string>
+<string name="voice_warning_may_not_understand">voes input is An AksprimntAl phichAr yuzifg gugAl\'s ntvrkd spiich rAkognisn.</string>
+<string name="voice_warning_how_to_turn_off">tu trn of voes input, go tu kiibord sAtifg.</string>
+<string name="voice_hint_dialog_message">tu yuz voes input, prAs  maikrophon btAn or slaid yuAr phifgAr Akros  on-skrin kiibord.</string>
 <string name="voice_listening">spiik nao</string>
 <string name="voice_working">vrkifg</string>
 <string name="voice_initializing"></string>
-<string name="voice_error">qrqr. pliij trai qgen.</string>
-<string name="voice_network_error">kud not knqkt</string>
-<string name="voice_too_much_speech">qrqr, tuu mch spiich.</string>
-<string name="voice_audio_error">odio problqm</string>
-<string name="voice_server_error">srvr qrqr</string>
+<string name="voice_error">ArAr. pliiz trai Agen.</string>
+<string name="voice_network_error">kud not knAkt</string>
+<string name="voice_too_much_speech">ArAr, tuu mch spiich.</string>
+<string name="voice_audio_error">odio problAm</string>
+<string name="voice_server_error">srvr ArAr</string>
 <string name="voice_speech_timeout">no spiic hrd</string>
-<string name="voice_no_match">no mqcij phaund</string>
+<string name="voice_no_match">no mAciz phaund</string>
 <string name="voice_not_installed">voes src not instald</string>
-<string name="voice_swipe_hint"><b>hint:</b> svaip qkros kiibord tu spiik</string>
-<string name="voice_punctuation_hint"><b>hint:</b> nqkst taim, trai spiikifg pfkcyuesn laik \"period\", \"comma\", or \"question mark\".</string>
-<string name="cancel">kqnsql</string>
+<string name="voice_swipe_hint"><b>hint:</b> svaip Akros kiibord tu spiik</string>
+<string name="voice_punctuation_hint"><b>hint:</b> nAkst taim, trai spiikifg pfkcyuesn laik \"period\", \"comma\", or \"Auestion mark\".</string>
+<string name="cancel">kAnsAl</string>
 <string name="okke">ok</string>
 <string name="voice_input">voes input</string>
-<string-array name="voice_input_modes"><item>on men kiibord</item><item>on simbqls kiibord</item><item>off</item></string-array>
+<string-array name="voice_input_modes"><item>on men kiibord</item><item>on simbAls kiibord</item><item>off</item></string-array>
 <string name="voice_mode_main" translatable="false">0</string>
 <string name="voice_mode_symbols" translatable="false">1</string>
 <string name="voice_mode_off"  translatable="false">2</string>
@@ -113,45 +113,45 @@
 </string-array>
 <string-array name="voice_input_modes_summary">
 <item>maik on mukhy kiibord</item>
-<item>maik on simbqls kiibord</item>
+<item>maik on simbAls kiibord</item>
 <item>voes input is disebld</item>
 </string-array>
-<string name="auto_submit">oto sbmit qntqr voes</string>
-<string name="auto_submit_summary">otomqtikli prqs qntqr wn srchifg or goifg tu nqkst field.</string>
-<string name="close_the_keyboard"><font size="17"><b>kloj kiibord\n</b></font><font size="3">\n</font>Press  Back kii.</string>
-<string name="touch_and_hold"><font size="17"><b>tch \u0026 hold q kii phor opsqns\n</b></font><font size="3">\n</font>Access pfkchyuesn qnd accents.</string>
-<string name="keyboard_settings"><font size="17"><b>kiibord sqtifgs\n</b></font><font size="3">\n</font>tch \u0026 hold  <b>\?123\</b> kii.</string>
+<string name="auto_submit">oto sbmit AntAr voes</string>
+<string name="auto_submit_summary">otomAtikli prAs AntAr wn srchifg or goifg tu nAkst field.</string>
+<string name="close_the_keyboard"><font size="17"><b>kloz kiibord\n</b></font><font size="3">\n</font>Press  Back kii.</string>
+<string name="touch_and_hold"><font size="17"><b>tch \u0026 hold A kii phor opsAns\n</b></font><font size="3">\n</font>Access pfkchyuesn And accents.</string>
+<string name="keyboard_settings"><font size="17"><b>kiibord setiNgs\n</b></font><font size="3">\n</font>tch \u0026 hold  <b>\?123\</b> kii.</string>
 <string name="popular_domain_0">".com"</string>
 <string name="popular_domain_1">".net"</string>
 <string name="popular_domain_2">".org"</string>
 <string name="popular_domain_3">".gov"</string>
 <string name="popular_domain_4">".edu"</string>
-<string name="selectInputMethod">slqkt input mqxhqd</string>
-<string name="language_selection_title">input lqfgyuej</string>
-<string name="language_selection_summary">slaid phifgqr on spesbar tu cenj bhasha</string>
-<string name="hint_add_to_dictionary">\u2190 tch qgen tu sev</string>
-<string name="has_dictionary">diksneri qvelebql</string>
-<string name="prefs_enable_log">inebl yujqr phiidbqk</string>
-<string name="prefs_description_log">hqlp impruv wis input mqxhqd qditr bay otometikli sqndifg yusej stqtistiks qnd krqsh riports tu gugql.</string>
-<string name="prefs_enable_recorrection">tch tu krqkt vrds</string>
-<string name="prefs_enable_recorrection_summary">tch qntqrd vrds tu krqkt wm</string>
-<string name="pref_screen_feedback_title">kii phiidbqk sqtifgs</string>
-<string name="pref_screen_feedback_title_summary">konphigr kii saund, vaibret, priviyu popqp qkstra.</string>
-<string name="pref_screen_view_title">xhiim qnd lebql sqtifgs</string>
-<string name="pref_screen_view_title_summary">konphigr xhimifg qnd lebql disple</string>
+<string name="selectInputMethod">slAkt input mAxhAd</string>
+<string name="language_selection_title">input lAfgyuez</string>
+<string name="language_selection_summary">slaid phifgAr on spesbar tu cenz bhasha</string>
+<string name="hint_add_to_dictionary">\u2190 tch Agen tu sev</string>
+<string name="has_dictionary">diksneri AvelebAl</string>
+<string name="prefs_enable_log">inebl yuzAr phiidbAk</string>
+<string name="prefs_description_log">hAlp impruv wis input mAxhAd Aditr bay otometikli sAndifg yusez stAtistiks And krAsh riports tu gugAl.</string>
+<string name="prefs_enable_recorrection">tch tu krAkt vrds</string>
+<string name="prefs_enable_recorrection_summary">tch AntArd vrds tu krAkt wm</string>
+<string name="pref_screen_feedback_title">kii phiidbAk setiNgs</string>
+<string name="pref_screen_feedback_title_summary">konphigr kii saund, vaibret, priviyu popAp Akstra.</string>
+<string name="pref_screen_view_title">xhiim And lebAl setiNgs</string>
+<string name="pref_screen_view_title_summary">konphigr xhimifg And lebAl disple</string>
 <string name="keyboard_layout">kiibord xhiim</string>
 <string name="layout_basic" translatable="false">besik</string>
 <string name="layout_high_contrast" translatable="false">besik (hai kontrast)</string>
 <string name="layout_stone_bold"  translatable="false">ston (bold)</string>
-<string name="layout_stone_normal"  translatable="false">ston(normql)</string>
-<string name="layout_gingerbread"  translatable="false">jinjrbrd</string>
-<string name="layout_ics"  translatable="false">ais krim sqndvic (brait hints)</string>
-<string name="layout_ics_darker"  translatable="false">ais krim sqndvic (dark hints)</string>
-<string name="layout_trans"  translatable="false">transperqnt</string>
-<string name="layout_trans_neon"  translatable="false">transperqnt (qksprimntql)</string>
-<string name="layout_material_black" translatable="false">mteriql blqk</string>
-<string name="layout_material_dark" translatable="false">mteriql dark</string>
-<string name="layout_material_light" translatable="false">mteriql lait</string>
+<string name="layout_stone_normal"  translatable="false">ston(normAl)</string>
+<string name="layout_gingerbread"  translatable="false">zinzrbrd</string>
+<string name="layout_ics"  translatable="false">ais krim sAndvic (brait hints)</string>
+<string name="layout_ics_darker"  translatable="false">ais krim sAndvic (dark hints)</string>
+<string name="layout_trans"  translatable="false">transperAnt</string>
+<string name="layout_trans_neon"  translatable="false">transperAnt (AksprimntAl)</string>
+<string name="layout_material_black" translatable="false">mteriAl blAk</string>
+<string name="layout_material_dark" translatable="false">mteriAl dark</string>
+<string name="layout_material_light" translatable="false">mteriAl lait</string>
 <string-array name="keyboard_layout_modes" translatable="false">
 <item>@string/layout_ics</item>
 <item>@string/layout_ics_darker</item>
@@ -168,88 +168,88 @@
 <string name="subtype_mode_keyboard">kiibord</string>
 <string name="subtype_mode_voice">voes</string>
 <string name="title_keyboard_mode_portrait">kiibord mod, portret</string>
-<string name="title_keyboard_mode_landscape">kiibord mod, lqndskep</string>
+<string name="title_keyboard_mode_landscape">kiibord mod, lAndskep</string>
 <string-array name="keyboard_mode_entries">
-<item>4-ro jinjqrbrqd leaut</item>
-<item>5-ro kompqkt leaut (hksu qaiueo onli!)</item>
+<item>4-ro zinzArbrAd leaut</item>
+<item>5-ro kompAkt leaut (hksu Aaiueo onli!)</item>
 <item>phul 5-ro leaut</item>
 </string-array>
 <string-array name="keyboard_mode_values"><item>0</item><item>1</item><item>2</item></string-array>
-<string name="title_ctrl_a_override">ktrl-q (sqlqkt aal) ovqr-raid</string>
-<string name="toast_ctrl_a_override_info">ktrl-q is disebqld. yuj ktrl-alt-q instiqd, or inebl it in sqtifgs.</string>
+<string name="title_ctrl_a_override">ktrl-A (sAlAkt aal) ovAr-raid</string>
+<string name="toast_ctrl_a_override_info">ktrl-A is disebAld. yuz ktrl-alt-A instiAd, or inebl it in setiNgs.</string>
 <string name="default_ctrl_a_override">0</string>
 <string-array name="ctrl_a_override_entries">
-<item>disebql ktrl-q, yuj ktrl-alt-q instiqd</item>
-<item>disebql ktrl-q kmplitli</item>
-<item>yuj ktrl-q (no ovqr-raid)</item>
+<item>disebAl ktrl-A, yuz ktrl-alt-A instiAd</item>
+<item>disebAl ktrl-A kmplitli</item>
+<item>yuz ktrl-A (no ovAr-raid)</item>
 </string-array>
 <string-array name="ctrl_a_override_values"><item>0</item><item>1</item><item>2</item></string-array>
 <string name="title_chording_ctrl_key">ktrl kii kod</string>
 <string name="default_chording_ctrl_key">0</string>
-<string-array name="chording_ctrl_key_entries"><item>nn (ignord vhn not modiphaifg qwqr kiij)</item><item>lqpht ktrl</item><item>rait ktrl</item></string-array>
+<string-array name="chording_ctrl_key_entries"><item>nn (ignord vhn not modiphaifg AwAr kiiz)</item><item>lApht ktrl</item><item>rait ktrl</item></string-array>
 <string-array name="chording_ctrl_key_values"><item>0</item><item>113</item><item>114</item></string-array>
 <string name="title_chording_alt_key">alt kii kod</string>
 <string name="default_chording_alt_key">0</string>
-<string-array name="chording_alt_key_entries"><item>nn (ignord vhn not modiphaifg qwqr kiij)</item><item>lqpht alt</item><item>rait alt</item></string-array>
+<string-array name="chording_alt_key_entries"><item>nn (ignord vhn not modiphaifg AwAr kiiz)</item><item>lApht alt</item><item>rait alt</item></string-array>
 <string-array name="chording_alt_key_values"><item>0</item><item>57</item><item>58</item></string-array>
-<string name="title_chording_meta_key">mqta kii kod</string>
+<string name="title_chording_meta_key">mAta kii kod</string>
 <string name="default_chording_meta_key">0</string>
-<string-array name="chording_meta_key_entries"><item>nn (ignord vhn not modiphaifg qwqr kiij)</item><item>lqpht mqta</item><item>rait mqta</item></string-array>
+<string-array name="chording_meta_key_entries"><item>nn (ignord vhn not modiphaifg AwAr kiiz)</item><item>lApht mAta</item><item>rait mAta</item></string-array>
 <string-array name="chording_meta_key_values"><item>0</item><item>117</item><item>118</item></string-array>
-<string name="title_suggestions_in_landscape">sjqsqns in lqndskep mod</string>
-<string name="summary_suggestions_in_landscape_true">sem qj in portret mod</string>
-<string name="summary_suggestions_in_landscape_false">haid sjqsqns in lqndskep mod</string>
-<string name="title_fullscreen_override">lqndskep mod phulskrin qditr</string>
-<string name="summary_fullscreen_override_true">disebqld, yuj stqndrd viyu</string>
-<string name="summary_fullscreen_override_false">inebld on smal divaisij</string>
+<string name="title_suggestions_in_landscape">szAsAns in lAndskep mod</string>
+<string name="summary_suggestions_in_landscape_true">sem Az in portret mod</string>
+<string name="summary_suggestions_in_landscape_false">haid szAsAns in lAndskep mod</string>
+<string name="title_fullscreen_override">lAndskep mod phulskrin Aditr</string>
+<string name="summary_fullscreen_override_true">disebAld, yuz stAndrd viyu</string>
+<string name="summary_fullscreen_override_false">inebld on smal divaisiz</string>
 <string name="title_force_keyboard_on">sho sopht kiibord</string>
-<string name="summary_force_keyboard_on_true">alvej</string>
-<string name="summary_force_keyboard_on_false">vhn no hardveyr kiibord is qvelebql</string>
-<string name="title_keyboard_notification">yuj prmanqnt notiphikesn</string>
-<string name="summary_keyboard_notification_true">qktivet  kiibord bay tqpifg  notiphikesn</string>
+<string name="summary_force_keyboard_on_true">alvez</string>
+<string name="summary_force_keyboard_on_false">vhn no hardveyr kiibord is AvelebAl</string>
+<string name="title_keyboard_notification">yuz prmanAnt notiphikesn</string>
+<string name="summary_keyboard_notification_true">Aktivet  kiibord bay tApifg  notiphikesn</string>
 <string name="summary_keyboard_notification_false">no notiphikesn</string>
-<string name="title_application_category">qplikesqn-spqsiphik sqtifgs</string>
-<string name="title_connectbot_tab_hack">knqktbot tqb kii mod</string>
-<string name="summary_connectbot_tab_hack_true">inebl kmpqtibiliti vrkqraund</string>
-<string name="summary_connectbot_tab_hack_false">sqnd plen tqb kii ivqnt</string>
-<string name="title_caps_lock">dbql-tqp sipht mod</string>
-<string name="summary_caps_lock_true">kqps lok (k1 => k1)</string>
-<string name="summary_caps_lock_false">sipht lok (q1 => Q!)</string>
-<string name="title_shift_lock_modifiers">qplai sipht lok tu modiphayr kiij?</string>
-<string name="summary_shift_lock_modifiers_true">ys, ifklyudifg qro kiij</string>
-<string name="summary_shift_lock_modifiers_false">no, normql kiij onli</string>
-<string name="title_hint_mode">lebqld altrnet kiij</string>
+<string name="title_application_category">AplikesAn-spAsiphik setiNgs</string>
+<string name="title_connectbot_tab_hack">knAktbot tAb kii mod</string>
+<string name="summary_connectbot_tab_hack_true">inebl kmpAtibiliti vrkAraund</string>
+<string name="summary_connectbot_tab_hack_false">sAnd plen tAb kii ivAnt</string>
+<string name="title_caps_lock">dbAl-tAp sipht mod</string>
+<string name="summary_caps_lock_true">kAps lok (k1 => k1)</string>
+<string name="summary_caps_lock_false">sipht lok (A1 => A!)</string>
+<string name="title_shift_lock_modifiers">Aplai sipht lok tu modiphayr kiiz?</string>
+<string name="summary_shift_lock_modifiers_true">ys, ifklyudifg Aro kiiz</string>
+<string name="summary_shift_lock_modifiers_false">no, normAl kiiz onli</string>
+<string name="title_hint_mode">lebAld altrnet kiiz</string>
 <string-array name="hint_modes">
-<item>haid hint lebqls</item> <item>sho askii pfkchyuesn</item>         <item>sho aal hint lebqls</item>
+<item>haid hint lebAls</item> <item>sho askii pfkchyuesn</item>         <item>sho aal hint lebAls</item>
 </string-array>
 <string-array name="hint_modes_values"><item>0</item><item>1</item><item>2</item></string-array>
 <string name="default_hint_mode">1</string>
-<string name="title_touch_pos">dibqg tch skriin pojisqn</string>
-<string name="summary_touch_pos_true">sho phidbqk phur tch skrin lokesqn</string>
+<string name="title_touch_pos">dibAg tch skriin pozisAn</string>
+<string name="summary_touch_pos_true">sho phidbAk phur tch skrin lokesAn</string>
 <string name="summary_touch_pos_false">o??</string>
-<string name="title_slide_keys">slaidifg kii ivqnts</string>
+<string name="title_slide_keys">slaidifg kii ivAnts</string>
 <string-array name="slide_keys_entries">
-<item>ignor kiij durifg slaidifg muuvmnt (rikmqndid)</item>
-<item>sqnd phrst kii tcd</item>
-<item>sqnd last kii tcd</item>
-<item>sqnd phrst qnd last kii</item>
-<item>sqnd aal kiij tcd durifg slaidifg muuvmnt</item>
+<item>ignor kiiz durifg slaidifg muuvmnt (rikmAndid)</item>
+<item>sAnd phrst kii tcd</item>
+<item>sAnd last kii tcd</item>
+<item>sAnd phrst And last kii</item>
+<item>sAnd aal kiiz tcd durifg slaidifg muuvmnt</item>
 </string-array>
 <string-array name="slide_keys_values"><item>0</item><item>1</item><item>2</item><item>3</item><item>4</item></string-array>
-<string name="prsqnt">prsqnt</string>
-<string name="title_top_row_scale">5th ro hait qdjqstmnt</string>
-<string name="title_label_scale">kii lebql skelifg</string>
-<string name="title_candidate_scale">sjqsn lebql skelifg</string>
-<string name="title_vibrate_len">vaibret dyuresqn</string>
+<string name="prsAnt">prsAnt</string>
+<string name="title_top_row_scale">5th ro hait AdzAstmnt</string>
+<string name="title_label_scale">kii lebAl skelifg</string>
+<string name="title_candidate_scale">szAsn lebAl skelifg</string>
+<string name="title_vibrate_len">vaibret dyuresAn</string>
 <string name="title_click_volume">kii klik volyum</string>
 <string name="default_click_volume">0.2</string>
-<string name="title_click_method">klik volyum kntrol mqxhqd</string>
+<string name="title_click_method">klik volyum kntrol mAxhAd</string>
 <string name="default_click_method">0</string>
 <string-array name="click_method_entries">
-<item>sistqm diphalt (ignor klik volyum)</item>
-<item>qbsolyut klik volyum</item>
+<item>sistAm diphalt (ignor klik volyum)</item>
+<item>Absolyut klik volyum</item>
 <item>pholo midia volyum</item>
-<item>rivqrs midia volyum</item>
+<item>rivArs midia volyum</item>
 </string-array>
 <string-array name="click_method_values">
 <item>0</item>
@@ -257,13 +257,13 @@
 <item>2</item>
 <item>3</item>
 </string-array>
-<string name="title_long_press_duration">lofg-prqs dyuresqn</string>
-<string name="title_render_mode">draifg mqxhqd</string>
-<string name="render_mode_unavailable">(not cenjebl on wis divais)</string>
+<string name="title_long_press_duration">lofg-prAs dyuresAn</string>
+<string name="title_render_mode">draifg mAxhAd</string>
+<string name="render_mode_unavailable">(not cenzebl on wis divais)</string>
 <string-array name="render_mode_entries">
-<item>dayrqkt dra (sevj mqmori)</item>
-<item>sophtveyr bphqrd (diphalt)</item>
-<item>hardveyr qkslqretid (qksprimntql)</item>
+<item>dayrAkt dra (sevz mAmori)</item>
+<item>sophtveyr bphArd (diphalt)</item>
+<item>hardveyr AkslAretid (AksprimntAl)</item>
 </string-array>
 <!-- Keep these values in sync with android.viyu.viyu LAYER_TYPE_* definitions -->
 <string-array name="render_mode_values">
@@ -271,105 +271,105 @@
 <item>1</item>
 <item>2</item>
 </string-array>
-<string name="pref_screen_actions_title">gqschr qnd kii qksqn</string>
-<string name="pref_screen_actions_title_summary">konphigr qksqns phor svaip gqscqrs qnd hardveyr kiij</string>
-<string name="title_swipe_up">svaip qp</string>
+<string name="pref_screen_actions_title">gAschr And kii AksAn</string>
+<string name="pref_screen_actions_title_summary">konphigr AksAns phor svaip gAscArs And hardveyr kiiz</string>
+<string name="title_swipe_up">svaip Ap</string>
 <string name="title_swipe_down">svaip daun</string>
-<string name="title_swipe_left">svaip lqpht</string>
+<string name="title_swipe_left">svaip lApht</string>
 <string name="title_swipe_right">svaip rait</string>
-<string name="title_vol_up">volyum qp</string>
+<string name="title_vol_up">volyum Ap</string>
 <string name="title_vol_down">volyum daun</string>
 <string-array name="swipe_action_entries">
-<item>(no qksqn)</item>
-<item>kloj kiibord</item>
-<item>togql qkstqnsn ro</item>
-<item>lanc sqtifgs</item>
-<item>toggle sjqsqns</item>
+<item>(no AksAn)</item>
+<item>kloz kiibord</item>
+<item>togAl AkstAnsn ro</item>
+<item>lanc setiNgs</item>
+<item>toggle szAsAns</item>
 <item>voes input</item>
 <item>svic kiibord leaut</item>
-<item>inkrij hait</item>
-<item>dikrij hait</item>
-<item>priviqs lqfgyuej</item>
--       <item>nqkst lqfgyuej</item>
+<item>inkriz hait</item>
+<item>dikriz hait</item>
+<item>priviAs lAfgyuez</item>
+-       <item>nAkst lAfgyuez</item>
 </string-array>
 <string-array name="swipe_action_values">
 <item>nn</item>
-<item>kloj</item>
-<item>qkstqnsn</item>
-<item>sqtifgs</item>
-<item>sjqsqns</item>
+<item>kloz</item>
+<item>AkstAnsn</item>
+<item>setiNgs</item>
+<item>szAsAns</item>
 <item>voes_input</item>
 <item>phul_mod</item>
-<item>hait_qp</item>
+<item>hait_Ap</item>
 <item>hait_daun</item>
-<item>lqfg_priv</item>
--       <item>lafg_nqkst</item>
+<item>lAfg_priv</item>
+-       <item>lafg_nAkst</item>
 </string-array>
-<string name="default_swipe_up">qkstqnsn</string>
-<string name="default_swipe_down">kloj</string>
+<string name="default_swipe_up">AkstAnsn</string>
+<string name="default_swipe_down">kloz</string>
 <string name="default_swipe_left">nn</string>
 <string name="default_swipe_right">nn</string>
 <string name="default_vol_up">nn</string>
 <string name="default_vol_down">nn</string>
-<string name="title_popup_content">popqp mini-kiibord kntqnts</string>
+<string name="title_popup_content">popAp mini-kiibord kntAnts</string>
 <string-array name="popup_content_entries">
-<item>no popqps</item>
-<item>no popqps, yuj oto-ripit</item>
+<item>no popAps</item>
+<item>no popAps, yuz oto-ripit</item>
 <item>yunik onliA 3 &#x21d2; ³, e &#x21d2; é</item>
-<item>qqd siphtidA 3 &#x21d2; #³, e &#x21d2; é</item>
-<item>qqd qpqr: 3 &#x21d2; #³, e &#x21d2; Eé</item>
-<item>qqd sqlph: 3 &#x21d2; 3#³, e &#x21d2; eEé</item>
+<item>AAd siphtidA 3 &#x21d2; #³, e &#x21d2; é</item>
+<item>AAd ApAr: 3 &#x21d2; #³, e &#x21d2; Eé</item>
+<item>AAd sAlph: 3 &#x21d2; 3#³, e &#x21d2; eEé</item>
 </string-array>
 <string-array name="popup_content_values">
     <item>256</item><item>768</item><item>0</item><item>1</item><item>3</item><item>7</item>
 </string-array>
 <string name="default_popup_content">1</string>
-<string name="voice_not_enabled_warning">voes input is not qvqelebql in wis vrjqn.</string>
-<string name="recorrect_warning">ph.y.i: rii_krqksn dj not vrk krqktli on pri-jinjqrbrd divaisij diyu tu misifg opretifg sistqm suport.</string>
+<string name="voice_not_enabled_warning">voes input is not AvAelebAl in wis vrzAn.</string>
+<string name="recorrect_warning">ph.y.i: rii_krAksn dz not vrk krAktli on pri-zinzArbrd divaisiz diyu tu misifg opretifg sistAm suport.</string>
 <string name="no_market_warning">inebl tu lonc ple stor.</string>
-<string name="english_ime_dibqg_settings" translatable="false">dibqg sqtifgs</string>
-<string name="prefs_dibqg_mode" translatable="false">dibqg mod</string>
+<string name="english_ime_dibAg_settings" translatable="false">dibAg setiNgs</string>
+<string name="prefs_dibAg_mode" translatable="false">dibAg mod</string>
 <string name="main_setup_configure_imes">inebl kiibord</string>
-<string name="main_setup_set_ime">st input mqxhqd</string>
+<string name="main_setup_set_ime">st input mAxhAd</string>
 <string name="main_setup_get_dicts">mor</string>
-<string name="main_setup_input_lang">input lqfgyuejis</string>
-<string name="main_setup_settings">sqtifgs</string>
-<string name="main_setup_tqst">test</string>
+<string name="main_setup_input_lang">input lAfgyuezis</string>
+<string name="main_setup_settings">setiNgs</string>
+<string name="main_setup_tAst">test</string>
 <string name="main_body"><Data>
 <![CDATA["
 <h2>ineblifg hekskibord</h2>
-<p><i>hekskibord</i> provaids niyu qndroed input mqxhqd. it is <b>disebqld bay diphalt</b>, qnd phor sqkyoriti riijqn qndroed djn't qlo programs tu cenj input mqxhqd sqtifgs. pliij pholo pholoifg stqps tu qktivet it.<p>
-<h3>qqd kiibord tu sistqm's input mqxhqd list:</h3>
-<blockquote>
-<p>&#8226; opqn  sistqm input sqtifgs konphigyuresqn bay prqsifg  <b>inebl kiibord</b> btqn qbqv.</p>
-<p>&#8226; phaind <i>hekskibord</i> in  input mqxhqd list, tqp  cqkmark tu svic it on.</p>
-<p>&#8226; qknolej  varnifg shon bay  sistqm.  sistqm alvej shoj wis mqsej vhn ineblifg q xhrd-parti input mqxhqd.</p>
-<p>&#8226; prqs  <i>bqk</i> btqn tu return tu wis page.</p>
-</blockquote>
-<h3>cuuj krqntli qktiv input mqxhqd:</h3>
-<blockquote>
-<p>&#8226; prqs  <b>sqt input mqxhqd</b> btqn qbqv.</p>
-<p>&#8226; sqlqkt <i>hekskibord</i>phrom list.</p>
-</blockquote>
-<h3>opsnl: sqlqkt input lqfgyuejis:</h3>
-<blockquote>
-<p>&#8226; prqs  <b>input lqfgyuejis</b> btqn qbqv tu sqlqkt vic kiibord leauts yu vant tu yuj. yu <b>mqst</b> konphigr wis if yu vant tu yuj q language or leaut qwqr than  one corresponding tu your sistqm's diphalt language.</p>
-<p>&#8226; prqs  <i>bqk</i> btqn tu return tu wis page.</p>
-<p>&#8226; vhn typing, slide  spes bar horijntli tu svic bitvin sqlqktid leauts.
-</blockquote>
-<h3>opsnl: instal kmplisqn diksneri pqkejis:</h3>
-<blockquote>
-<p>&#8226; prqs  <b>mor</b> btqn qbqv tu du q ple stor src phor  kiibord's dqvlqpqr nem, wis vil sho phri daunlodebl kmplisqn diksneri pqkejis.</p>
-</blockquote>
-<h2>qdisnl inphormesqn</h2>
-<p>pliij rqphqr tu  <q href='https://github.com/font77/hpop'>projqkt vqb pej</q> phur mor inpormesqn, ifklyudifg  yujqr's gaid, isyu trqkqr, qnd disksqn grup.</p>
+<p><i>hekskibord</i> provaids niyu Androed input mAxhAd. it is <b>disebAld bay diphalt</b>, And phor sAkyoriti riizAn Androed dzn't Alo programs tu cenz input mAxhAd setiNgs. pliiz pholo pholoifg stAps tu Aktivet it.<p>
+<h3>AAd kiibord tu sistAm's input mAxhAd list:</h3>
+<blockAuote>
+<p>&#8226; opAn  sistAm input setiNgs konphigyuresAn bay prAsifg  <b>inebl kiibord</b> btAn AbAv.</p>
+<p>&#8226; phaind <i>hekskibord</i> in  input mAxhAd list, tAp  cAkmark tu svic it on.</p>
+<p>&#8226; Aknolez  varnifg shon bay  sistAm.  sistAm alvez shoz wis mAsez vhn ineblifg A xhrd-parti input mAxhAd.</p>
+<p>&#8226; prAs  <i>bAk</i> btAn tu return tu wis page.</p>
+</blockAuote>
+<h3>cuuz krAntli Aktiv input mAxhAd:</h3>
+<blockAuote>
+<p>&#8226; prAs  <b>sAt input mAxhAd</b> btAn AbAv.</p>
+<p>&#8226; sAlAkt <i>hekskibord</i>phrom list.</p>
+</blockAuote>
+<h3>opsnl: sAlAkt input lAfgyuezis:</h3>
+<blockAuote>
+<p>&#8226; prAs  <b>input lAfgyuezis</b> btAn AbAv tu sAlAkt vic kiibord leauts yu vant tu yuz. yu <b>mAst</b> konphigr wis if yu vant tu yuz A language or leaut AwAr than  one corresponding tu your sistAm's diphalt language.</p>
+<p>&#8226; prAs  <i>bAk</i> btAn tu return tu wis page.</p>
+<p>&#8226; vhn typing, slide  spes bar horizntli tu svic bitvin sAlAktid leauts.
+</blockAuote>
+<h3>opsnl: instal kmplisAn diksneri pAkezis:</h3>
+<blockAuote>
+<p>&#8226; prAs  <b>mor</b> btAn AbAv tu du A ple stor src phor  kiibord's dAvlApAr nem, wis vil sho phri daunlodebl kmplisAn diksneri pAkezis.</p>
+</blockAuote>
+<h2>Adisnl inphormesAn</h2>
+<p>pliiz rAphAr tu  <A href='https://github.com/font77/hpop'>prozAkt vAb pez</A> phur mor inpormesAn, ifklyudifg  yuzAr's gaid, isyu trAkAr, And disksAn grup.</p>
 "]]>
 </Data></string>
-<string name="text_tqst">test</string>
+<string name="text_tAst">test</string>
 <string name="seek_pref_0">0%</string>
 <string name="seek_pref_val">x%</string>
 <string name="seek_pref_max">100%</string>
 <string name="notification_channel_name">hekskibord</string>
 <string name="notification_channel_description">hekskibord</string>
-<string name="notification_action_settings">sqtifgs</string>
+<string name="notification_action_settings">setiNgs</string>
 </resources>
