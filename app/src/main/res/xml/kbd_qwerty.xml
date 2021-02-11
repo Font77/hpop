@@ -19,7 +19,7 @@
         <Key android:keyLabel="u" android:popupCharacters="UVw_W" />
         <Key android:keyLabel="e" android:popupCharacters="E!=&lt;&gt;~^{[(O)]}" />
         <Key android:keyLabel="o" android:popupCharacters="O0.,:;" />
-        <Key android:keyLabel="N" android:popupCharacters="f0123456789tJQWXF.&lt;=&gt;" />
+        <Key android:keyLabel="N" android:popupCharacters="f123456789tjQWxF0.+-*/=^S.&lt;=&gt;" />
         <Key android:keyLabel="y" android:popupCharacters="YUVO" />
 <!--        <Key android:keyLabel="H" android:popupCharacters="=&lt;&gt;+-*\\/%[|]{;}(:)" />-->
         <Key android:codes="72" android:keyIcon="@drawable/simbql_kibord_hh" android:popupCharacters="jJ=&lt;&gt;+-*\\/%[|]{;}(:)" />
@@ -35,15 +35,15 @@
         <Key android:keyLabel="T" android:popupCharacters="xX" />
         <Key android:keyLabel="D" android:popupCharacters="w=+-*/\\" />
         <Key android:keyLabel="p" android:popupCharacters="+-*\\/%[|]{;}(:)PfF" />
-        <Key android:keyLabel="b" android:popupCharacters="B" android:keyEdgeFlags="right" />
+        <Key android:keyLabel="b" android:popupCharacters="B`&quot;'" android:keyEdgeFlags="right" />
     </Row>
     <Row>
         <!-- <Key android:codes="@integer/key_shift" android:keyIcon="@drawable/sym_keyboard_shift" android:iconPreview="@drawable/sym_keyboard_feedback_shift" android:keyWidth="15%p" android:isModifier="true" android:isSticky="true" android:keyEdgeFlags="left" /> -->
         <Key android:codes="104" android:keyIcon="@drawable/simbql_kibord_h" android:popupCharacters="" android:keyEdgeFlags="left" />
         <Key android:keyLabel="r" android:popupCharacters="R@&lt;-&gt;" />
-        <Key android:keyLabel="l" android:popupCharacters="L" />
-        <Key android:keyLabel="v" android:popupCharacters="V" />
-        <Key android:keyLabel="m" android:popupCharacters="M+-/*=S()[]{}" />
+        <Key android:keyLabel="l" android:popupCharacters="L|\\/" />
+        <Key android:keyLabel="v" android:popupCharacters="V^wW" />
+        <Key android:keyLabel="m" android:popupCharacters="M+-\/*=S()[]{}" />
         <Key android:keyLabel="n" android:popupCharacters="N123456789tjQWxF0.+-*/=^S" />
         <Key android:keyLabel="f" android:popupCharacters="Fph" />
 <!--        <Key android:keyLabel="." android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" />-->
