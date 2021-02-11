@@ -43,8 +43,8 @@
         <Key android:keyLabel="r" android:popupCharacters="R@&lt;-&gt;" />
         <Key android:keyLabel="l" android:popupCharacters="L" />
         <Key android:keyLabel="v" android:popupCharacters="V" />
-        <Key android:keyLabel="m" android:popupCharacters="M+-/*=S.0123456789tJQWXF()[]{}" />
-        <Key android:keyLabel="n" android:popupCharacters="N" />
+        <Key android:keyLabel="m" android:popupCharacters="M+-/*=S()[]{}" />
+        <Key android:keyLabel="n" android:popupCharacters="N123456789tjQWxF0.+-*/=^S" />
         <Key android:keyLabel="f" android:popupCharacters="Fph" />
 <!--        <Key android:keyLabel="." android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" />-->
         <Key android:keyLabel="." android:popupCharacters=",;:'&quot;~`-_=+*" android:isModifier="true" />
