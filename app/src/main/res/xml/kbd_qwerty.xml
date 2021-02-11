@@ -41,7 +41,7 @@
         <!-- <Key android:codes="@integer/key_shift" android:keyIcon="@drawable/sym_keyboard_shift" android:iconPreview="@drawable/sym_keyboard_feedback_shift" android:keyWidth="15%p" android:isModifier="true" android:isSticky="true" android:keyEdgeFlags="left" /> -->
         <Key android:codes="104" android:keyIcon="@drawable/simbql_kibord_h" android:popupCharacters="" android:keyEdgeFlags="left" />
         <Key android:keyLabel="r" android:popupCharacters="R@&lt;-&gt;" />
-        <Key android:keyLabel="l" android:popupCharacters="L|\\/" />
+        <Key android:keyLabel="l" android:popupCharacters="L|/\\" />
         <Key android:keyLabel="v" android:popupCharacters="V^wW" />
         <Key android:keyLabel="m" android:popupCharacters="M+-\/*=S()[]{}" />
         <Key android:keyLabel="n" android:popupCharacters="N123456789tjQWxF0.+-*/=^S" />
