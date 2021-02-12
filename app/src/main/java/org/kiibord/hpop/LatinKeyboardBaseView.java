@@ -499,11 +499,11 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 }
                 switch (label.charAt(0))
                 {
-                    case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T': case 'D': case 'p': case 'b': case 's':
+                    case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T': case 'D': case 'p': case 'b': case 's': case '_':
                         paint.setColor(0xFF77ff77);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
 //                    case 'A': case 'a': case 'i': case 'u': case 'e': case 'o': case 'N': case 'y': case 'r': case 'l': case 'v': case 'm': case 'n': case 'f':
 //                        paint.setColor(0xFFFFFFFF);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
-                    case '_': paint.setColor(0xFF7777FF);paint.setTypeface(Typeface.DEFAULT_BOLD);break;
+//                    case '_': paint.setColor(0xFF7777FF);paint.setTypeface(Typeface.DEFAULT_BOLD);break;
                 }
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);
