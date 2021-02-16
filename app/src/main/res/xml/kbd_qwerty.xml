@@ -16,7 +16,7 @@
         <Key android:keyLabel="A" android:popupCharacters="xXM&amp;#$" android:keyEdgeFlags="left" />
         <Key android:keyLabel="a" android:popupCharacters="&amp;?!`'O&quot;" />
         <Key android:keyLabel="i" android:popupCharacters="I[`]{'}(&quot;)" />
-        <Key android:keyLabel="u" android:popupCharacters="UwW" />
+        <Key android:keyLabel="u" android:popupCharacters="UWV" />
         <Key android:keyLabel="e" android:popupCharacters="E!=&lt;&gt;~^{[(O)]}" />
         <Key android:keyLabel="o" android:popupCharacters="O,:;" />
         <Key android:keyLabel="N" android:popupCharacters="~^+-*/=^S.&lt;=&gt;" />
@@ -31,9 +31,9 @@
         <Key android:keyLabel="c" android:popupCharacters="C()[]{}&lt;&gt;" />
         <Key android:keyLabel="z" android:popupCharacters="jZJ~" />
         <Key android:keyLabel="t" android:popupCharacters="~`#$,!" />
-        <Key android:keyLabel="d" android:popupCharacters="W $!=:;&quot;" />
+        <Key android:keyLabel="d" android:popupCharacters="$#@%*?!=:;&quot;" />
         <Key android:keyLabel="T" android:popupCharacters="xX" />
-        <Key android:keyLabel="D" android:popupCharacters="w =+-*/\\" />
+        <Key android:keyLabel="D" android:popupCharacters="w WVU$=+-*/\\" />
         <Key android:keyLabel="p" android:popupCharacters="P+-*\\/%[]{}()fF" />
         <Key android:keyLabel="b" android:popupCharacters="B`&quot;'" android:keyEdgeFlags="right" />
     </Row>
@@ -44,7 +44,7 @@
         <Key android:keyLabel="l" android:popupCharacters="L|/\\" />
         <Key android:keyLabel="v" android:popupCharacters="V^wW" />
         <Key android:keyLabel="m" android:popupCharacters="M-+\/*=S()[]{}" />
-        <Key android:keyLabel="n" android:popupCharacters="N123456789tjQWxF0.+-*/=^S" />
+        <Key android:keyLabel="n" android:popupCharacters="N1 23456789tjQWxF0.+-*/=^S" />
         <Key android:keyLabel="f" android:popupCharacters="F" />
 <!--        <Key android:keyLabel="." android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" />-->
         <Key android:keyLabel="." android:popupCharacters=",;:'&quot;~`-_=+*" android:isModifier="true" />
@@ -61,7 +61,7 @@
         <Key android:codes="@integer/kii_rminu" android:keyIcon="@drawable/simbql_kibord_rminu" />
         <!-- <Key android:keyLabel=".01" android:keyIcon="@drawable/hint_popup" android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" /> -->
         <Key android:keyLabel="/" android:popupCharacters="\\%?!^`'&quot;~|" />
-        <Key android:keyLabel="#" android:popupCharacters="123456789tjQWxF0.+-*/=^S|.,^%*-+!" />
+        <Key android:keyLabel="#" android:popupCharacters="1 23456789tjQWxF0.+-*/=^S|.,^%*-+!" />
         <Key android:codes="@integer/key_return" android:keyIcon="@drawable/sym_keyboard_return" android:iconPreview="@drawable/sym_keyboard_feedback_return" android:isModifier="true"
         android:keyWidth="10%p" android:keyEdgeFlags="right" />
     </Row>
@@ -74,7 +74,7 @@
         <Key android:codes="@integer/kii_qndqrskor" android:keyIcon="@drawable/simbl_undrskor" android:popupCharacters='|-=~!\\/' />
         <Key android:codes="@integer/kii_rminu" android:keyIcon="@drawable/simbql_kibord_rminu" />
         <Key android:keyLabel="/" android:popupCharacters="\\%?!^`'&quot;~|" />
-        <Key android:keyLabel="#" android:popupCharacters="123456789tjQWxF0.+-*/=^S|.,^%*-+!" />
+        <Key android:keyLabel="#" android:popupCharacters="1 23456789tjQWxF0.+-*/=^S|.,^%*-+!" />
         <Key android:codes="@integer/key_return" android:keyIcon="@drawable/sym_keyboard_return" android:iconPreview="@drawable/sym_keyboard_feedback_return" android:isModifier="true"
         android:keyWidth="10%p" android:keyEdgeFlags="right" />
     </Row>
@@ -85,7 +85,7 @@
 <!--        <Key android:keyLabel="_" android:popupCharacters='|-=~!\\/' />-->
         <Key android:codes="@integer/kii_qndqrskor" android:keyIcon="@drawable/simbl_undrskor" android:popupCharacters='|-=~!\\/' />
         <Key android:keyLabel="/" android:popupCharacters="\\%?!^`'&quot;~|" />
-        <Key android:keyLabel="#" android:popupCharacters="123456789tjQWxF0.+-*/=^S|.,^%*-+!" />
+        <Key android:keyLabel="#" android:popupCharacters="1 23456789tjQWxF0.+-*/=^S|.,^%*-+!" />
 <!--        <Key android:keyLabel="." android:keyIcon="@drawable/hint_popup" android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" />-->
         <Key android:codes="@integer/key_return" android:keyIcon="@drawable/sym_keyboard_return" android:iconPreview="@drawable/sym_keyboard_feedback_return" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="right" />
     </Row>
@@ -96,7 +96,7 @@
         <!--        <Key android:keyLabel="_" android:popupCharacters='|-=~!\\/' />-->
         <Key android:codes="@integer/kii_qndqrskor" android:keyIcon="@drawable/simbl_undrskor" android:popupCharacters='|-=~!\\/' />
         <Key android:keyLabel="/" android:popupCharacters="\\%?!^`'&quot;~|" />
-        <Key android:keyLabel="#" android:popupCharacters="123456789tjQWxF0.+-*/=^S|.,^%*-+!" />
+        <Key android:keyLabel="#" android:popupCharacters="1 23456789tjQWxF0.+-*/=^S|.,^%*-+!" />
 <!--        <Key android:keyLabel="." android:keyIcon="@drawable/hint_popup" android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" />-->
         <Key android:codes="@integer/key_return" android:keyIcon="@drawable/sym_keyboard_return" android:iconPreview="@drawable/sym_keyboard_feedback_return" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="right" />
     </Row>
@@ -107,7 +107,7 @@
         <!--        <Key android:keyLabel="_" android:popupCharacters='|-=~!\\/' />-->
         <Key android:codes="@integer/kii_qndqrskor" android:keyIcon="@drawable/simbl_undrskor" android:popupCharacters='|-=~!\\/' />
         <Key android:keyLabel="/" android:popupCharacters="\\%?!^`'&quot;~|" />
-        <Key android:keyLabel="#" android:popupCharacters="123456789tjQWxF0.+-*/=^S|.,^%*-+!" />
+        <Key android:keyLabel="#" android:popupCharacters="1 23456789tjQWxF0.+-*/=^S|.,^%*-+!" />
         <!--        <Key android:keyLabel="." android:keyIcon="@drawable/hint_popup" android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" />-->
         <Key android:keyLabel=":-)" android:keyOutputText=":-) " android:keyIcon="@drawable/hint_popup" android:popupKeyboard="@xml/popup_smileys" android:keyWidth="20%p" android:isModifier="true" android:keyEdgeFlags="right" />
     </Row>
@@ -119,7 +119,7 @@
         <Key android:codes="@integer/kii_qndqrskor" android:keyIcon="@drawable/simbl_undrskor" android:popupCharacters='|-=~!\\/' />
         <Key android:keyLabel="tab" android:popupCharacters='' />
         <Key android:keyLabel="/" android:popupCharacters="\\%?!^`'&quot;~|" />
-        <Key android:keyLabel="#" android:popupCharacters="123456789tjQWxF0.+-*/=^S|.,^%*-+!" />
+        <Key android:keyLabel="#" android:popupCharacters="1 23456789tjQWxF0.+-*/=^S|.,^%*-+!" />
 <!--        <Key android:codes="@integer/key_tab" android:keyIcon="@drawable/sym_keyboard_tab" android:iconPreview="@drawable/sym_keyboard_feedback_tab" android:isModifier="true" />-->
         <Key android:keyLabel="." android:keyIcon="@drawable/hint_popup" android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" />
         <Key android:codes="@integer/key_return" android:keyIcon="@drawable/sym_keyboard_return" android:iconPreview="@drawable/sym_keyboard_feedback_return" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="right" />
