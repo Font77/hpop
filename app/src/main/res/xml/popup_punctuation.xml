@@ -15,14 +15,14 @@
     </Row>
     <Row android:rowEdgeFlags="bottom" >
         <Key android:keyLabel="9" android:keyEdgeFlags="left" />
-        <Key android:keyLabel=":" />
-        <Key android:keyLabel=";" />
-        <Key android:keyLabel="&lt;" />
-        <Key android:keyLabel="=" />
-        <Key android:keyLabel="&gt;" />
-        <Key android:keyLabel="\?" />
+        <Key android:keyLabel="L" />
+        <Key android:keyLabel="J" />
+        <Key android:keyLabel="Q" />
+        <Key android:keyLabel="W" />
+        <Key android:keyLabel="X" />
+        <Key android:keyLabel="F" />
         <Key android:keyLabel="0" />
-        <Key android:keyLabel="N" />
+        <Key android:keyLabel="+" />
         <Key android:keyLabel="," android:keyEdgeFlags="right" />
     </Row>
 </Keyboard>
