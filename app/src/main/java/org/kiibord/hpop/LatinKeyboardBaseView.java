@@ -851,9 +851,9 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
             if (pointerCount > 1 && !tracker.isModifier()) { mHandler.cancelKeyRepeatTimer(); }
         }
         if (!mHasDistinctMultitouch) { PointerTracker tracker = getPointerTracker(0);
-            if (pointerCount == 1 && oldPointerCount == 2) {                 tracker.onDownEvent(x, y, eventTime);             }
-            else if (pointerCount == 2 && oldPointerCount == 1) {                 tracker.onUpEvent(tracker.getLastX(), tracker.getLastY(), eventTime);             }
-            else if (pointerCount == 1 && oldPointerCount == 1) {                 tracker.onTouchEvent(action, x, y, eventTime);             }
+            if (pointerCount == 1 && oldPointerCount == 2) { tracker.onDownEvent(x, y, eventTime); }
+            else if (pointerCount == 2 && oldPointerCount == 1) { tracker.onUpEvent(tracker.getLastX(), tracker.getLastY(), eventTime);             }
+            else if (pointerCount == 1 && oldPointerCount == 1) { tracker.onTouchEvent(action, x, y, eventTime);             }
             else {Log.w(TAG, "Unknown touch panel behavior: pointer count is " + pointerCount+ " (old " + oldPointerCount + ")");}
             if (continuing) tracker.setSlidingKeyInputState(true);
             return true;

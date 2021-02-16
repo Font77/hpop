@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 <string name="english_ime_name">hpop_u5</string>
-<string name="english_ime_settings">hpop setiNgs</string>
-<string name="english_ime_input_options">input opsAns</string>
-<string name="title_keyboard_view_settings">kiibord viyu setiNgs</string>
-<string name="title_keyboard_height_portrait">kiibord hait portret</string>
-<string name="title_keyboard_height_landscape">kiibord hait lAndskep</string>
-<string name="title_key_layout_options">ki leaut sAksn</string>
-<string name="title_key_behavior_settings">ki biheviyr setiNgs</string>
-<string name="title_long_press_alternate_keys">loNg prAs altrnet kiiz</string>
+<string name="english_ime_settings">hpop setiNg</string>
+<string name="english_ime_input_options">input opsns</string>
+<string name="title_keyboard_view_settings">kibord viyu setiNg</string>
+<string name="title_keyboard_height_portrait">kibord hait portret</string>
+<string name="title_keyboard_height_landscape">kibord hait lAndskep</string>
+<string name="title_key_layout_options">ki leaut sksn</string>
+<string name="title_key_behavior_settings">ki biheviyr setiNg</string>
+<string name="title_long_press_alternate_keys">loNg prs altrnet kiz</string>
 <string name="title_suggested_punctuation">szAstid pNkcyuesn</string>
-<string name="title_input_mode_settings">input mod setiNgs</string>
-<string name="title_dibAgging">dibAgiNgs</string>
+<string name="title_input_mode_settings">input mod setiNg</string>
+<string name="title_dibAgging">dibAgiNg</string>
 <string name="title_input_connection_details">input knAksn ditels</string>
 <string name="title_version">vrzn</string>
-<string name="title_swipe_gestures">svaip gAschrs (Aksprimntl)</string>
-<string name="title_hardware_key_actions">hardveyr kii AksAns</string>
+<string name="title_swipe_gestures">svaip gschrs (Aksprimntl)</string>
+<string name="title_hardware_key_actions">hardveyr kii Aksns</string>
 <string name="vibrate_on_keypress">vaibret on  kiipres</string>
 <string name="sound_on_keypress">saund on  kiipres</string>
 <string name="popup_on_keypress">popup on  kiipres</string>
@@ -24,23 +24,23 @@
 <string name="hit_correction_land">lAndskep input errors</string>
 <string name="hit_correction_land_summary">inebl input error correction</string>
 <string name="auto_correction">vrd szAsns</string>
-<string name="auto_correction_summary">autometikli krAkt priviyAs vrd</string>
-<string name="prediction">vrd szAsns</string>
+<string name="auto_correction_summary">automtikli krAkt priviys vrd</string>
+<string name="prediction">vrd szAsn</string>
 <string name="prediction_category">vrd szAsn setiNgs</string>
-<string name="prediction_summary">inebl auto kmplisAn while typing</string>
+<string name="prediction_summary">inebl auto kmplisAn vhile typing</string>
 <string name="auto_complete_dialog_title">oto kmplisn</string>
 <string name="prediction_landscape">inkriz tAkst phild saiz</string>
 <string name="prediction_landscape_summary">haid vrd szAsns in lAndskep viyu</string>
-<string name="auto_cap">oto-kApitAlaizesn</string>
+<string name="auto_cap">oto-kepitAlaizesn</string>
 <string name="auto_cap_summary">kepitAlaiz  start of sentence</string>
-<string name="auto_punctuate">auto-punctuate</string>
+<string name="auto_punctuate">oto-punctuate</string>
 <string name="auto_punctuate_summary"></string>
 <string name="kyuik_fixes">kyuik phiksis</string>
 <string name="kyuik_fixes_summary">krAkts komAnli taipd misteks</string>
 <string name="show_suggestions">sho szAsns</string>
-<string name="show_suggestions_summary">disple szAstid vrds vahil taipifg</string>
+<string name="show_suggestions_summary">disple szAstid vrds vahil taipiNg</string>
 <string name="auto_complete">oto-kmplit</string>
-<string name="auto_complete_summary">spesbar And pfkchyuesn otometikli insArt hailaitid vrd</string>
+<string name="auto_complete_summary">spesbar And pNkchyuesn otometikli insArt hailaitid vrd</string>
 <string name="prefs_settings_key">sho setiNgs kii</string>
 <string-array name="settings_key_modes_values" translatable="false">
 <item>@string/settings_key_mode_auto</item>
@@ -71,12 +71,12 @@
 <string name="tip_dismiss">prAs  bAk kii \u21b6 tu kloz  kiibord At Ani point</string>
 <string name="tip_access_symbols">AksAs nmbArs And simbAls</string>
 <string name="tip_add_to_dictionary">prAs And hold lApht-most vrd tu AAd it tu diksneri</string>
-<string name="touch_to_continue">tch wis hint tu kontiniyu »</string>
-<string name="touch_to_finish">tch heyr tu kloz wis hint And start taipifg!</string>
+<string name="touch_to_continue">tch Dis hint tu kontiniyu »</string>
+<string name="touch_to_finish">tch heyr tu kloz Dis hint And start taipiNg!</string>
 <string name="label_go_key">go</string>
-<string name="label_next_key">nAkst</string>
+<string name="label_next_key">nkst</string>
 <string name="label_done_key">dn</string>
-<string name="label_send_key">sAnd</string>
+<string name="label_send_key">snd</string>
 <string name="label_symbol_key">a1!</string>
 <string name="label_phone_key">123</string>
 <string name="label_alpha_key">Aai</string>
@@ -87,13 +87,13 @@
 <string name="voice_warning_how_to_turn_off">tu trn of voes input, go tu kiibord sAtifg.</string>
 <string name="voice_hint_dialog_message">tu yuz voes input, prAs  maikrophon btAn or slaid yuAr phifgAr Akros  on-skrin kiibord.</string>
 <string name="voice_listening">spiik nao</string>
-<string name="voice_working">vrkifg</string>
+<string name="voice_working">vrkiNg</string>
 <string name="voice_initializing"></string>
-<string name="voice_error">ArAr. pliiz trai Agen.</string>
+<string name="voice_error">err. pliz trai Agen.</string>
 <string name="voice_network_error">kud not knAkt</string>
-<string name="voice_too_much_speech">ArAr, tuu mch spiich.</string>
-<string name="voice_audio_error">odio problAm</string>
-<string name="voice_server_error">srvr ArAr</string>
+<string name="voice_too_much_speech">err, tuu mch spiich.</string>
+<string name="voice_audio_error">odio problm</string>
+<string name="voice_server_error">srvr err</string>
 <string name="voice_speech_timeout">no spiic hrd</string>
 <string name="voice_no_match">no mAciz phaund</string>
 <string name="voice_not_installed">voes src not instald</string>
@@ -338,7 +338,7 @@
 <string name="main_body"><Data>
 <![CDATA["
 <h2>ineblifg hekskibord</h2>
-<p><i>hekskibord</i> provaids niyu Androed input mAxhAd. it is <b>disebAld bay diphalt</b>, And phor sAkyoriti riizAn Androed dzn't Alo programs tu cenz input mAxhAd setiNgs. pliiz pholo pholoifg stAps tu Aktivet it.<p>
+<p><i>hekskibord</i> provides niyu Androed input mAxhAd. it is <b>disebAld bay diphalt</b>, And phor sAkyoriti riizAn Androed dzn't Alo programs tu cenz input mAxhAd setiNgs. pliiz pholo pholoifg stAps tu Aktivet it.<p>
 <h3>AAd kiibord tu sistAm's input mAxhAd list:</h3>
 <blockAuote>
 <p>&#8226; opAn  sistAm input setiNgs konphigyuresAn bay prAsifg  <b>inebl kiibord</b> btAn AbAv.</p>

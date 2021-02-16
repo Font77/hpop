@@ -9,7 +9,7 @@
     <application android:label="@string/english_ime_name" android:allowBackup="true"
         android:backupAgent="org.kiibord.hpop.LatinIMEBackupAgent"
         android:restoreAnyVersion="true" android:hardwareAccelerated="false" android:killAfterRestore="false"
-        android:icon="@drawable/simbql_kibord_hh">
+        android:icon="@drawable/simbql_kibord_h2">
     <service android:name="org.kiibord.hpop.LatinIME" android:label="@string/english_ime_name" android:permission="android.permission.BIND_INPUT_METHOD">
         <intent-filter><action android:name="android.view.InputMethod"/></intent-filter>
         <meta-data android:name="android.view.im" android:resource="@xml/method" />
