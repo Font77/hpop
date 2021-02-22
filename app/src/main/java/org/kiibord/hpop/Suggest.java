@@ -12,10 +12,8 @@ import android.util.Log;
 import android.view.View;
 
 public class Suggest implements Dictionary.WordCallback {
-	private static String TAG = "hpop"; //"PCKeyboard";
-	
+	private static String TAG = "hpop_u5"; //"PCKeyboard";	
     public static final int APPROX_MAX_WORD_LENGTH = 32;
-
     public static final int CORRECTION_NONE = 0;
     public static final int CORRECTION_BASIC = 1;
     public static final int CORRECTION_FULL = 2;
@@ -48,12 +46,6 @@ public class Suggest implements Dictionary.WordCallback {
 
     private int[] mPriorities = new int[mPrefMaxSuggestions];
     private int[] mBigramPriorities = new int[PREF_MAX_BIGRAMS];
-
-    // Handle predictive correction for only the first 1280 characters for performance reasons
-    // If we support scripts that need latin characters beyond that, we should probably use some
-    // kind of a sparse array or language specific list with a mapping lookup table.
-    // 1280 is the size of the BASE_CHARS array in ExpandableDictionary, which is a basic set of
-    // latin characters.
     private int[] mNextLettersFrequencies = new int[1280];
     private ArrayList<CharSequence> mSuggestions = new ArrayList<CharSequence>();
     ArrayList<CharSequence> mBigramSuggestions  = new ArrayList<CharSequence>();
@@ -109,39 +101,11 @@ public class Suggest implements Dictionary.WordCallback {
         return mMainDict.getSize() > LARGE_DICTIONARY_THRESHOLD;
     }
 
-    public int getApproxMaxWordLength() {
-        return APPROX_MAX_WORD_LENGTH;
-    }
-
-    /**
-     * Sets an optional user dictionary resource to be loaded. The user dictionary is consulted
-     * before the main dictionary, if set.
-     */
-    public void setUserDictionary(Dictionary userDictionary) {
-        mUserDictionary = userDictionary;
-    }
-
-    /**
-     * Sets an optional contacts dictionary resource to be loaded.
-     */
-    public void setContactsDictionary(Dictionary userDictionary) {
-        mContactsDictionary = userDictionary;
-    }
-    
-    public void setAutoDictionary(Dictionary autoDictionary) {
-        mAutoDictionary = autoDictionary;
-    }
-
-    public void setUserBigramDictionary(Dictionary userBigramDictionary) {
-        mUserBigramDictionary = userBigramDictionary;
-    }
-
-    /**
-     * Number of suggestions to generate from the input key sequence. This has
-     * to be a number between 1 and 100 (inclusive).
-     * @param maxSuggestions
-     * @throws IllegalArgumentException if the number is out of range
-     */
+    public int getApproxMaxWordLength() { return APPROX_MAX_WORD_LENGTH; }
+    public void setUserDictionary(Dictionary userDictionary) { mUserDictionary = userDictionary; }
+    public void setContactsDictionary(Dictionary userDictionary) { mContactsDictionary = userDictionary; }
+    public void setAutoDictionary(Dictionary autoDictionary) { mAutoDictionary = autoDictionary; }
+    public void setUserBigramDictionary(Dictionary userBigramDictionary) { mUserBigramDictionary = userBigramDictionary; }
     public void setMaxSuggestions(int maxSuggestions) {
         if (maxSuggestions < 1 || maxSuggestions > 100) {
             throw new IllegalArgumentException("maxSuggestions must be between 1 and 100");
@@ -155,7 +119,6 @@ public class Suggest implements Dictionary.WordCallback {
             mStringPool.add(sb);
         }
     }
-
     private boolean haveSufficientCommonality(String original, CharSequence suggestion) {
         final int originalLength = original.length();
         final int suggestionLength = suggestion.length();
@@ -175,22 +138,8 @@ public class Suggest implements Dictionary.WordCallback {
             }
         }
         matching = Math.max(matching, lessMatching);
-
-        if (minLength <= 4) {
-            return matching >= 2;
-        } else {
-            return matching > minLength / 2;
-        }
+        if (minLength <= 4) { return matching >= 2; } else { return matching > minLength / 2; }
     }
-
-    /**
-     * Returns a list of words that match the list of character codes passed in.
-     * This list will be overwritten the next time this function is called.
-     * @param view a view for retrieving the context for AutoText
-     * @param wordComposer contains what is currently being typed
-     * @param prevWordForBigram previous word (used only for bigram)
-     * @return list of suggestions.
-     */
     public List<CharSequence> getSuggestions(View view, WordComposer wordComposer, 
             boolean includeTypedWordIfValid, CharSequence prevWordForBigram) {
         mHaveCorrection = false;

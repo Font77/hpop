@@ -18,6 +18,7 @@
     </Row>
     <Row android:rowEdgeFlags="top">
         <!-- <Key android:keyLabel="@string/key_tlde_main" android:shiftLabel="@string/key_tlde_shift" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="@string/key_tlde_alt" android:keyWidth="4.5714285%p" android:keyEdgeFlags="left" /> -->
+<!--        <Key android:keyLabel="A" />-->
         <Key android:keyLabel="A" android:shiftLabel="Q" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="Q&amp;" />
         <Key android:keyLabel="@string/key_ae02_main" android:shiftLabel="\@" android:popupKeyboard="@xml/kbd_popup_template" android:popupCharacters="\@\#$%" />
         <Key android:keyLabel="@string/key_ae03_main" android:shiftLabel="I" android:popupKeyboard="@xml/kbd_popup_narrow_template" android:popupCharacters="I" />

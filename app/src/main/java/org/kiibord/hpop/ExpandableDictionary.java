@@ -1,35 +1,10 @@
-/*
- * Copyright (C) 2009 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.kiibord.hpop;
 
 import java.util.LinkedList;
-
 import android.content.Context;
 import android.os.AsyncTask;
 
-/**
- * Base class for an in-memory dictionary that can grow dynamically and can
- * be searched for suggestions and valid words.
- */
 public class ExpandableDictionary extends Dictionary {
-    /**
-     * There is difference between what java and native code can handle.
-     * It uses 32 because Java stack overflows when greater value is used.
-     */
     protected static final int MAX_WORD_LENGTH = 32;
 
     private Context mContext;
@@ -79,20 +54,10 @@ public class ExpandableDictionary extends Dictionary {
         }
     }
 
-    static class NextWord {
-        Node word;
-        NextWord nextWord;
-        int frequency;
-
-        NextWord(Node word, int frequency) {
-            this.word = word;
-            this.frequency = frequency;
-        }
+    static class NextWord { Node word; NextWord nextWord; int frequency;
+        NextWord(Node word, int frequency) { this.word = word; this.frequency = frequency; }
     }
-
-
     private NodeArray mRoots;
-
     private int[][] mCodes;
 
     ExpandableDictionary(Context context, int dicTypeId) {
@@ -116,28 +81,11 @@ public class ExpandableDictionary extends Dictionary {
         }
     }
 
-    public void setRequiresReload(boolean reload) {
-        synchronized (mUpdatingLock) {
-            mRequiresReload = reload;
-        }
-    }
-
-    public boolean getRequiresReload() {
-        return mRequiresReload;
-    }
-
-    /** Override to load your dictionary here, on a background thread. */
-    public void loadDictionaryAsync() {
-    }
-
-    Context getContext() {
-        return mContext;
-    }
-    
-    int getMaxWordLength() {
-        return MAX_WORD_LENGTH;
-    }
-
+    public void setRequiresReload(boolean reload) { synchronized (mUpdatingLock) { mRequiresReload = reload; }     }
+    public boolean getRequiresReload() { return mRequiresReload; }
+    public void loadDictionaryAsync() {}
+    Context getContext() { return mContext; }     
+    int getMaxWordLength() { return MAX_WORD_LENGTH; }
     public void addWord(String word, int frequency) {
         addWordRec(mRoots, word, 0, frequency, null);
     }
