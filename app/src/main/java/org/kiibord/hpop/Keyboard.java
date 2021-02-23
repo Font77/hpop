@@ -584,12 +584,7 @@ public class Keyboard {
     protected Row createRowFromXml(Resources res, XmlResourceParser parser) { return new Row(res, this, parser); }
     protected Key createKeyFromXml(Resources res, Row parent, int x, int y, XmlResourceParser parser) { return new Key(res, parent, x, y, parser); }
     private void loadKeyboard(Context context, XmlResourceParser parser) {
-        boolean inKey = false;
-        boolean inRow = false;
-        float x = 0;
-        int y = 0;
-        Key key = null;
-        Row currentRow = null;
+        boolean inKey = false;boolean inRow = false;float x = 0;int y = 0;Key key = null;Row currentRow = null;
         Resources res = context.getResources();
         boolean skipRow = false;
         mRowCount = 0;
@@ -610,9 +605,7 @@ public class Keyboard {
                         inKey = true;
                         key = createKeyFromXml(res, currentRow, Math.round(x), y, parser);
                         key.realX = x;
-                        if (key.codes == null) {
-                          if (prevKey != null) prevKey.width += key.width;
-                        } else {
+                        if (key.codes == null) if (prevKey != null) prevKey.width += key.width; else {
                           mKeys.add(key);
                           prevKey = key;
                           if (key.codes[0] == KEYCODE_SHIFT) {
@@ -663,9 +656,7 @@ public class Keyboard {
         mVerticalPad = getDimensionOrFraction(a, R.styleable.Keyboard_verticalPad, mDisplayHeight, res.getDimension(R.dimen.key_vertical_pad));
         mLayoutRows = a.getInteger(R.styleable.Keyboard_layoutRows, DEFAULT_LAYOUT_ROWS);
         mLayoutColumns = a.getInteger(R.styleable.Keyboard_layoutColumns, DEFAULT_LAYOUT_COLUMNS);
-        if (mDefaultHeight == 0 && mKeyboardHeight > 0 && mLayoutRows > 0) {
-            mDefaultHeight = mKeyboardHeight / mLayoutRows;
-        }
+        if (mDefaultHeight == 0 && mKeyboardHeight > 0 && mLayoutRows > 0) mDefaultHeight = mKeyboardHeight / mLayoutRows;
         mProximityThreshold = (int) (mDefaultWidth * SEARCH_DISTANCE);
         mProximityThreshold = mProximityThreshold * mProximityThreshold; // Square it for comparison
         a.recycle();
