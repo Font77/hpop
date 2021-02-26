@@ -485,13 +485,17 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 String altHint;
                 if (' ' != label.charAt(0)) { altHint = key.getAltHintLabel(showHints7Bit(), showHintsAll(),2); }
                 else { altHint = key.getAltHintLabel(showHints7Bit(), showHintsAll(),6); }
-                int hintTextSize = (int)(mKeyTextSize  * mLabelScale); // pij
-                paintHint.setTextSize(hintTextSize); paintHint.setColor(0xFFFFFF77);
-                final float beslain_alt_hint = key.height - labelHeight/2 ;
-                if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
-                    drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
-                } else { canvas.drawText(altHint, centerx_alt_hint, beslain_alt_hint, paintHint); }
-
+                if (!altHint.equals("")) {
+                    int hintTextSize = (int) (mKeyTextSize * mLabelScale); // pij
+                    paintHint.setTextSize(hintTextSize);
+                    paintHint.setColor(0xFFFFFF77);
+                    final float beslain_alt_hint = key.height - labelHeight / 2;
+                    if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
+                        drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
+                    } else {
+                        canvas.drawText(altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
+                    }
+                }
                 switch (label.charAt(0))
                 {
                     case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T': case 'D': case 'p': case 'b': case 's': case '_':
