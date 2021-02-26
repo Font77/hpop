@@ -499,7 +499,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 switch (label.charAt(0))
                 {
                     case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T': case 'D': case 'p': case 'b': case 's': case '_':
-                        paint.setColor(0xFF77ff77);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
+                    paint.setColor(0xFF77ff77);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
+                    case ' ': int hint_lebl_size = (int) (mKeyTextSize * mLabelScale * 0.8); paint.setTextSize(hint_lebl_size); label = "ziNglish" ; break;
                 }
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);
