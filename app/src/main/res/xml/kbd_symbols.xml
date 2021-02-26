@@ -16,8 +16,8 @@
         <Key android:keyLabel="9" android:popupCharacters="" android:keyEdgeFlags="left" />
         <Key android:keyLabel="L" android:popupCharacters="" />
         <Key android:keyLabel="J" android:popupCharacters="" />
-        <Key android:keyLabel="Q" android:popupCharacters="" />
-        <Key android:keyLabel="W" android:popupCharacters="" />
+        <Key android:keyLabel="q" android:popupCharacters="" />
+        <Key android:keyLabel="w" android:popupCharacters="" />
         <Key android:keyLabel="X" android:popupCharacters="" />
         <Key android:keyLabel="F" android:popupCharacters="" />
         <Key android:keyLabel="0" android:popupCharacters="" />

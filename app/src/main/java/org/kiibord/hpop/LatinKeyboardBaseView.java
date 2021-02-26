@@ -402,11 +402,9 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         }
     }
     private void onBufferDraw(Canvas canvas) {
-        if (/*mBuffer == null ||*/ mKeyboardChanged) {mKeyboard.setKeyboardWidth(mViewWidth);
-        invalidateAllKeys(); mKeyboardChanged = false;}
+        if (mKeyboardChanged) {mKeyboard.setKeyboardWidth(mViewWidth);invalidateAllKeys(); mKeyboardChanged = false;}
         canvas.getClipBounds(mDirtyRect);if (mKeyboard == null) return;final Paint paint = mPaint;
-        final Paint paintHint = mPaintHint;
-        paintHint.setColor(mKeyHintColor);
+        final Paint paintHint = mPaintHint;paintHint.setColor(mKeyHintColor);
         final Drawable keyBackground = mKeyBackground;final Rect clipRegion = mClipRegion;
         final Rect padding = mPadding;final int kbdPaddingLeft = getPaddingLeft();
         final int kbdPaddingTop = getPaddingTop();
@@ -466,8 +464,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 final int centerxhint = 2*padding.left ; // (key.width + padding.left - padding.right) / 2; // orijnl
                 final int centerx_alt_hint = 2*padding.left ; // (key.width + padding.left - padding.right) / 2; // orijnl
                 final int lqpht_qks = padding.left * 2; // pij
-                if (label.length() > 1 && key.codes.length < 2)
-                    {labelSize = (int)(mLabelTextSize * mLabelScale);paint.setTypeface(Typeface.DEFAULT);}
+                if (label.length() > 1 && key.codes.length < 2) {labelSize = (int)(mLabelTextSize * mLabelScale);paint.setTypeface(Typeface.DEFAULT);}
                 else {labelSize = (int)(mKeyTextSize * mLabelScale);paint.setTypeface(mKeyTextStyle);}
                 paint.setFakeBoldText(key.isCursor);
                 paint.setTextSize(labelSize);
@@ -476,10 +473,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 final float beslain_lebql = top_y + labelHeight * KEY_LABEL_VERTICAL_ADJUSTMENT_FACTOR; // pij
                 paint.setShadowLayer(mShadowRadius, 0, 0, mShadowColor);
                 String hint = key.getHintLabel(showHints7Bit(), showHintsAll());
-                if (!hint.equals("")
-//                    &&
-//                    !(key.isShifted() && key.shiftLabel != null && hint.charAt(0) == key.shiftLabel.charAt(0))
-                ) {
+                if (!hint.equals("")) {
                     int hintTextSize = (int)(mKeyTextSize * mLabelScale);
                     paintHint.setTextSize(hintTextSize); paintHint.setColor(0xFFFFFF77);
                     final float beslain_hint = key.height - labelHeight/2 ;
@@ -488,22 +482,20 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     }
                     else canvas.drawText(hint, centerxhint, beslain_hint, paintHint);
                 }
-                String altHint = key.getAltHintLabel(showHints7Bit(), showHintsAll());
-                if (!altHint.equals("")) {
-                    int hintTextSize = (int)(mKeyTextSize  * mLabelScale); // pij
-                    paintHint.setTextSize(hintTextSize); paintHint.setColor(0xFFFFFF77);
-                    final float beslain_alt_hint = key.height - labelHeight/2 ;
-                    if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
-                        drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
-                    } else { canvas.drawText(altHint, centerx_alt_hint, beslain_alt_hint, paintHint); }
-                }
+                String altHint;
+                if (' ' != label.charAt(0)) { altHint = key.getAltHintLabel(showHints7Bit(), showHintsAll(),2); }
+                else { altHint = key.getAltHintLabel(showHints7Bit(), showHintsAll(),6); }
+                int hintTextSize = (int)(mKeyTextSize  * mLabelScale); // pij
+                paintHint.setTextSize(hintTextSize); paintHint.setColor(0xFFFFFF77);
+                final float beslain_alt_hint = key.height - labelHeight/2 ;
+                if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
+                    drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
+                } else { canvas.drawText(altHint, centerx_alt_hint, beslain_alt_hint, paintHint); }
+
                 switch (label.charAt(0))
                 {
                     case 'k': case 'g': case 'c': case 'z': case 't': case 'd': case 'T': case 'D': case 'p': case 'b': case 's': case '_':
                         paint.setColor(0xFF77ff77);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
-//                    case 'A': case 'a': case 'i': case 'u': case 'e': case 'o': case 'N': case 'y': case 'r': case 'l': case 'v': case 'm': case 'n': case 'f':
-//                        paint.setColor(0xFFFFFFFF);paint.setTypeface(Typeface.DEFAULT_BOLD); break;
-//                    case '_': paint.setColor(0xFF7777FF);paint.setTypeface(Typeface.DEFAULT_BOLD);break;
                 }
                 if (key.isDeadKey()) drawDeadKeyLabel(canvas, label, centerx, beslain_lebql, paint);
                 else canvas.drawText(label, centerx, beslain_lebql, paint);
@@ -516,7 +508,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 }
                 paint.setShadowLayer(0, 0, 0, 0);
                 shouldDrawIcon = shouldDrawLabelAndIcon(key);
-            }
+        }
             Drawable icon = key.icon;
             if (icon != null && shouldDrawIcon) {
                 final int drawableWidth;final int drawableHeight;final int drawableX;final int drawableY;
@@ -534,8 +526,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 if (iconColorFilter != null) {
                     if (shadowColorFilter != null && mShadowRadius > 0) {
                         BlurMaskFilter shadowBlur = new BlurMaskFilter(mShadowRadius, BlurMaskFilter.Blur.OUTER);
-                        Paint blurPaint = new Paint();
-                        blurPaint.setMaskFilter(shadowBlur);
+                        Paint blurPaint = new Paint();blurPaint.setMaskFilter(shadowBlur);
                         Bitmap tmpIcon = Bitmap.createBitmap(key.width, key.height, Bitmap.Config.ARGB_8888);
                         Canvas tmpCanvas = new Canvas(tmpIcon);
                         icon.draw(tmpCanvas);
@@ -545,12 +536,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                         shadowPaint.setColorFilter(shadowColorFilter);
                         canvas.drawBitmap(shadowBitmap, offsets[0], offsets[1], shadowPaint);
                     }
-                    icon.setColorFilter(iconColorFilter);
-                    icon.draw(canvas);
-                    icon.setColorFilter(null);
-                } else {
-                    icon.draw(canvas);
-                }
+                    icon.setColorFilter(iconColorFilter);icon.draw(canvas);icon.setColorFilter(null);
+                } else icon.draw(canvas);
                 canvas.translate(-drawableX, -drawableY);
             }
             canvas.translate(-key.x - kbdPaddingLeft, -key.y - kbdPaddingTop);

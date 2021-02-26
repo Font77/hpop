@@ -44,8 +44,8 @@
     <string name="key_ab01_main">9</string><string name="key_ab01_shift"></string><string name="key_ab01_alt">@string/alternates_for_z</string>
     <string name="key_ab02_main">L</string><string name="key_ab02_shift"></string><string name="key_ab02_alt">@string/alternates_for_x</string>
     <string name="key_ab03_main">J</string><string name="key_ab03_shift"></string><string name="key_ab03_alt">@string/alternates_for_c</string>
-    <string name="key_ab04_main">Q</string><string name="key_ab04_shift"></string><string name="key_ab04_alt">@string/alternates_for_v</string>
-    <string name="key_ab05_main">W</string><string name="key_ab05_shift"></string><string name="key_ab05_alt">@string/alternates_for_b</string>
+    <string name="key_ab04_main">q</string><string name="key_ab04_shift"></string><string name="key_ab04_alt">@string/alternates_for_v</string>
+    <string name="key_ab05_main">w</string><string name="key_ab05_shift"></string><string name="key_ab05_alt">@string/alternates_for_b</string>
     <string name="key_ab06_main">X</string><string name="key_ab06_shift"></string><string name="key_ab06_alt">@string/alternates_for_n</string>
     <string name="key_ab07_main">F</string><string name="key_ab07_shift"></string><string name="key_ab07_alt">@string/alternates_for_m</string>
     <string name="key_ab08_main">0</string><string name="key_ab08_shift">&lt;</string><string name="key_ab08_alt">,&lt;≤«‹</string>

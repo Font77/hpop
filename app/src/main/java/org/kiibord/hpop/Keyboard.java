@@ -301,20 +301,9 @@ public class Keyboard {
             }}
             return hint;
         }
-        public String getAltHintLabel(boolean wantAscii, boolean wantAll) {
-            if (altHint == null) { altHint = "";
+        public String getAltHintLabel(boolean wantAscii, boolean wantAll, int n) {
                 String popup = getPopupKeyboardContent( false, false);
-                if (popup.length() > 0) { char c = popup.charAt(0);
-                    if (wantAll || wantAscii && printebl_kya(c)) altHint = Character.toString(c);
-                    if (popup.length() > 1) { c = popup.charAt(1);
-                        if (wantAll || wantAscii && printebl_kya(c)) altHint = altHint + c;
-//                        if (popup.length() > 2) { c = popup.charAt(2);
-//                            if (wantAll || wantAscii && printebl_kya(c)) altHint = altHint + c;
-//                        }
-                    }
-                }
-            }
-            return altHint;
+                return popup.substring(0, Math.min(popup.length(), n));
         }
 
         public void onPressed() {
