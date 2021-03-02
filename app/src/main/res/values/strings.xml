@@ -78,8 +78,8 @@
 <string name="label_done_key">dn</string>
 <string name="label_send_key">snd</string>
 <string name="label_symbol_key">a1!</string>
-<string name="label_phone_key">123</string>
-<string name="label_alpha_key">Aai</string>
+<string name="label_phone_key">12</string>
+<string name="label_alpha_key">ai</string>
 <string name="label_alt_key">alt</string>
 <string name="voice_warning_title">voes input</string>
 <string name="voice_warning_locale_not_supported">voes input is not krAntli suportid phor yuAr lAfgyuez, bt dz vrk in ifglish.</string>
