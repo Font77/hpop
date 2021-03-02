@@ -18,7 +18,7 @@ import java.util.Locale;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-import static org.kiibord.hpop.aski_hksu.is7BitAscii;
+import static org.kiibord.hpop.aski_hksu.non_voes_printebl; // is7BitAscii;
 import static org.kiibord.hpop.aski_hksu.printebl_kya;
 
 public class Keyboard {
@@ -292,7 +292,8 @@ public class Keyboard {
             if (popup.length() > 0) {
                 int resId = popupResId;
                 if (resId == 0) resId = R.xml.kbd_popup_template;
-                return new Keyboard(context, keyboard.mDefaultHeight, resId, popup, popupReversed, -1, padding);
+                return new Keyboard(context, keyboard.mDefaultHeight, resId, popup, popupReversed, 9, padding);
+//                return new Keyboard(context, keyboard.mDefaultHeight, resId, popup, popupReversed, -1, padding);
             } else return null;
         }
         public String getHintLabel(boolean wantAscii, boolean wantAll) {
@@ -402,8 +403,7 @@ public class Keyboard {
         setEdgeFlags();
         fixAltChars(LatinIME.sKeyboardSettings.inputLocale);
     }
-    private Keyboard(Context context, int defaultHeight, int layoutTemplateResId, CharSequence characters, boolean reversed, int columns, int horizontalPadding) {
-        this(context, defaultHeight, layoutTemplateResId);
+    private Keyboard(Context context, int defaultHeight, int layoutTemplateResId, CharSequence characters, boolean reversed, int columns, int horizontalPadding) { this(context, defaultHeight, layoutTemplateResId);
         int x = 0;
         int y = 0;
         int column = 0;

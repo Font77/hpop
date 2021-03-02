@@ -17,8 +17,8 @@
         <Key android:keyLabel="9" android:keyEdgeFlags="left" />
         <Key android:keyLabel="L" />
         <Key android:keyLabel="J" />
-        <Key android:keyLabel="Q" />
-        <Key android:keyLabel="W" />
+        <Key android:keyLabel="q" />
+        <Key android:keyLabel="w" />
         <Key android:keyLabel="X" />
         <Key android:keyLabel="F" />
         <Key android:keyLabel="0" />

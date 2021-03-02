@@ -715,12 +715,10 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         if (mMiniKeyboardContainer == null) {inflateMiniKeyboardContainer();}
         if (mMiniKeyboard == null) return false;
         mMiniKeyboard.setKeyboard(kbd);
-        mMiniKeyboardContainer.measure(MeasureSpec.makeMeasureSpec(getWidth(), MeasureSpec.AT_MOST),
-            MeasureSpec.makeMeasureSpec(getHeight(), MeasureSpec.AT_MOST));
+        mMiniKeyboardContainer.measure(MeasureSpec.makeMeasureSpec(getWidth(), MeasureSpec.AT_MOST), MeasureSpec.makeMeasureSpec(getHeight(), MeasureSpec.AT_MOST));
         if (mWindowOffset == null) { mWindowOffset = new int[2]; getLocationInWindow(mWindowOffset); }
         final List<Key> miniKeys = mMiniKeyboard.getKeyboard().getKeys();
         final int miniKeyWidth = miniKeys.size() > 0 ? miniKeys.get(0).width : 0;
-
         int popupX = popupKey.x + mWindowOffset[0];
         popupX += getPaddingLeft();
         if (shouldAlignLeftmost(popupKey)) {
@@ -738,10 +736,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         final int x = popupX;
         final int y = mShowPreview && isOneRowKeys(miniKeys) ? mPopupPreviewDisplayedY : popupY;
 
-        int adjustedX = x;
-        if (x < 0) {
-            adjustedX = 0;
-        } else if (x > (getMeasuredWidth() - mMiniKeyboardContainer.getMeasuredWidth())) {
+        int adjustedX = x;if (x < 0) adjustedX = 0;
+        else if (x > (getMeasuredWidth() - mMiniKeyboardContainer.getMeasuredWidth())) {
             adjustedX = getMeasuredWidth() - mMiniKeyboardContainer.getMeasuredWidth();
         }
         // Log.i(TAG, "x=" + x + " y=" + y + " adjustedX=" + adjustedX + " getMeasuredWidth()=" + getMeasuredWidth());
@@ -758,14 +754,11 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         mMiniKeyboardPopup.showAtLocation(this, Gravity.NO_GRAVITY, adjustedX, y);
         mMiniKeyboardVisible = true;
 
-        // Inject down event on the key to mini keyboard.
-        long eventTime = SystemClock.uptimeMillis();
+        long eventTime = SystemClock.uptimeMillis();// Inject down event on the key to mini keyboard.
         mMiniKeyboardPopupTime = eventTime;
-        MotionEvent downEvent = generateMiniKeyboardMotionEvent(MotionEvent.ACTION_DOWN, popupKey.x
-                + popupKey.width / 2, popupKey.y + popupKey.height / 2, eventTime);
+        MotionEvent downEvent = generateMiniKeyboardMotionEvent(MotionEvent.ACTION_DOWN, popupKey.x + popupKey.width / 2, popupKey.y + popupKey.height / 2, eventTime);
         mMiniKeyboard.onTouchEvent(downEvent);
         downEvent.recycle();
-
         invalidateAllKeys();
         return true;
     }
@@ -778,15 +771,14 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
     private boolean isLatinF1Key(Key key) {return (mKeyboard instanceof LatinKeyboard) && ((LatinKeyboard)mKeyboard).isF1Key(key);} 
     private boolean isNonMicLatinF1Key(Key key) {return isLatinF1Key(key) && key.label != null;} 
     private static boolean isNumberAtEdgeOfPopupChars(Key key) {return isNumberAtLeftmostPopupChar(key) || isNumberAtRightmostPopupChar(key);     } 
-    /* package */ static boolean isNumberAtLeftmostPopupChar(Key key) {
+    static boolean isNumberAtLeftmostPopupChar(Key key) {
         if (key.popupCharacters != null && key.popupCharacters.length() > 0 && aski_dijit_kya(key.popupCharacters.charAt(0))) {
             return true;
         }
         return false;
     }
-    /* package */ static boolean isNumberAtRightmostPopupChar(Key key) {
-        if (key.popupCharacters != null && key.popupCharacters.length() > 0
-                && aski_dijit_kya(key.popupCharacters.charAt(key.popupCharacters.length() - 1))) {
+    static boolean isNumberAtRightmostPopupChar(Key key) {
+        if (key.popupCharacters != null && key.popupCharacters.length() > 0 && aski_dijit_kya(key.popupCharacters.charAt(key.popupCharacters.length() - 1))) {
             return true;
         }
         return false;
@@ -794,13 +786,12 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
     private MotionEvent generateMiniKeyboardMotionEvent(int action, int x, int y, long eventTime) {
         return MotionEvent.obtain(mMiniKeyboardPopupTime, eventTime, action, x - mMiniKeyboardOriginX, y - mMiniKeyboardOriginY, 0);
     }
-    /*package*/ boolean enableSlideKeyHack() { return false; }     
+    boolean enableSlideKeyHack() { return false; }
     private PointerTracker getPointerTracker(final int id) {
         final ArrayList<PointerTracker> pointers = mPointerTrackers; final Key[] keys = mKeys;
         final OnKeyboardActionListener listener = mKeyboardActionListener;
         for (int i = pointers.size(); i <= id; i++) {
-            final PointerTracker tracker = new PointerTracker(
-               i, mHandler, mKeyDetector, this, getResources(), enableSlideKeyHack());
+            final PointerTracker tracker = new PointerTracker(i, mHandler, mKeyDetector, this, getResources(), enableSlideKeyHack());
             if (keys != null) tracker.setKeyboard(keys, mKeyHysteresisDistance);
             if (listener != null) tracker.setOnKeyboardActionListener(listener);
             pointers.add(tracker);
@@ -811,8 +802,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         if (mMiniKeyboardVisible) {return mMiniKeyboard.isInSlidingKeyInput();} else {return mPointerQueue.isInSlidingKeyInput();}
     }
     public int getPointerCount() { return mOldPointerCount; } 
-    @Override
-    public boolean onTouchEvent(MotionEvent me) { return onTouchEvent(me, false); } 
+    @Override public boolean onTouchEvent(MotionEvent me) { return onTouchEvent(me, false); }
     public boolean onTouchEvent(MotionEvent me, boolean continuing) {
         final int action = me.getActionMasked();
         final int pointerCount = me.getPointerCount();
@@ -829,17 +819,13 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         if (mMiniKeyboardVisible) {
             final int miniKeyboardPointerIndex = me.findPointerIndex(mMiniKeyboardTrackerId);
             if (miniKeyboardPointerIndex >= 0 && miniKeyboardPointerIndex < pointerCount) {
-                final int miniKeyboardX = (int)me.getX(miniKeyboardPointerIndex);
-                final int miniKeyboardY = (int)me.getY(miniKeyboardPointerIndex);
+                final int miniKeyboardX = (int)me.getX(miniKeyboardPointerIndex);final int miniKeyboardY = (int)me.getY(miniKeyboardPointerIndex);
                 MotionEvent translated = generateMiniKeyboardMotionEvent(action, miniKeyboardX, miniKeyboardY, eventTime);
-                mMiniKeyboard.onTouchEvent(translated);
-                translated.recycle();
+                mMiniKeyboard.onTouchEvent(translated); translated.recycle();
             }
             return true;
         }
-        if (mHandler.isInKeyRepeat()) {
-            if (action == MotionEvent.ACTION_MOVE) { return true; }
-            final PointerTracker tracker = getPointerTracker(id);
+        if (mHandler.isInKeyRepeat()) { if (action == MotionEvent.ACTION_MOVE) { return true; } ; final PointerTracker tracker = getPointerTracker(id);
             if (pointerCount > 1 && !tracker.isModifier()) { mHandler.cancelKeyRepeatTimer(); }
         }
         if (!mHasDistinctMultitouch) { PointerTracker tracker = getPointerTracker(0);
@@ -858,10 +844,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
         } } else {
             PointerTracker tracker = getPointerTracker(id);
             switch (action) {
-                case MotionEvent.ACTION_DOWN: case MotionEvent.ACTION_POINTER_DOWN:
-                    mIgnoreMove = false; onDownEvent(tracker, x, y, eventTime); break;
-                case MotionEvent.ACTION_UP: case MotionEvent.ACTION_POINTER_UP:
-                    mIgnoreMove = false; onUpEvent(tracker, x, y, eventTime); break;
+                case MotionEvent.ACTION_DOWN: case MotionEvent.ACTION_POINTER_DOWN: mIgnoreMove = false; onDownEvent(tracker, x, y, eventTime); break;
+                case MotionEvent.ACTION_UP: case MotionEvent.ACTION_POINTER_UP: mIgnoreMove = false; onUpEvent(tracker, x, y, eventTime); break;
                 case MotionEvent.ACTION_CANCEL: onCancelEvent(tracker, x, y, eventTime); break;
             }
             if (continuing) tracker.setSlidingKeyInputState(true);
