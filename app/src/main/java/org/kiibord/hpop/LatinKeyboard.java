@@ -438,14 +438,8 @@ public class LatinKeyboard extends Keyboard {
             paint.setColor(shadowColor);
             canvas.drawText(language, width / 2, baseline - descent - 1, paint); // language
             paint.setColor(mRes.getColor(R.color.latinkeyboard_dim_color_white));
-
             canvas.drawText(language, width / 2, baseline - descent, paint);
-
-            // Put arrows that are already layed out on either side of the text
-            if (mLanguageSwitcher.getLocaleCount() > 1) {
-                mButtonArrowLeftIcon.draw(canvas);
-                mButtonArrowRightIcon.draw(canvas);
-            }
+            if (mLanguageSwitcher.getLocaleCount() > 1) { mButtonArrowLeftIcon.draw(canvas);mButtonArrowRightIcon.draw(canvas); }
         }
 
         // Draw the spacebar icon at the bottom

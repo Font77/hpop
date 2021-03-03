@@ -478,7 +478,7 @@ public class Keyboard {
             StringBuilder newPopup = new StringBuilder(popupLen);
             for (int i = 0; i < popupLen; ++i) {
                 char c = key.popupCharacters.charAt(i);
-                if (mainKeys.contains(c)) continue;
+//                if (mainKeys.contains(c)) continue; // 3mar2021
                 newPopup.append(c);
             }
             key.popupCharacters = newPopup.toString();
