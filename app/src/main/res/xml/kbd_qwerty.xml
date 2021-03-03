@@ -29,11 +29,11 @@
         <Key android:keyLabel="k" android:popupCharacters="qKQ?'&quot;`" android:keyEdgeFlags="left"/>
         <Key android:keyLabel="g" android:popupCharacters="G" />
         <Key android:keyLabel="c" android:popupCharacters="C()[]{}&lt;&gt;" />
-        <Key android:keyLabel="z" android:popupCharacters="jZJ~" />
+        <Key android:keyLabel="z" android:popupCharacters="jZ=CGQJ~" />
         <Key android:keyLabel="t" android:popupCharacters="~`#$,!" />
         <Key android:keyLabel="d" android:popupCharacters="$#@%*?!=:;&quot;" />
         <Key android:keyLabel="T" android:popupCharacters="*xX" />
-        <Key android:keyLabel="D" android:popupCharacters="wWVU$=+-*/\\" />
+        <Key android:keyLabel="D" android:popupCharacters="w$VUW=+-*/\\" />
         <Key android:keyLabel="p" android:popupCharacters="P+-*\\/%[]{}()fF" />
         <Key android:keyLabel="b" android:popupCharacters="B`&quot;'" android:keyEdgeFlags="right" />
     </Row>
@@ -62,7 +62,7 @@
         <Key android:codes="@integer/key_delete" android:keyIcon="@drawable/sym_keyboard_delete" android:iconPreview="@drawable/sym_keyboard_feedback_delete" android:keyWidth="10%p" android:isModifier="true" android:isRepeatable="true" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_normal" android:rowEdgeFlags="bottom"> <!-- <Key android:codes="@integer/key_f1" android:isModifier="true" /> -->
-        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
+        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_phone_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
         <Key android:codes="@integer/key_tab" android:keyLabel="tAb"/>
 <!--        <Key android:codes="@integer/kii_lminu" android:keyIcon="@drawable/simbql_kibord_lminu" />-->
         <Key android:codes="@integer/key_alt_left" android:keyLabel="alt" android:isSticky="true" android:isModifier="true" />
@@ -76,7 +76,7 @@
         android:keyWidth="10%p" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_normal_with_settings_key" android:rowEdgeFlags="bottom">
-        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
+        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_phone_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
         <Key android:codes="@integer/key_tab" android:keyLabel="tAb"/>
         <!--        <Key android:codes="@integer/kii_lminu" android:keyIcon="@drawable/simbql_kibord_lminu" />-->
         <Key android:codes="@integer/key_alt_left" android:keyLabel="alt" android:isSticky="true" android:isModifier="true" />
@@ -90,7 +90,7 @@
         android:keyWidth="10%p" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_url" android:rowEdgeFlags="bottom">
-        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
+        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_phone_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
         <Key android:codes="@integer/key_f1" android:isModifier="true" />
         <!--        <Key android:codes="@integer/kii_lminu" android:keyIcon="@drawable/simbql_kibord_lminu" />-->
         <Key android:codes="@integer/key_alt_left" android:keyLabel="alt" android:isSticky="true" android:isModifier="true" />
@@ -103,7 +103,7 @@
         <Key android:codes="@integer/key_return" android:keyIcon="@drawable/sym_keyboard_return" android:iconPreview="@drawable/sym_keyboard_feedback_return" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_email" android:rowEdgeFlags="bottom">
-        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
+        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_phone_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
         <Key android:codes="@integer/key_f1" android:isModifier="true" />
         <!--        <Key android:codes="@integer/kii_lminu" android:keyIcon="@drawable/simbql_kibord_lminu" />-->
         <Key android:codes="@integer/key_alt_left" android:keyLabel="alt" android:isSticky="true" android:isModifier="true" />
@@ -116,7 +116,7 @@
         <Key android:codes="@integer/key_return" android:keyIcon="@drawable/sym_keyboard_return" android:iconPreview="@drawable/sym_keyboard_feedback_return" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_im" android:rowEdgeFlags="bottom">
-        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
+        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_phone_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
         <Key android:codes="@integer/key_f1" android:isModifier="true" />
         <!--        <Key android:codes="@integer/kii_lminu" android:keyIcon="@drawable/simbql_kibord_lminu" />-->
         <Key android:codes="@integer/key_alt_left" android:keyLabel="alt" android:isSticky="true" android:isModifier="true" />
@@ -129,7 +129,7 @@
         <Key android:keyLabel=":-)" android:keyOutputText=":-) " android:keyIcon="@drawable/hint_popup" android:popupKeyboard="@xml/popup_smileys" android:keyWidth="20%p" android:isModifier="true" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_webentry" android:rowEdgeFlags="bottom">
-        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
+        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_phone_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
         <Key android:codes="@integer/key_f1" android:isModifier="true" />
         <!--        <Key android:codes="@integer/kii_lminu" android:keyIcon="@drawable/simbql_kibord_lminu" />-->
         <Key android:codes="@integer/key_alt_left" android:keyLabel="alt" android:isSticky="true" android:isModifier="true" />
@@ -142,7 +142,7 @@
         <Key android:codes="@integer/key_return" android:keyIcon="@drawable/sym_keyboard_return" android:iconPreview="@drawable/sym_keyboard_feedback_return" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_url_with_settings_key" android:rowEdgeFlags="bottom">
-        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
+        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_phone_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
         <Key android:codes="@integer/key_settings" android:keyIcon="@drawable/sym_keyboard_settings" android:iconPreview="@drawable/sym_keyboard_feedback_settings" android:isModifier="true" />
         <!--        <Key android:codes="@integer/kii_lminu" android:keyIcon="@drawable/simbql_kibord_lminu" />-->
         <Key android:codes="@integer/key_alt_left" android:keyLabel="alt" android:isSticky="true" android:isModifier="true" />
@@ -155,7 +155,7 @@
         <Key android:codes="@integer/key_return" android:keyIcon="@drawable/sym_keyboard_return" android:iconPreview="@drawable/sym_keyboard_feedback_return" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_email_with_settings_key" android:rowEdgeFlags="bottom">
-        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
+        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_phone_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
         <Key android:codes="@integer/key_settings" android:keyIcon="@drawable/sym_keyboard_settings" android:iconPreview="@drawable/sym_keyboard_feedback_settings" android:isModifier="true" />
         <!--        <Key android:codes="@integer/kii_lminu" android:keyIcon="@drawable/simbql_kibord_lminu" />-->
         <Key android:codes="@integer/key_alt_left" android:keyLabel="alt" android:isSticky="true" android:isModifier="true" />
@@ -169,7 +169,7 @@
         android:keyWidth="10%p" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_im_with_settings_key" android:rowEdgeFlags="bottom">
-        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
+        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_phone_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
         <Key android:codes="@integer/key_settings" android:keyIcon="@drawable/sym_keyboard_settings" android:iconPreview="@drawable/sym_keyboard_feedback_settings" android:isModifier="true" />
         <!--        <Key android:codes="@integer/kii_lminu" android:keyIcon="@drawable/simbql_kibord_lminu" />-->
         <Key android:codes="@integer/key_alt_left" android:keyLabel="alt" android:isSticky="true" android:isModifier="true" />
@@ -182,7 +182,7 @@
         <Key android:keyLabel=":-)" android:keyOutputText=":-) " android:keyIcon="@drawable/hint_popup" android:popupKeyboard="@xml/popup_smileys" android:keyWidth="25%p" android:isModifier="true" android:keyEdgeFlags="right" />
     </Row>
     <Row android:keyboardMode="@+id/mode_webentry_with_settings_key" android:rowEdgeFlags="bottom">
-        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_symbol_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
+        <Key android:codes="@integer/key_symbol" android:keyLabel="@string/label_phone_key" android:keyWidth="10%p" android:isModifier="true" android:keyEdgeFlags="left" />
         <Key android:codes="@integer/key_settings" android:keyIcon="@drawable/sym_keyboard_settings" android:iconPreview="@drawable/sym_keyboard_feedback_settings" android:isModifier="true" />
         <!--        <Key android:codes="@integer/kii_lminu" android:keyIcon="@drawable/simbql_kibord_lminu" />-->
         <Key android:codes="@integer/key_alt_left" android:keyLabel="alt" android:isSticky="true" android:isModifier="true" />

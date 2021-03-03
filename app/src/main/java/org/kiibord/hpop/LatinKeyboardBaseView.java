@@ -490,11 +490,11 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                     paintHint.setTextSize(hintTextSize);
                     paintHint.setColor(0xFFFFFF77);
                     final float beslain_alt_hint = key.height - labelHeight / 2;
-                    if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
-                        drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
-                    } else {
+//                    if (Character.getType(altHint.charAt(0)) == Character.NON_SPACING_MARK) {
+//                        drawDeadKeyLabel(canvas, altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
+//                    } else {
                         canvas.drawText(altHint, centerx_alt_hint, beslain_alt_hint, paintHint);
-                    }
+//                    }
                 }
                 switch (label)
                 {
