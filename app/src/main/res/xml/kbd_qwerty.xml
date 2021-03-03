@@ -48,12 +48,13 @@
             android:isModifier="true"
             android:isSticky="true"
             android:keyEdgeFlags="left" />
-<!--        android:keyIcon="@drawable/simbql_kibord_rminu"-->
+<!--        android:keyIcon="@drawable/simbql_kibord_rminu" m_lminu-->
         <Key android:keyLabel="r" android:popupCharacters="R@&gt;-&lt;" />
         <Key android:keyLabel="l" android:popupCharacters="L|/\\" />
         <Key android:keyLabel="v" android:popupCharacters="V^wW" />
-        <Key android:keyLabel="m" android:popupCharacters="M^*X-+\/*=S()[]{}" />
-        <Key android:keyLabel="n" android:popupCharacters="1-23456789LJqwXF.+-*/=^S" />
+        <Key android:codes="@integer/key_code_m" android:keyIcon="@drawable/m_lminu" android:popupCharacters="M^*X-+\/*=S()[]{}" />
+<!--        <Key android:keyLabel="m" android:popupCharacters="M^*X-+\/*=S()[]{}" />-->
+        <Key android:keyLabel="n" android:popupCharacters=",=+.-*/=^S" />
         <Key android:keyLabel="f" android:popupCharacters="FR/\+-*%S" />
 <!--        <Key android:keyLabel="." android:popupKeyboard="@xml/popup_punctuation" android:isModifier="true" />-->
         <Key android:keyLabel="." android:popupCharacters=";:,~`'&quot;~`-_=+*" android:isModifier="true" />

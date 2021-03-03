@@ -280,17 +280,17 @@
 <string name="title_vol_up">volyum Ap</string>
 <string name="title_vol_down">volyum daun</string>
 <string-array name="swipe_action_entries">
-<item>(no AksAn)</item>
-<item>kloz kiibord</item>
-<item>togAl AkstAnsn ro</item>
-<item>lanc setiNgs</item>
-<item>toggle szAsAns</item>
-<item>voes input</item>
-<item>svic kiibord leaut</item>
-<item>inkriz hait</item>
-<item>dikriz hait</item>
-<item>priviAs lAfgyuez</item>
--       <item>nAkst lAfgyuez</item>
+    <item>(no AksAn)</item>
+    <item>kloz kiibord</item>
+    <item>toggle ekstension rou</item>
+    <item>lang setiNgs</item>
+    <item>toggle suzzestions</item>
+    <item>voes input</item>
+    <item>svitch kiibord leaut</item>
+    <item>inkriz hait</item>
+    <item>dikriz hait</item>
+    <item>priviAs language</item>
+    <item>nekst language</item>
 </string-array>
 <string-array name="swipe_action_values">
 <item>nn</item>
@@ -338,7 +338,7 @@
 <string name="main_body"><Data>
 <![CDATA["
 <h2>ineblifg hekskibord</h2>
-<p><i>hekskibord</i> provides niyu Androed input mAxhAd. it is <b>disebAld bay diphalt</b>, And phor sAkyoriti riizAn Androed dzn't Alo programs to cenz input mAxhAd setiNgs. pliiz pholo pholoifg stAps to Aktivet it.<p>
+<p><i>hekskibord</i> provides niyu Android input method. it is <b>disabled by default</b>, & for security reason Android dzn't Alo programs to cenz input mAxhAd setiNgs. pliiz pholo pholoifg stAps to Aktivet it.<p>
 <h3>AAd kiibord to sistAm's input mAxhAd list:</h3>
 <blockAuote>
 <p>&#8226; opAn  sistAm input setiNgs konphigyuresAn bay prAsifg  <b>inebl kiibord</b> btAn AbAv.</p>
