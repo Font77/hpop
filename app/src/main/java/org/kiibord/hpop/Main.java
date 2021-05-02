@@ -23,8 +23,8 @@ public class Main extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        fontsovArride.setDefaultFont(this,"DEFAULT",R.font.u5);
-        fontsovArride.setDefaultFont(this,"MONOSPACE",R.font.u5);
+        fontsovArride.setDefaultFont(this,"DEFAULT",R.font.u5cdot);
+        fontsovArride.setDefaultFont(this,"MONOSPACE",R.font.u5cdot);
         setContentView(R.layout.main);
         String html = getString(R.string.main_body);
         html += "<p><i>vrjqn: " + getString(R.string.auto_version) + "</i></p>";

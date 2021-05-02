@@ -5,9 +5,11 @@
     <!-- <string name="sentence_separators">.,!?);:</string> -->
     <string name="sentence_separators">.,!F)BA</string>
     <!-- <string name="suggested_punctuations_default">!?,\u0022\u0027:;()-/@_</string> -->
-    <string name="suggested_punctuations_default">0123456789:;&lt;=&gt;?</string>
+<!--    <string name="suggested_punctuations_default">0123456789:;&lt;=&gt;?</string> viml-->
+    <string name="suggested_punctuations_default">0123456789LJQWXF</string>
     <!-- <string name="suggested_punctuations">!?,\u0022\u0027:;()-/@_</string> -->
-    <string name="suggested_punctuations">0123456789:;&lt;=&gt;?</string>
+<!--    <string name="suggested_punctuations">0123456789:;&lt;=&gt;?</string> viml-->
+    <string name="suggested_punctuations">0123456789LJQWXF</string>
     <string name="settings_key_mode_auto" translatable="false">0</string>
     <string name="settings_key_mode_always_show" translatable="false">1</string>
     <string name="settings_key_mode_always_hide" translatable="false">2</string>

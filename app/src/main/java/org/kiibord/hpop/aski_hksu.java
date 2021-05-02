@@ -6,7 +6,7 @@ public class aski_hksu {
     public final static HashSet<Character> dizits_set = new HashSet<Character>(Arrays.asList(
     '0','1','2','3','4','5','6','7','8','9',
 //    ':',';','<','=','>','?',
-    'L','J','q','w','X','F'
+    'L','J','Q','W','X','F'
     ));
     public final static HashSet<Character> voes_set = new HashSet<Character>(Arrays.asList(
             'A','a','i','u','e','o','N','y','h','H',
